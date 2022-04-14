@@ -722,3 +722,36 @@ export const animalList = [
 export const movieList = [
   { value: '' }
 ]
+
+export const singerList = [
+  { value: '' }
+]
+
+export const musicList = [
+  { value: '' }
+]
+
+export const stuffList = [
+  { value: '' }
+]
+
+export const emotionList = [
+  { value: '' }
+]
+
+export const celebrityList = [
+  { value: '' }
+]
+
+export const applianceList = [
+  { value: '' }
+]
+
+export const scriptList = [
+  { value: '' }
+]
+
+
+export const classicList = [
+  { value: '' }
+]

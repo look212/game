@@ -1,5 +1,5 @@
 <template>
-  <div v-if="timer !== 0" class="timer-wrap">
+  <div v-show="isTimerStart" class="timer-wrap">
     <p>
       {{ timer }}
     </p>
@@ -7,41 +7,51 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted } from '@nuxtjs/composition-api';
+import { defineComponent, reactive, toRefs, onMounted, computed } from '@nuxtjs/composition-api';
+import { useGameStore } from '~/store';
 export default defineComponent({
   name: 'GTimer',
   props: {
     time: {
       type: Number,
       default: 3,
-    }
+    },
+    delay: {
+      type: Number,
+      default: 1000
+    },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const data = reactive({
       timer: 0,
       isOver: false,
     });
+    const game = useGameStore();
+    const isTimerStart = computed(() => game.isTimerStart);
 
     onMounted(() => {
       data.timer = props.time;
-      methods.countDown();
     });
 
     const methods = {
       countDown() {
         if (data.timer > 0) {
+          game.setStartTimer(true);
           data.isOver = false;
           setTimeout(() => {
             data.timer -= 1
             methods.countDown();
-          }, 1000)
+          }, props.delay)
         } else {
           data.isOver = true;
+          game.setStartTimer(false);
+          data.timer = props.time;
         }
-      }
+      },
     }
 
     return {
+      isTimerStart,
       ...toRefs(data),
       ...methods
     }

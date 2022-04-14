@@ -49,6 +49,9 @@ button {
   &.is-block {
     display: block;
     width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 12px;
   }
   &.is-gray {
     background: #f0f0f0;

@@ -2,17 +2,17 @@
   <div class="container">
     <div class="contents">
       <h1>{{ mainInfo.title }}</h1>
-      <div class="menu" v-if="gameType === null || gameType === 0">
-        <g-button @click="setGameType(1)">이어말하기</g-button>
-        <g-button @click="setGameType(2)">몸으로 말해요</g-button>
-        <g-button @click="setGameType(3)">라이어게임</g-button>
-        <g-button @click="setGameType(4)">맞추기</g-button>
+      <div class="menu" v-if="gameType === null">
+        <g-button @click="setGameType('talk')">이어말하기</g-button>
+        <g-button @click="setGameType('body')">몸으로 말해요</g-button>
+        <g-button @click="setGameType('liar')">라이어게임</g-button>
+        <g-button @click="setGameType('fit')">맞추기</g-button>
       </div>
       <div v-html="mainInfo.description"/>
       <div class="btn-wrap"
-           v-if="gameType !==  null && gameType !==  0">
+           v-if="gameType !== null">
         <g-button :is-gray="true"
-                  @click="setGameType(0)">뒤로</g-button>
+                  @click="setGameType(null)">뒤로</g-button>
         <g-button @click="$router.push(`/detail/${gameType}`)">시작하기</g-button>
       </div>
     </div>
@@ -35,7 +35,7 @@ export default defineComponent({
     const mainInfo = computed(() => game.mainInfo);
 
     const methods = {
-      setGameType(type: number) {
+      setGameType(type: string) {
         game.setGameType(type);
         game.setMainInfo(type);
       },
@@ -63,7 +63,7 @@ h1 {
 .contents {
   padding: 20px;
 
-  div {
+  > div {
     margin-top: 50px;
     line-height: 1.5em;
   }
