@@ -1,5 +1,5 @@
 <template>
-  <button :class="{'is-block': isBlock}" @click="handleClick">
+  <button :class="[{'is-block': isBlock},{'is-gray': isGray}]" @click="handleClick">
     <slot/>
   </button>
 </template>
@@ -10,6 +10,10 @@ export default defineComponent({
   name: 'GButton',
   props: {
     isBlock: {
+      type: Boolean,
+      default: false,
+    },
+    isGray: {
       type: Boolean,
       default: false,
     }
@@ -40,10 +44,15 @@ button {
   color: #fff;
   font-weight: bold;
   font-size: 1.2em;
+  outline: none;
 
   &.is-block {
     display: block;
     width: 100%;
+  }
+  &.is-gray {
+    background: #f0f0f0;
+    color: #000;
   }
 }
 </style>

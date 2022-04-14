@@ -4,3 +4,5 @@ $defaultFont: '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', 'App
 // notch 영역 대응
 $safeTopHeight: env(safe-area-inset-top);
 $safeBottomHeight: env(safe-area-inset-bottom);
+$safeRightHeight: env(safe-area-inset-right);
+$safeLeftHeight: env(safe-area-inset-left);
