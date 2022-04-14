@@ -1,467 +1,467 @@
 export const proverbList = [
   {
     value: '가는 날이 장날이다',
-    masking: '가는 날이 XXXX',
+    masking: '가는 날이',
   },
   {
     value: '가는 말이 고와야 오는 말이 곱다',
-    masking: '가는 말이 고와야 XX XX XX',
+    masking: '가는 말이 고와야',
   },
   {
     value: '가랑잎이 솔잎더러 바스락거린다고 한다',
-    masking: '가랑잎이 솔잎더러 XXXXXXX XX',
+    masking: '가랑잎이 솔잎더러',
   },
   {
     value: '가재는 게 편이다',
-    masking: '가재는 X XXX'
+    masking: '가재는'
   },
   {
     value: '가지 많은 나무에 바람 잘 날 없다',
-    masking: '가지 많은 나무에 XX X X XX',
+    masking: '가지 많은 나무에',
   },
   {
     value: '갈수록 태산',
-    masking: '갈수록 XX'
+    masking: '갈수록'
   },
   {
     value: '같은 값이면 다홍치마',
-    masking: '같은 값이면 XXXX',
+    masking: '같은 값이면',
   },
   {
     value: '개같이 벌어서 정승같이 쓴다',
-    masking: '개같이 벌어서 XXXX XX',
+    masking: '개같이 벌어서',
   },
   {
     value: '개구리 올챙이 적 생각을 못 한다',
-    masking: '개구리 XXX X XXX X XX',
+    masking: '개구리',
   },
   {
     value: '개똥도 약에 쓰려면 없다',
-    masking: '개똥도 XX XXX XX',
+    masking: '개똥도',
   },
   {
     value: '개밥에 도토리',
-    masking: '개밥에 XXX',
+    masking: '개밥에',
   },
   {
     value: '개버릇 남 못 준다',
-    masking: '개버릇 X X XX',
+    masking: '개버릇',
   },
   {
     value: '개천에서 용 난다',
-    masking: '개천에서 X XX',
+    masking: '개천에서',
   },
   {
     value: '계란에도 뼈가 있다',
-    masking: '계란에도 XX XX',
+    masking: '계란에도',
   },
   {
     value: '고기는 씹어야 맛이요, 말은 해야 맛이라',
-    masking: '고기는 씹어야 맛이요, XX XX XXX',
+    masking: '고기는 씹어야 맛이요,',
   },
   {
     value: '고기도 먹어 본 사람이 잘 먹는다',
-    masking: '고기도 XX X XXX 잘 먹는다',
+    masking: '고기도 잘 먹는다',
   },
   {
     value: '고래 싸움에 새우 등 터진다',
-    masking: '고래 싸움에 XX X XXX',
+    masking: '고래 싸움에',
   },
   {
     value: '고양이 목에 방울 달기',
-    masking: '고양이 목에 XX XX',
+    masking: '고양이 목에',
   },
   {
     value: '공든 탑이 무너지랴',
-    masking: '공든 탑이 XXXX',
+    masking: '공든 탑이',
   },
   {
     value: '구더기 무서워 장 못 담글까',
-    masking: '구더기 무서워 X X XXX',
+    masking: '구더기 무서워',
   },
   {
     value: '구르는 돌은 이끼가 끼지 않는다',
-    masking: '구르는 돌은 XXX XX 않는다',
+    masking: '구르는 돌은 않는다',
   },
   {
     value: '구슬이 서 말이라도 꿰어야 보배라',
-    masking: '구슬이 서 말이라도 XXX XXX',
+    masking: '구슬이 서 말이라도',
   },
   {
     value: '굴러 온 돌이 박힌 돌 뺀다',
-    masking: '굴러 온 돌이 XX X XX',
+    masking: '굴러 온 돌이',
   },
   {
     value: '귀에 걸면 귀걸이, 코에 걸면 코걸이',
-    masking: '귀에 걸면 귀걸이, XX XX XXX',
+    masking: '귀에 걸면 귀걸이,',
   },
   {
     value: '그림의 떡',
-    masking: '그림의 X',
+    masking: '그림의',
   },
   {
     value: '금강산도 식후경',
-    masking: '금강산도 XXX',
+    masking: '금강산도',
   },
   {
     value: '까마귀 날자 배 떨어진다',
-    masking: '까마귀 날자 X XXXX',
+    masking: '까마귀 날자',
   },
   {
     value: '꿩 대신 닭',
-    masking: '꿩 대신 X',
+    masking: '꿩 대신',
   },
   {
     value: '꿩 먹고 알 먹기',
-    masking: '꿩 먹고 X XX',
+    masking: '꿩 먹고',
   },
   {
     value: '남의 잔치에 감 놓아라 배 놓아라 한다',
-    masking: '남의 잔치에 감 놓아라 X XXX XX',
+    masking: '남의 잔치에 감 놓아라',
   },
   {
     value: '낫 놓고 기역 자 모른다',
-    masking: '낫 놓고 XX X XXX',
+    masking: '낫 놓고',
   },
   {
     value: '낮말은 새가 듣고 밤말은 쥐가 듣는다',
-    masking: '낮말은 새가 듣고 XXX XX XXX',
+    masking: '낮말은 새가 듣고',
   },
   {
     value: '내 코가 석자',
-    masking: '내 코가 XX',
+    masking: '내 코가',
   },
   {
     value: '누워서 침 뱉기',
-    masking: '누워서 X XX',
+    masking: '누워서',
   },
   {
     value: '누워서 떡 기',
-    masking: '누워서 X XX',
+    masking: '누워서',
   },
   {
     value: '늦게 배운 도둑이 날 새는 줄 모른다',
-    masking: '늦게 배운 도둑이 X XX X XXX',
+    masking: '늦게 배운 도둑이',
   },
   {
     value: '다 된 밥에 재 뿌리기',
-    masking: '다 된 밥에 X XXX',
+    masking: '다 된 밥에',
   },
   {
     value: '달면 삼키고 쓰면 뱉는다',
-    masking: '달면 삼키고 XX XXX',
+    masking: '달면 삼키고',
   },
   {
     value: '닭 잡아 먹고 오리발 내민다',
-    masking: '닭 잡아 먹고 XXX XXX',
+    masking: '닭 잡아 먹고',
   },
   {
     value: '도둑이 제 발 저리다',
-    masking: '도둑이 X X XXX',
+    masking: '도둑이',
   },
   {
     value: '돌다리도 두들겨 보고 건너라',
-    masking: '돌다리도 XXX XX XXX',
+    masking: '돌다리도',
   },
   {
     value: '되로 주고 말로 받는다',
-    masking: '되로 주고 XX XXX',
+    masking: '되로 주고',
   },
   {
     value: '등잔 밑이 어둡다',
-    masking: '등잔 밑이 XXX',
+    masking: '등잔 밑이',
   },
   {
     value: '땅 짚고 헤엄치기',
-    masking: '땅 짚고 XXXX',
+    masking: '땅 짚고',
   },
   {
     value: '똥 묻은 개가 겨 묻은 개 나무란다',
-    masking: '똥 묻은 개가 X XX X XXXX',
+    masking: '똥 묻은 개가',
   },
   {
     value: '뛰는 놈 위에 나는 놈 있다',
-    masking: '뛰는 놈 위에 XX X XX',
+    masking: '뛰는 놈 위에',
   },
   {
     value: '마른 하늘에 날벼락',
-    masking: '마른 하늘에 XXX',
+    masking: '마른 하늘에',
   },
   {
     value: '마파람에 게눈 감추듯 한다',
-    masking: '마파람에 XX XXX XX',
+    masking: '마파람에',
   },
   {
     value: '말 한마디에 천 냥 빚도 갚는다',
-    masking: '말 한마디에 X X XX XXX',
+    masking: '말 한마디에',
   },
   {
     value: '매도 먼저 맞는 놈이 낫다',
-    masking: '매도 XX XX X이 낫다',
+    masking: '매도 낫다',
   },
   {
     value: '모로 가도 서울만 가면 된다',
-    masking: '모로 가도 XXX XX XX',
+    masking: '모로 가도',
   },
   {
     value: '목구멍이 포도청',
-    masking: '목구멍이 XXX',
+    masking: '목구멍이',
   },
   {
     value: '못 먹는 감 찔러나 본다',
-    masking: '못 먹는 감 XXX XX',
+    masking: '못 먹는 감',
   },
   {
     value: '미운 놈 떡 하나 더 준다',
-    masking: '미운 놈 X XX X XX',
+    masking: '미운 놈',
   },
   {
     value: '믿는 도끼에 발등 찍힌다',
-    masking: '믿는 도끼에 XX XXX',
+    masking: '믿는 도끼에',
   },
   {
     value: '밑 빠진 독에 물 붓기',
-    masking: '밑 빠진 독에 X XX',
+    masking: '밑 빠진 독에',
   },
   {
     value: '바늘 가는 데 실 간다',
-    masking: '바늘 가는 데 X XX',
+    masking: '바늘 가는 데',
   },
   {
     value: '바늘 도둑이 소 도둑 된다',
-    masking: '바늘 도둑이 X XX XX',
+    masking: '바늘 도둑이',
   },
   {
     value: '배보다 배꼽이 더 크다',
-    masking: '배보다 배꼽이 X XX',
+    masking: '배보다 배꼽이',
   },
   {
     value: '밥 먹을 때는 개도 안 건든다',
-    masking: '밥 먹을 때는 XX X XXX',
+    masking: '밥 먹을 때는',
   },
   {
     value: '백지장도 맞들면 낫다',
-    masking: '백지장도 XXX XX',
+    masking: '백지장도',
   },
   {
     value: '뱁새가 황새 따라간다',
-    masking: '뱁새가 황새 XXXX',
+    masking: '뱁새가 황새',
   },
   {
     value: '벼룩의 간 빼먹기',
-    masking: '벼룩의 X XXX',
+    masking: '벼룩의',
   },
   {
     value: '병 주고 약 준다',
-    masking: '병 주고 X XX',
+    masking: '병 주고',
   },
   {
     value: '보기 좋은 떡이 먹기도 좋다',
-    masking: '보기 좋은 떡이 XXX XX',
+    masking: '보기 좋은 떡이',
   },
   {
     value: '불난 집에 부채질 한다',
-    masking: '불난 집에 XXX XX',
+    masking: '불난 집에',
   },
   {
     value: '비 온 뒤에 땅이 굳어진다',
-    masking: '비 온 뒤에 XX XXXX',
+    masking: '비 온 뒤에',
   },
   {
     value: '빈 수레가 요란하다',
-    masking: '빈 수레가 XXXX',
+    masking: '빈 수레가',
   },
   {
     value: '빛 좋은 개살구',
-    masking: '빛 좋은 XXX',
+    masking: '빛 좋은',
   },
   {
     value: '사공이 많으면 배가 산으로 올라간다',
-    masking: '사공이 많으면 XX XXX XXXX',
+    masking: '사공이 많으면',
   },
   {
     value: '사촌이 땅을 사면 배가 아프다',
-    masking: '사촌이 땅을 사면 XX XXX',
+    masking: '사촌이 땅을 사면',
   },
   {
     value: '새발의 피',
-    masking: '새발의 X'
+    masking: '새발의'
   },
   {
     value: '서당 개 삼 년에 풍월을 읊는다',
-    masking: '서당 개 삼 년에 XXX XXX',
+    masking: '서당 개 삼 년에',
   },
   {
     value: '세 살 버릇 여든까지 간다',
-    masking: '세 살 버릇 XXXX XX',
+    masking: '세 살 버릇',
   },
   {
     value: '소문난 잔치에 먹을 것 없다',
-    masking: '소문난 잔치에 XX X XX',
+    masking: '소문난 잔치에',
   },
   {
     value: '소 잃고 외양간 고친다',
-    masking: '소 잃고 XXX XXX',
+    masking: '소 잃고',
   },
   {
     value: '쇠뿔도 단김에 빼랬다',
-    masking: '쇠뿔도 XXX XXX',
+    masking: '쇠뿔도',
   },
   {
     value: '수박 겉 핥기',
-    masking: '수박 X XX',
+    masking: '수박',
   },
   {
     value: '십 년이면 강산도 변한다',
-    masking: '십 년이면 XXX XXX',
+    masking: '십 년이면',
   },
   {
     value: '아는 길도 물어 가라',
-    masking: '아는 길도 XX XX',
+    masking: '아는 길도',
   },
   {
     value: '아니 땐 굴뚝에 연기 나랴',
-    masking: '아니 땐 굴뚝에 XX XX',
+    masking: '아니 땐 굴뚝에',
   },
   {
     value: '아닌 밤중에 홍두깨',
-    masking: '아닌 밤중에 XXX',
+    masking: '아닌 밤중에',
   },
   {
     value: '약방에 감초',
-    masking: '약방에 XX',
+    masking: '약방에',
   },
   {
     value: '어물전 망신은 꼴뚜기가 시킨다',
-    masking: '어물전 망신은 XXX XXX',
+    masking: '어물전 망신은',
   },
   {
     value: '엎드려 절 받기',
-    masking: '엎드려 X XX',
+    masking: '엎드려',
   },
   {
     value: '여자 셋이 모이면 접시가 깨진다',
-    masking: '여자 셋이 모이면 XXX XXX',
+    masking: '여자 셋이 모이면',
   },
   {
     value: '열 길 물 속은 알아도 한 길 사람 속은 모른다',
-    masking: '열 길 물 속은 알아도 X X XX XX XXX',
+    masking: '열 길 물 속은 알아도',
   },
   {
     value: '열 번 찍어 안 넘어가는 나무 없다',
-    masking: '열 번 찍어 X XXXX XX XX',
+    masking: '열 번 찍어',
   },
   {
     value: '오뉴월 감기는 개도 안 걸린다',
-    masking: '오뉴월 감기는 XX X XXX',
+    masking: '오뉴월 감기는',
   },
   {
     value: '오르지 못할 나무는 쳐다보지도 말아라',
-    masking: '오르지 못할 나무는 XXXXX XXX',
+    masking: '오르지 못할 나무는',
   },
   {
     value: '우물에 가서 숭늉 찾는다',
-    masking: '우물에 가서 XX XXX'
+    masking: '우물에 가서'
   },
   {
     value: '울며 겨자 먹기',
-    masking: '울며 XX XX',
+    masking: '울며',
   },
   {
     value: '웃는 낯에 침 뱉으랴',
-    masking: '웃는 낯에 X XXX',
+    masking: '웃는 낯에',
   },
   {
     value: '원수는 외나무 다리에서 만난다',
-    masking: '원수는 XXX XXXX XXX',
+    masking: '원수는',
   },
   {
     value: '원숭이도 나무에서 떨어진다',
-    masking: '원숭이도 XXXX XXXX',
+    masking: '원숭이도',
   },
   {
     value: '윗물이 맑아야 아랫물도 맑다',
-    masking: '윗물이 맑아야 XXXX XX',
+    masking: '윗물이 맑아야',
   },
   {
     value: '자라 보고 놀란 가슴 솥뚜껑 보고 놀란다',
-    masking: '자라 보고 놀란 가슴 XXX XX XXX',
+    masking: '자라 보고 놀란 가슴',
   },
   {
     value: '잘 자랄 나무는 떡잎부터 알아본다',
-    masking: '잘 자랄 나무는 XXXX XXXX',
+    masking: '잘 자랄 나무는',
   },
   {
     value: '작은 고추가 더 맵다',
-    masking: '작은 고추가 X XX',
+    masking: '작은 고추가',
   },
   {
     value: '점잖은 고양이가 부뚜막에 먼저 올라간다',
-    masking: '점잖은 고양이가 XXXX XX XXXX',
+    masking: '점잖은 고양이가',
   },
   {
     value: '종로에서 뺨 맞고 한강 가서 눈 흘긴다',
-    masking: '종로에서 뺨 맞고 XX XX X XXX',
+    masking: '종로에서 뺨 맞고',
   },
   {
     value: '좋은 약은 입에 쓰다',
-    masking: '좋은 약은 XX XX',
+    masking: '좋은 약은',
   },
   {
     value: '쥐구멍에도 볕 들 날이 있다',
-    masking: '쥐구멍에도 X X XX XX',
+    masking: '쥐구멍에도',
   },
   {
     value: '지렁이도 밟으면 꿈틀한다',
-    masking: '지렁이도 밟으면 XXXX'
+    masking: '지렁이도 밟으면'
   },
   {
     value: '천 리 길도 한 걸음부터',
-    masking: '천 리 길도 X XXXX',
+    masking: '천 리 길도',
   },
   {
     value: '칼로 물 베기',
-    masking: '칼로 X XX'
+    masking: '칼로'
   },
   {
     value: '콩 심은 데 콩 나고 팥 심은 데 팥 난다',
-    masking: '콩 심은 데 콩 나고 X XX X X XX',
+    masking: '콩 심은 데 콩 나고',
   },
   {
     value: '티끌 모아 태산',
-    masking: '티끌 모아 XX',
+    masking: '티끌 모아',
   },
   {
     value: '하늘의 별 따기',
-    masking: '하늘의 X XX'
+    masking: '하늘의'
   },
   {
     value: '하늘이 무너져도 솟아날 구멍은 있다',
-    masking: '하늘이 무너져도 XXX XXX XX',
+    masking: '하늘이 무너져도',
   },
   {
     value: '하룻강아지 범 무서운 줄 모른다',
-    masking: '하룻강아지 X XXX X XXX',
+    masking: '하룻강아지',
   },
   {
     value: '한 귀로 듣고 한 귀로 흘린다',
-    masking: '한 귀로 듣고 X XX XXX'
+    masking: '한 귀로 듣고'
   },
   {
     value: '한 술 밥에 배 부르랴',
-    masking: '한 술 밥에 X XXX',
+    masking: '한 술 밥에',
   },
   {
     value: '호랑이 굴에 들어가야 호랑이 새끼를 잡는다',
-    masking: '호랑이 굴에 들어가야 XXX XXX XXX',
+    masking: '호랑이 굴에 들어가야',
   },
   {
     value: '호랑이에게 물려가도 정신만 바짝 차리면 산다',
-    masking: '호랑이에게 물려가도 XXX XX XXX XX',
+    masking: '호랑이에게 물려가도',
   },
   {
     value: '호랑이도 제 말 하면 온다',
-    masking: '호랑이도 X X XX XX',
+    masking: '호랑이도',
   },
 ]
 
