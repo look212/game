@@ -1,5 +1,5 @@
 <template>
-  <div v-if="gameList.length > 0">
+  <div v-if="gameList.length > 1">
     <div class="info">
       <p>{{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
     </div>
@@ -11,10 +11,7 @@
               @slideChange="slideChange">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
-          <div class="btn-wrap"
-               v-if="gameList.length !== (activeIndex + 1)">
-            <g-button @click="nextSlide">다음</g-button>
-          </div>
+          <div class="swiper-button-next">다음</div>
         </swiper-slide>
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
@@ -52,7 +49,6 @@ export default defineComponent({
       activeIndex,
       slideChange,
       setDelay,
-      nextSlide,
     } = gameSetting();
 
     const data = reactive({
@@ -89,7 +85,7 @@ export default defineComponent({
             container: 'modal_container is_cancelBtn',
           },
           confirmButtonText: '예',
-          title: 'Next Game Start 👉',
+          title: '처음으로 이동하시겠습니까?',
         }).then(async (result) => {
           if (result.isConfirmed) window.location.href = '/game';
         });
@@ -109,7 +105,6 @@ export default defineComponent({
       timer,
       setDelay,
       slideChange,
-      nextSlide,
       ...methods,
       ...toRefs(data),
     }
@@ -123,10 +118,9 @@ export default defineComponent({
   color: #999;
 }
 .btn-wrap {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: $safeBottomHeight;
   right: 0;
-  padding-bottom: $safeBottomHeight;
   z-index: 1;
   display: flex;
   button {

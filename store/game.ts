@@ -61,7 +61,7 @@ export default class Game extends VuexModule {
     const { subject, questionCount } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
-    console.log(totalList);
+    console.log(totalList);1
     let totalLength = totalList.length;
     this.totalNumbers = [];
     this.selectNumbers = [];
@@ -80,7 +80,7 @@ export default class Game extends VuexModule {
 
     if (questionCount && questionCount > remainLength) {
       Vue.swal({
-        title: '홈으로 이동',
+        title: '처음으로 이동하시겠습니까?',
         html: '남아있는 문제 수가 적어 게임을 이어서할 수 없습니다.'
       }).then((result) => {
         if (result.isConfirmed) {

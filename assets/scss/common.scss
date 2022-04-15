@@ -96,8 +96,14 @@ pre {
 }
 
 .swiper-container.custom {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: -1;
+
   .swiper-slide {
-    height: calc(100vh - 106px);
+    height: calc(100vh);
     background: #fff;
     position: relative;
     z-index: 0;
@@ -107,9 +113,9 @@ pre {
     }
 
     .swiper-button-next {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      right: 20px;
       height: 40px;
       line-height: 40px;
       background-color: #000;

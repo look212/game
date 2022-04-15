@@ -71,13 +71,10 @@ export default function gameSetting() {
     setLiarMode(value: string) {
       game.setLiarMode(value);
     },
-    slideChange() {
+    async slideChange() {
       data.activeIndex = swiper.value.$swiper.activeIndex;
-    },
-    async nextSlide() {
-      await swiper.value.$swiper.slideNext();
       await methods.setDelay(countSpeed.value);
-    }
+    },
   }
 
   return {

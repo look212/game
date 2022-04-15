@@ -81,7 +81,7 @@ export const proverbList = [
   },
   {
     value: '구르는 돌은 이끼가 끼지 않는다',
-    masking: '구르는 돌은 않는다',
+    masking: '구르는 돌은',
   },
   {
     value: '구슬이 서 말이라도 꿰어야 보배라',
@@ -136,12 +136,12 @@ export const proverbList = [
     masking: '누워서',
   },
   {
-    value: '누워서 떡 기',
+    value: '누워서 떡먹기',
     masking: '누워서',
   },
   {
-    value: '늦게 배운 도둑이 날 새는 줄 모른다',
-    masking: '늦게 배운 도둑이',
+    value: '늦게 배운 도둑질에 날 새는 줄 모른다',
+    masking: '늦게 배운 도둑질에',
   },
   {
     value: '다 된 밥에 재 뿌리기',
@@ -197,7 +197,7 @@ export const proverbList = [
   },
   {
     value: '매도 먼저 맞는 놈이 낫다',
-    masking: '매도 낫다',
+    masking: '매도 먼저',
   },
   {
     value: '모로 가도 서울만 가면 된다',
