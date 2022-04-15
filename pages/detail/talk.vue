@@ -16,8 +16,8 @@
       </div>
       <div class="contents">
         <h2>속도
-          <span v-if="delayList.find((option) => option.value === timerDelay)">
-          ({{ delayList.find((option) => option.value === timerDelay).label }})
+          <span v-if="delayList.find((option) => option.value === countSpeed)">
+          ({{ delayList.find((option) => option.value === countSpeed).label }})
         </span>
         </h2>
         <div class="btn-wrap">
@@ -43,7 +43,7 @@
     </template>
     <template v-else>
       <div class="contents">
-
+        <talk></talk>
       </div>
     </template>
   </div>
@@ -54,28 +54,31 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
+import talk from '~/components/game/talk.vue';
 
 export default defineComponent({
   name: 'Talk',
   components: {
     GTimer,
     GButton,
+    talk,
   },
   setup(props, { root }) {
     const {
+      timer,
       game,
-      setDelay,
-      setSubject,
-      setQuestionCount,
       delay,
       questionCount,
       gameType,
       mainInfo,
-      timerDelay,
+      countSpeed,
       isGameStart,
       subject,
       delayList,
       questionNumberList,
+      setDelay,
+      setSubject,
+      setQuestionCount,
     } = gameSetting();
 
     const methods = {
@@ -93,7 +96,7 @@ export default defineComponent({
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          game.setGameStart();
+          game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
         });
       }
     }
@@ -102,11 +105,12 @@ export default defineComponent({
       setDelay,
       setSubject,
       setQuestionCount,
+      timer,
       delay,
       questionCount,
       gameType,
       mainInfo,
-      timerDelay,
+      countSpeed,
       isGameStart,
       subject,
       delayList,
@@ -140,6 +144,7 @@ header {
     overflow: hidden;
   }
 }
+
 .contents {
   padding: 20px;
 

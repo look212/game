@@ -34,6 +34,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/vue-sweetalert2',
+    { src: '@/plugins/vue-awesome-swiper', mode: 'client' },
   ],
 
   // sweetalert style custom
@@ -71,6 +72,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+      'vue-awesome-swiper'
+    ],
+    terser: {
+      // https://github.com/terser/terser#compress-options
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
+    }
   },
 
   // Build path change
@@ -79,6 +91,6 @@ export default {
   },
 
   router: {
-    base: '/game/'
+    base: '/game'
   },
 }

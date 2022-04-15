@@ -50,7 +50,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
   line-height: 1.2em;
   word-break: keep-all;
@@ -65,27 +65,6 @@ h1 {
 
   > div {
     margin-top: 50px;
-  }
-
-  .description-wrap {
-    ul {
-      margin-left: 20px;
-      li {
-        line-height: 1.5em;
-        list-style: decimal;
-        word-break: keep-all;
-      }
-    }
-
-    q {
-      color: #ddd;
-      font-weight: 100;
-      font-size: 1em;
-      a {
-        color: #ddd;
-        text-decoration: underline;
-      }
-    }
   }
 }
 </style>
