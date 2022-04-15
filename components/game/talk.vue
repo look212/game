@@ -12,7 +12,7 @@
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
         </swiper-slide>
-        <div class="swiper-button-next">다음</div>
+        <div class="next-wrap"><div class="swiper-button-next">다음</div></div>
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
         <g-button @click="setGameStart">이어서 게임 시작하기</g-button>
@@ -121,6 +121,7 @@ export default defineComponent({
   position: fixed;
   bottom: $safeBottomHeight;
   right: 0;
+  padding: 20px;
   z-index: 1;
   display: flex;
   button {

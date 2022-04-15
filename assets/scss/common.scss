@@ -97,7 +97,7 @@ pre {
 
 .swiper-container.custom {
   .swiper-slide {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     background: #fff;
     position: relative;
     z-index: 0;
@@ -107,10 +107,14 @@ pre {
     }
   }
 
-  .swiper-button-next {
+  .next-wrap {
     position: fixed;
-    bottom: calc(20px + env(safe-area-inset-bottom));
-    right: 20px;
+    bottom: $safeBottomHeight;
+    right: 0;
+    padding: 20px;
+    z-index: 10;
+  }
+  .swiper-button-next {
     height: 40px;
     line-height: 40px;
     background-color: #000;
@@ -122,7 +126,6 @@ pre {
     font-weight: bold;
     font-size: 1.2em;
     outline: none;
-    z-index: 10;
 
     &.swiper-button-disabled {
       display: none;
@@ -142,9 +145,16 @@ pre {
 }
 
 q {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  bottom: $safeBottomHeight;
+  padding: 20px;
   color: #ccc;
   font-weight: 100;
   font-size: 1em;
+  text-align: center;
   a {
     color: #ddd;
     text-decoration: underline;
