@@ -1,5 +1,5 @@
 import { Module, VuexModule, MutationAction, Mutation } from 'vuex-module-decorators';
-import { IMainInfo, ISubjectTypes } from '~/types';
+import { IMainInfo, ISimpleType } from '~/types';
 import { mainInfos } from '~/constants';
 
 @Module({
@@ -13,29 +13,31 @@ export default class Game extends VuexModule {
   mainInfo: IMainInfo = mainInfos[0];
   isTimerStart: boolean = false;
   timerDelay: number = 0;
-  gameStart: boolean = false;
-  subject: ISubjectTypes = { value: '', label: '' };
+  isGameStart: boolean = false;
+  subject: ISimpleType = { value: '', label: '' };
   questionCount: number = 0;
+  timeLimit: number = 0;
+  liarMode: string = 'default';
 
   @Mutation
-  setGameType(gameType: string) {
-    this.gameType = gameType
+  setGameType(option: string) {
+    this.gameType = option
   }
 
   @Mutation
-  setMainInfo(type: string) {
-    const idx = mainInfos.findIndex((info:IMainInfo) => info.type === type)
+  setMainInfo(option: string) {
+    const idx = mainInfos.findIndex((info:IMainInfo) => info.type === option)
     this.mainInfo = mainInfos[idx];
   }
 
   @Mutation
-  setStartTimer(isStart: boolean) {
-    this.isTimerStart = isStart
+  setStartTimer(option: boolean) {
+    this.isTimerStart = option
   }
 
   @Mutation
-  setTimerDelay(delay: number) {
-    this.timerDelay = delay;
+  setTimerDelay(option: number) {
+    this.timerDelay = option;
   }
 
   @Mutation
@@ -45,11 +47,21 @@ export default class Game extends VuexModule {
   }
 
   @Mutation
-  setQuestionCount(value: number) {
-    this.questionCount = value
+  setQuestionCount(option: number) {
+    this.questionCount = option
   }
   @Mutation
   setGameStart() {
-    this.gameStart = true;
+    this.isGameStart = true;
+  }
+
+  @Mutation
+  setTimeLimit(option: number) {
+    this.timeLimit = option;
+  }
+
+  @Mutation
+  setLiarMode(option: string) {
+    this.liarMode = option;
   }
 }

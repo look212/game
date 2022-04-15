@@ -8,7 +8,7 @@
         <g-button @click="setGameType('liar')">라이어게임</g-button>
         <g-button @click="setGameType('fit')">맞추기</g-button>
       </div>
-      <div v-html="mainInfo.description"/>
+      <div class="description-wrap" v-html="mainInfo.description"/>
       <div class="btn-wrap"
            v-if="gameType !== null">
         <g-button :is-gray="true"
@@ -65,7 +65,27 @@ h1 {
 
   > div {
     margin-top: 50px;
-    line-height: 1.5em;
+  }
+
+  .description-wrap {
+    ul {
+      margin-left: 20px;
+      li {
+        line-height: 1.5em;
+        list-style: decimal;
+        word-break: keep-all;
+      }
+    }
+
+    q {
+      color: #ddd;
+      font-weight: 100;
+      font-size: 1em;
+      a {
+        color: #ddd;
+        text-decoration: underline;
+      }
+    }
   }
 }
 </style>

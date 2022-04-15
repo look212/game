@@ -2,20 +2,10 @@ export interface IMainInfo {
   type: string | null;
   title: string;
   description?: string;
-  subject?: ISubjectTypes[];
+  subject?: ISimpleType[];
 }
 
-export interface IDelayTime {
-  delay: number;
-  display_delay: string;
-}
-
-export interface ISubjectTypes {
-  value: string;
-  label: string;
-}
-
-export interface IQuestionNumberTypes {
-  value: number;
+export interface ISimpleType {
+  value: string | number | null | undefined;
   label: string;
 }

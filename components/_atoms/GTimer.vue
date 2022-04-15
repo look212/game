@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isTimerStart" class="timer-wrap">
+  <div v-if="isTimerStart" class="timer-wrap">
     <p>
       {{ timer }}
     </p>
@@ -37,13 +37,11 @@ export default defineComponent({
       countDown() {
         if (data.timer > 0) {
           game.setStartTimer(true);
-          data.isOver = false;
           setTimeout(() => {
             data.timer -= 1
             methods.countDown();
           }, props.delay)
         } else {
-          data.isOver = true;
           game.setStartTimer(false);
           data.timer = props.time;
         }
@@ -62,7 +60,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .timer-wrap {
   display: flex;
-  height: 200px;
+  height: 100px;
   align-items: center;
   justify-content: center;
   p {

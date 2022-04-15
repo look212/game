@@ -51,7 +51,7 @@ button {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    border-radius: 12px;
+    border-radius: 30px;
   }
   &.is-gray {
     background: #f0f0f0;

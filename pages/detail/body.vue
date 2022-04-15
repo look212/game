@@ -4,52 +4,53 @@
       <a href="/game" class="btn__home">home</a>
       <h1>{{ mainInfo.title }}</h1>
     </header>
-    <template>
+    <template v-if="!isGameStart">
       <div class="contents">
         <h2>주제 <span v-if="subject.label">({{ subject.label }})</span></h2>
         <div class="btn-wrap">
-          <g-button v-for="(subject, index) in mainInfo.subject"
+          <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
                     :key="`subject_${index}`"
-                    @click="setSubject(subject.value, subject.label)">{{ subject.label }}</g-button>
+                    @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="contents">
-        <h2>속도
-          <span v-if="delayList.find((delay) => delay.delay === timerDelay)">
-          ({{ delayList.find((delay) => delay.delay === timerDelay).display_delay }})
-        </span>
+        <h2>제한시간
+          <span v-if="timeLimit">({{ timeLimit }}분)</span>
         </h2>
         <div class="btn-wrap">
-          <g-button v-for="(delay, index) in delayList"
+          <g-button v-for="(option, index) in timeLimitList"
                     :is-gray="true"
-                    :key="`delay_${index}`"
-                    @click="setDelay(delay.delay)">{{ delay.display_delay }}</g-button>
+                    :key="`time_limit_${index}`"
+                    @click="setTimeLimit(option.value)">{{ option.label }}</g-button>
         </div>
-        <g-timer ref="Timer" :delay="delay"></g-timer>
       </div>
       <div class="contents">
-        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }})</span></h2>
+        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
         <div class="btn-wrap">
-          <g-button v-for="(question, index) in questionNumberList"
+          <g-button v-for="(option, index) in questionNumberList"
                     :is-gray="true"
                     :key="`question_${index}`"
-                    @click="setQuestionCount(question.value)">{{ question.label }}</g-button>
+                    @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="footer-btn">
         <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
       </div>
     </template>
+    <template v-else>
+      <div class="contents">
+
+      </div>
+    </template>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/composition-api';
-import { useGameStore } from '~/store';
+import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
-import { delayList, questionNumberList } from '~/constants';
+import gameSetting from '~/composable/gameSetting';
 
 export default defineComponent({
   name: 'Body',
@@ -58,69 +59,55 @@ export default defineComponent({
     GButton,
   },
   setup(props, { root }) {
-    const game = useGameStore();
-    const gameType = computed(() => game.gameType);
-    const mainInfo = computed(() => game.mainInfo);
-    const subject = computed(() => game.subject);
-    const timerDelay = computed(() => game.timerDelay);
-    const questionCount = computed(() => game.questionCount);
-    const gameStart = computed(() => game.gameStart);
-    const route = useRoute();
-    const Timer = ref();
-    const data = reactive({
-      delay: 0,
-      isStart: false,
-      subjectVal: subject.value.value,
+    const {
+      game,
+      setTimeLimit,
+      setSubject,
+      setQuestionCount,
+      delay,
       questionCount,
       gameType,
       mainInfo,
-      timerDelay,
-      gameStart,
+      isGameStart,
+      timeLimit,
       subject,
-    })
-
-    onMounted(() => {
-      const type = route.value.name?.split('-')[1];
-      if (type) {
-        game.setGameType(type);
-        game.setMainInfo(type);
-      }
-    });
+      timeLimitList,
+      questionNumberList,
+    } = gameSetting();
 
     const methods = {
-      setDelay(delay: number) {
-        data.delay = delay;
-        Timer.value.countDown();
-        game.setTimerDelay(delay);
-      },
-      setSubject(value: string, label: string) {
-        game.setSubject({ value, label });
-      },
-      setQuestionCount(value: number) {
-        game.setQuestionCount(value);
-      },
       setGameStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
           return false;
         }
-        if (!data.delay) {
-          root.$swal('속도를 선택해주세요');
+        if (!timeLimit.value) {
+          root.$swal('제한시간을 선택해주세요');
           return false;
         }
         if (!questionCount.value) {
           root.$swal('문제 갯수를 선택해주세요');
           return false;
         }
-        game.setGameStart();
+        root.$swal('Game Start 😆').then(() => {
+          game.setGameStart();
+        });
       }
     }
 
     return {
-      Timer,
-      delayList,
+      setTimeLimit,
+      setSubject,
+      setQuestionCount,
+      delay,
+      questionCount,
+      gameType,
+      mainInfo,
+      timeLimit,
+      isGameStart,
+      subject,
+      timeLimitList,
       questionNumberList,
-      ...toRefs(data),
       ...methods,
     }
   }

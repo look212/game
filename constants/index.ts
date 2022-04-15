@@ -1,16 +1,21 @@
-import { IMainInfo, IDelayTime, ISubjectTypes, IQuestionNumberTypes } from '~/types';
+import { IMainInfo, ISimpleType } from '~/types';
 
 export const mainInfos: IMainInfo[] = [
   {
     type: null,
     title: '게임을 선택해주세요😉',
+    description: `
+    <q>Copyright 2022. <a href="https://github.com/look212/" target="_blank">look212</a> all rights reserved.</q>
+    `
   },
   {
     type: 'talk',
     title: '이어말하기',
     description: `
-    1. 주제를 고르세요.<br>
-    2. 문제를 보고 문장 또는 단어를 완성하세요.
+    <ul>
+        <li>주제, 속도, 문제 갯수를 고르세요.</li>
+        <li>문제를 보고 문장 또는 단어를 완성하세요.</li>
+    </ul>
     `,
     subject: [
       { value: 'proverb', label: '속담'},
@@ -22,9 +27,11 @@ export const mainInfos: IMainInfo[] = [
     type: 'body',
     title: '몸으로 말해요',
     description: `
-    1. 주제를 고르세요.<br>
-    2. 문제를 보고 몸으로 설명하세요.<br>
-    3. 답을 맞추세요.
+    <ul>
+        <li>주제, 제한시간, 문제 갯수를 고르세요.</li>
+        <li>문제를 보고 몸으로 설명하세요.</li>
+        <li>답을 맞추세요.</li>
+    </ul>
     `,
     subject: [
       { value: 'proverb', label: '속담'},
@@ -41,9 +48,11 @@ export const mainInfos: IMainInfo[] = [
     type: 'liar',
     title: '라이어게임',
     description: `
-    1. 주제를 고르세요.<br>
-    2. 모드를 고르세요.(일반, 스파이, 바보)<br>
-    3. 라이어게임을 즐기세요.
+    <ul>
+        <li>주제를 고르세요.</li>
+        <li>모드를 고르세요.(일반, 스파이, 바보)</li>
+        <li>라이어게임을 즐기세요.</li>
+    </ul>
     `,
     subject: [
       { value: 'animal', label: '동물'},
@@ -59,8 +68,10 @@ export const mainInfos: IMainInfo[] = [
     type: 'fit',
     title: '맞추기',
     description: `
-    1. 주제를 고르세요.<br>
-    2. 사진 또는 그림을 보거나 노래를 듣고 문제를 맞추세요<br>
+    <ul>
+        <li>주제를 고르세요.</li>
+        <li>사진 또는 그림을 보거나 노래를 듣고 문제를 맞추세요.</li>
+    </ul>
     `,
     subject: [
       { value: 'singer', label: '가수'},
@@ -69,18 +80,31 @@ export const mainInfos: IMainInfo[] = [
       { value: 'movie', label: '영화'},
       { value: 'script', label: '대사'},
       { value: 'classic', label: '클래식'},
+      { value: 'random', label: '랜덤이미지'},
     ]
   },
 ]
 
-export const delayList: IDelayTime[] = [
-  { delay: 500, display_delay: '0.5s'},
-  { delay: 700, display_delay: '0.7s'},
-  { delay: 1000, display_delay: '1s'},
+export const delayList: ISimpleType[] = [
+  { value: 500, label: '0.5s'},
+  { value: 700, label: '0.7s'},
+  { value: 1000, label: '1s'},
 ]
 
-export const questionNumberList: IQuestionNumberTypes[] = [
+export const questionNumberList: ISimpleType[] = [
   { value: 10, label: '10개'},
   { value: 20, label: '20개'},
   { value: 30, label: '30개'},
+]
+
+export const timeLimitList: ISimpleType[] = [
+  { value: 1, label: '1분'},
+  { value: 2, label: '2분'},
+  { value: 3, label: '3분'},
+]
+
+export const liarModeList: ISimpleType[] = [
+  { value: 'detault', label: '기본'},
+  { value: 'spy', label: '스파이'},
+  { value: 'fool', label: '바보'},
 ]

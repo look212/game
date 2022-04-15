@@ -751,7 +751,10 @@ export const scriptList = [
   { value: '' }
 ]
 
-
 export const classicList = [
+  { value: '' }
+]
+
+export const animationList = [
   { value: '' }
 ]
