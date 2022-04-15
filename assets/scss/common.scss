@@ -96,6 +96,7 @@ pre {
 }
 
 .swiper-container.custom {
+  overflow: visible;
   .swiper-slide {
     height: calc(100vh - 150px);
     background: #fff;
@@ -109,9 +110,10 @@ pre {
 
   .next-wrap {
     position: fixed;
-    bottom: $safeBottomHeight;
+    bottom: 20px;
     right: 0;
     padding: 20px;
+    padding-bottom: $safeBottomHeight;
     z-index: 10;
   }
   .swiper-button-next {
@@ -149,8 +151,9 @@ q {
   width: 100%;
   box-sizing: border-box;
   left: 0;
-  bottom: $safeBottomHeight;
+  bottom: 20px;
   padding: 20px;
+  padding-bottom: $safeBottomHeight;
   color: #ccc;
   font-weight: 100;
   font-size: 1em;

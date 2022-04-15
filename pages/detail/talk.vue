@@ -171,8 +171,9 @@ header {
 .footer-btn {
   position: fixed;
   width: 100%;
-  bottom: $safeBottomHeight;
+  bottom: 20px;
   left: 0;
   padding: 20px;
+  padding-bottom: $safeBottomHeight;
 }
 </style>

@@ -119,9 +119,10 @@ export default defineComponent({
 }
 .btn-wrap {
   position: fixed;
-  bottom: $safeBottomHeight;
+  bottom: 20px;
   right: 0;
   padding: 20px;
+  padding-bottom: $safeBottomHeight;
   z-index: 1;
   display: flex;
   button {
