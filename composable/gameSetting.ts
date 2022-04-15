@@ -71,7 +71,7 @@ export default function gameSetting() {
     setLiarMode(value: string) {
       game.setLiarMode(value);
     },
-    slideChange(total: number) {
+    slideChange() {
       data.activeIndex = swiper.value.$swiper.activeIndex;
     },
     async nextSlide() {

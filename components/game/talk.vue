@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="gameList.length > 0">
     <div class="info">
       <p>{{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
     </div>
@@ -78,6 +78,7 @@ export default defineComponent({
           if (result.isConfirmed) {
             game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
             swiper.value.$swiper.slideTo(0);
+            setDelay(countSpeed.value);
           }
         });
       },

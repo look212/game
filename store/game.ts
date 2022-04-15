@@ -61,6 +61,7 @@ export default class Game extends VuexModule {
     const { subject, questionCount } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
+    console.log(totalList);
     let totalLength = totalList.length;
     this.totalNumbers = [];
     this.selectNumbers = [];

@@ -20,7 +20,7 @@ export const mainInfos: IMainInfo[] = [
     subject: [
       { value: 'proverb', label: '속담'},
       { value: 'idiom', label: '사자성어'},
-      { value: 'fourLetterVocal', label: '4글자단어'},
+      { value: 'fourLetterVocab', label: '4글자단어'},
     ]
   },
   {
