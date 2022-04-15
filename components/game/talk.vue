@@ -11,8 +11,8 @@
               @slideChange="slideChange">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
-          <div class="swiper-button-next">다음</div>
         </swiper-slide>
+        <div class="swiper-button-next">다음</div>
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
         <g-button @click="setGameStart">이어서 게임 시작하기</g-button>
