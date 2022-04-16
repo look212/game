@@ -173,7 +173,6 @@ header {
   width: 100%;
   bottom: 20px;
   left: 0;
-  padding: 20px;
-  padding-bottom: $safeBottomHeight;
+  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
 }
 </style>
