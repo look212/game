@@ -1,6 +1,7 @@
 import { computed, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/composition-api';
-import { delayList, questionNumberList, timeLimitList, liarModeList } from '~/constants';
+import { countSpeedList, questionNumberList, timeLimitList, liarModeList, countDownList } from '~/constants';
 import { useGameStore } from '~/store';
+import { saveGuard } from '~/utils/utils';
 
 export default function gameSetting() {
   const game = useGameStore();
@@ -8,6 +9,7 @@ export default function gameSetting() {
   const mainInfo = computed(() => game.mainInfo);
   const subject = computed(() => game.subject);
   const countSpeed = computed(() => game.countSpeed);
+  const countDown = computed(() => game.countDown);
   const questionCount = computed(() => game.questionCount);
   const isGameStart = computed(() => game.isGameStart);
   const timeLimit = computed(() => game.timeLimit);
@@ -23,6 +25,7 @@ export default function gameSetting() {
     gameType,
     mainInfo,
     countSpeed,
+    countDown,
     isGameStart,
     subject,
     timeLimit,
@@ -30,10 +33,11 @@ export default function gameSetting() {
     gameList,
     isTimerStart,
     activeIndex: 0,
-    delayList,
+    countSpeedList,
     questionNumberList,
     timeLimitList,
     liarModeList,
+    countDownList,
     swiperOptions: {
       allowTouchMove: false,
       navigation: {
@@ -53,9 +57,15 @@ export default function gameSetting() {
 
   const methods = {
     async setCountSpeed(option: number) {
+      // 연속 호출 방지
+      if (saveGuard.isBusy()) { return; } else { saveGuard.setGuard(option * countDown.value); }
+
       data.speed = option;
       await timer.value.countDown(option);
       await game.setCountSpeed(option);
+    },
+    async setCountDown(option: number) {
+      await game.setCountDown(option);
     },
     async setSubject(value: string, label: string) {
       await game.setSubject({ value, label });
@@ -69,9 +79,12 @@ export default function gameSetting() {
     async setLiarMode(value: string) {
       await game.setLiarMode(value);
     },
-    async slideChange() {
-      data.activeIndex = swiper.value.$swiper.activeIndex;
-      await methods.setCountSpeed(countSpeed.value);
+    async nextSlide() {
+      if (!isTimerStart.value) {
+        await swiper.value.$swiper.slideNext();
+        data.activeIndex = swiper.value.$swiper.activeIndex;
+        await methods.setCountSpeed(countSpeed.value);
+      }
     },
   }
 

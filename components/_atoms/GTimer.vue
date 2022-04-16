@@ -1,49 +1,44 @@
 <template>
   <div v-if="isTimerStart" class="timer-wrap">
     <p :class="{'is-active': isTimerStart}">
-      {{ timer }}
+      {{ initialCount }}
     </p>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted, computed } from '@nuxtjs/composition-api';
+import { defineComponent, reactive, toRefs, onMounted, computed, watch } from '@nuxtjs/composition-api';
 import { useGameStore } from '~/store';
 export default defineComponent({
   name: 'GTimer',
-  props: {
-    time: {
-      type: Number,
-      default: 3,
-    },
-    delay: {
-      type: Number,
-      default: 1000
-    },
-  },
-  setup(props, { emit }) {
+  setup() {
     const data = reactive({
-      timer: 0,
+      initialCount: 0,
       isOver: false,
     });
     const game = useGameStore();
     const isTimerStart = computed(() => game.isTimerStart);
+    const countDown = computed(() => game.countDown);
 
     onMounted(() => {
-      data.timer = props.time;
+      data.initialCount = countDown.value;
     });
 
+    watch(() => countDown.value, (newValue: number) => {
+      data.initialCount = countDown.value;
+    })
+
     const methods = {
-      countDown(delay: number) {
-        if (data.timer > 0) {
+      countDown(speed: number) {
+        if (data.initialCount > 0) {
           game.setStartTimer(true);
           setTimeout(() => {
-            data.timer -= 1
-            methods.countDown(delay);
-          }, delay)
+            data.initialCount -= 1
+            methods.countDown(speed);
+          }, speed)
         } else {
           game.setStartTimer(false);
-          data.timer = props.time;
+          data.initialCount = countDown.value;
         }
       },
     }

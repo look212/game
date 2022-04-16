@@ -14,6 +14,7 @@ export default class Game extends VuexModule {
   gameType: string | null = null; // 게임 종류
   mainInfo: IMainInfo = mainInfos[0];
   isTimerStart: boolean = false;
+  countDown: number = 3; // 카운트다운
   countSpeed: number = 0; // 카운트 속도
   isGameStart: boolean = false;
   subject: ISimpleType = { value: '', label: '' }; // 주제
@@ -44,6 +45,11 @@ export default class Game extends VuexModule {
   @Mutation
   setCountSpeed(option: number) {
     this.countSpeed = option;
+  }
+
+  @Mutation
+  setCountDown(option: number) {
+    this.countDown = option;
   }
 
   @Mutation

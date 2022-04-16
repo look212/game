@@ -7,12 +7,13 @@
       <g-timer ref="timer" class="timer"></g-timer>
       <swiper ref="swiper"
               class="custom"
-              :options="swiperOptions"
-              @slideChange="slideChange">
+              :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
         </swiper-slide>
-        <div class="next-wrap"><div class="swiper-button-next">다음</div></div>
+        <div class="next-wrap">
+          <g-button @click="nextSlide">다음</g-button>
+        </div>
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
         <g-button :is-gray="true" @click="goHome">처음으로</g-button>
@@ -42,13 +43,15 @@ export default defineComponent({
       gameType,
       subject,
       countSpeed,
+      countDown,
       questionCount,
       gameList,
       swiperOptions,
       isTimerStart,
       activeIndex,
-      slideChange,
+      nextSlide,
       setCountSpeed,
+      setCountDown,
     } = gameSetting();
 
     const data = reactive({
@@ -63,32 +66,37 @@ export default defineComponent({
 
     const methods = {
       setTalkStart() {
-        root.$swal({
-          showCancelButton: true,
-          customClass: {
-            container: 'modal_container is_cancelBtn',
-          },
-          confirmButtonText: '예',
-          title: 'Next Game Start 👉',
-        }).then((result) => {
-          if (result.isConfirmed) {
-            game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
-            swiper.value.$swiper.slideTo(0);
-            setCountSpeed(countSpeed.value);
-          }
-        });
+        if(!isTimerStart.value) {
+          root.$swal({
+            showCancelButton: true,
+            customClass: {
+              container: 'modal_container is_cancelBtn',
+            },
+            confirmButtonText: '예',
+            title: 'Next Game Start 👉',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
+              swiper.value.$swiper.slideTo(0);
+              setCountSpeed(countSpeed.value);
+              setCountDown(countDown.value);
+            }
+          });
+        }
       },
       goHome() {
-        root.$swal({
-          showCancelButton: true,
-          customClass: {
-            container: 'modal_container is_cancelBtn',
-          },
-          confirmButtonText: '예',
-          title: '처음으로 이동하시겠습니까?',
-        }).then((result) => {
-          if (result.isConfirmed) window.location.href = '/game';
-        });
+        if (!isTimerStart.value) {
+          root.$swal({
+            showCancelButton: true,
+            customClass: {
+              container: 'modal_container is_cancelBtn',
+            },
+            confirmButtonText: '예',
+            title: '처음으로 이동하시겠습니까?',
+          }).then((result) => {
+            if (result.isConfirmed) window.location.href = '/game';
+          });
+        }
       }
     }
 
@@ -97,6 +105,7 @@ export default defineComponent({
       gameType,
       subject,
       countSpeed,
+      countDown,
       questionCount,
       gameList,
       swiperOptions,
@@ -104,7 +113,8 @@ export default defineComponent({
       activeIndex,
       timer,
       setCountSpeed,
-      slideChange,
+      nextSlide,
+      setCountDown,
       ...methods,
       ...toRefs(data),
     }
