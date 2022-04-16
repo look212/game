@@ -17,7 +17,7 @@
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
         <g-button :is-gray="true" @click="goHome">처음으로</g-button>
-        <g-button @click="setTalkStart">이어서 게임 시작하기</g-button>
+        <g-button @click="setGameStart">이어서 게임 시작하기</g-button>
       </div>
     </div>
   </div>
@@ -65,38 +65,36 @@ export default defineComponent({
     })
 
     const methods = {
-      setTalkStart() {
-        if(!isTimerStart.value) {
-          root.$swal({
-            showCancelButton: true,
-            customClass: {
-              container: 'modal_container is_cancelBtn',
-            },
-            confirmButtonText: '예',
-            title: 'Next Game Start 👉',
-          }).then((result) => {
-            if (result.isConfirmed) {
-              game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
-              swiper.value.$swiper.slideTo(0);
-              setCountSpeed(countSpeed.value);
-              setCountDown(countDown.value);
-            }
-          });
-        }
+      setGameStart() {
+        if (isTimerStart.value) return false;
+        root.$swal({
+          showCancelButton: true,
+          customClass: {
+            container: 'modal_container is_cancelBtn',
+          },
+          confirmButtonText: '예',
+          title: 'Next Game Start 👉',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
+            swiper.value.$swiper.slideTo(0);
+            setCountSpeed(countSpeed.value);
+            setCountDown(countDown.value);
+          }
+        });
       },
       goHome() {
-        if (!isTimerStart.value) {
-          root.$swal({
-            showCancelButton: true,
-            customClass: {
-              container: 'modal_container is_cancelBtn',
-            },
-            confirmButtonText: '예',
-            title: '처음으로 이동하시겠습니까?',
-          }).then((result) => {
-            if (result.isConfirmed) window.location.href = '/game';
-          });
-        }
+        if (isTimerStart.value) return false;
+        root.$swal({
+          showCancelButton: true,
+          customClass: {
+            container: 'modal_container is_cancelBtn',
+          },
+          confirmButtonText: '예',
+          title: '처음으로 이동하시겠습니까?',
+        }).then((result) => {
+          if (result.isConfirmed) window.location.href = '/game';
+        });
       }
     }
 
@@ -129,7 +127,7 @@ export default defineComponent({
 }
 .btn-wrap {
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
   right: 0;
   padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
   z-index: 1;

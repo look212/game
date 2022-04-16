@@ -8,19 +8,30 @@
       <div class="contents">
         <h2>주제 <span v-if="subject.label">({{ subject.label }})</span></h2>
         <div class="btn-wrap">
-          <g-button v-for="(subject, index) in mainInfo.subject"
+          <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
                     :key="`subject_${index}`"
-                    @click="setSubject(subject.value, subject.label)">{{ subject.label }}</g-button>
+                    @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="contents">
-        <h2>모드 <span>({{ liarMode === 'fool' ? '바보' : liarMode === 'spy' ? '스파이' : '기본' }})</span></h2>
+        <h2>제한시간
+          <span v-if="timeLimit">({{ timeLimit }}분)</span>
+        </h2>
         <div class="btn-wrap">
-          <g-button v-for="(option, index) in liarModeList"
+          <g-button v-for="(option, index) in timeLimitList"
                     :is-gray="true"
-                    :key="`liar_${index}`"
-                    @click="setLiarMode(option.value)">{{ option.label }}</g-button>
+                    :key="`time_limit_${index}`"
+                    @click="setTimeLimit(option.value)">{{ option.label }}</g-button>
+        </div>
+      </div>
+      <div class="contents">
+        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
+        <div class="btn-wrap">
+          <g-button v-for="(option, index) in questionNumberList"
+                    :is-gray="true"
+                    :key="`question_${index}`"
+                    @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="footer-btn">
@@ -42,7 +53,7 @@ import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
 
 export default defineComponent({
-  name: 'Liar',
+  name: 'Explain',
   components: {
     GTimer,
     GButton,
@@ -50,20 +61,32 @@ export default defineComponent({
   setup(props, { root }) {
     const {
       game,
+      setTimeLimit,
       setSubject,
-      setLiarMode,
-      liarMode,
+      setQuestionCount,
+      speed,
+      questionCount,
       gameType,
       mainInfo,
       isGameStart,
+      timeLimit,
       subject,
-      liarModeList,
+      timeLimitList,
+      questionNumberList,
     } = gameSetting();
 
     const methods = {
       setGameStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
+          return false;
+        }
+        if (!timeLimit.value) {
+          root.$swal('제한시간을 선택해주세요');
+          return false;
+        }
+        if (!questionCount.value) {
+          root.$swal('문제 갯수를 선택해주세요');
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
@@ -73,14 +96,18 @@ export default defineComponent({
     }
 
     return {
+      setTimeLimit,
       setSubject,
-      setLiarMode,
-      liarMode,
+      setQuestionCount,
+      speed,
+      questionCount,
       gameType,
       mainInfo,
+      timeLimit,
       isGameStart,
       subject,
-      liarModeList,
+      timeLimitList,
+      questionNumberList,
       ...methods,
     }
   }

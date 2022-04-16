@@ -9,7 +9,7 @@ export const mainInfos: IMainInfo[] = [
     `
   },
   {
-    type: 'talk',
+    type: 'complete',
     title: '이어말하기',
     description: `
     <ul>
@@ -18,30 +18,30 @@ export const mainInfos: IMainInfo[] = [
     </ul>
     `,
     subject: [
-      { value: 'proverb', label: '속담'},
-      { value: 'idiom', label: '사자성어'},
-      { value: 'fourLetterVocab', label: '4글자단어'},
+      { value: 'proverb', label: '속담' },
+      { value: 'idiom', label: '사자성어' },
+      { value: 'fourLetterVocab', label: '4글자단어' },
     ]
   },
   {
-    type: 'body',
-    title: '몸으로 말해요',
+    type: 'explain',
+    title: '고요속의 외침',
     description: `
     <ul>
         <li>주제, 제한시간, 문제 갯수를 고르세요.</li>
-        <li>문제를 보고 몸으로 설명하세요.</li>
+        <li>문제를 보고 설명하세요.</li>
         <li>답을 맞추세요.</li>
     </ul>
     `,
     subject: [
-      { value: 'proverb', label: '속담'},
-      { value: 'idiom', label: '사자성어'},
-      { value: 'animal', label: '동물'},
-      { value: 'movie', label: '영화'},
-      { value: 'singer', label: '가수'},
-      { value: 'music', label: '노래'},
-      { value: 'stuff', label: '물건'},
-      { value: 'emotion', label: '감정'},
+      { value: 'proverb', label: '속담' },
+      { value: 'idiom', label: '사자성어' },
+      { value: 'animal', label: '동물' },
+      { value: 'movie', label: '영화' },
+      { value: 'singer', label: '가수' },
+      { value: 'music', label: '노래' },
+      { value: 'stuff', label: '물건' },
+      { value: 'emotion', label: '감정' },
     ]
   },
   {
@@ -55,63 +55,72 @@ export const mainInfos: IMainInfo[] = [
     </ul>
     `,
     subject: [
-      { value: 'animal', label: '동물'},
-      { value: 'singer', label: '가수'},
-      { value: 'music', label: '노래'},
-      { value: 'movie', label: '영화'},
-      { value: 'stuff', label: '물건'},
-      { value: 'celebrity', label: '연예인'},
-      { value: 'appliance', label: '전자제품'},
+      { value: 'animal', label: '동물' },
+      { value: 'singer', label: '가수' },
+      { value: 'music', label: '노래' },
+      { value: 'movie', label: '영화' },
+      { value: 'stuff', label: '물건' },
+      { value: 'celebrity', label: '연예인' },
+      { value: 'appliance', label: '전자제품' },
     ]
   },
   {
-    type: 'fit',
-    title: '맞추기',
+    type: 'photo',
+    title: '인물게임',
     description: `
     <ul>
-        <li>주제를 고르세요.</li>
-        <li>사진 또는 그림을 보거나 노래를 듣고 문제를 맞추세요.</li>
+        <li>사진 또는 그림을 보고 문제를 맞추세요.</li>
+    </ul>
+    `,
+    subject: []
+  },
+  {
+    type: 'listen',
+    title: '듣고 맞추기',
+    description: `
+    <ul>
+        <li>듣고 맞추는 게임입니다.</li>
+        <li>주제를 선택해주세요.</li>
+        <li>문제를 맞추세요</li>
     </ul>
     `,
     subject: [
-      { value: 'singer', label: '가수'},
-      { value: 'celebrity', label: '연예인'},
-      { value: 'music', label: '노래'},
-      { value: 'movie', label: '영화'},
-      { value: 'script', label: '대사'},
-      { value: 'classic', label: '클래식'},
-      { value: 'random', label: '랜덤이미지'},
+      { value: 'music', label: '노래' },
+      { value: 'movie', label: '영화' },
+      { value: 'classic', label: '클래식' },
+      { value: 'animal', label: '동물' },
+      { value: 'stuff', label: '사물' },
     ]
   },
 ]
 
 export const countSpeedList: ISimpleType[] = [
-  { value: 500, label: '0.5s'},
-  { value: 700, label: '0.7s'},
-  { value: 1000, label: '1s'},
+  { value: 500, label: '0.5s' },
+  { value: 700, label: '0.7s' },
+  { value: 1000, label: '1s' },
 ]
 
 export const questionNumberList: ISimpleType[] = [
-  { value: 10, label: '10개'},
-  { value: 20, label: '20개'},
-  { value: 30, label: '30개'},
+  { value: 10, label: '10개' },
+  { value: 20, label: '20개' },
+  { value: 30, label: '30개' },
 ]
 
 export const timeLimitList: ISimpleType[] = [
-  { value: 1, label: '1분'},
-  { value: 2, label: '2분'},
-  { value: 3, label: '3분'},
+  { value: 1, label: '1분' },
+  { value: 2, label: '2분' },
+  { value: 3, label: '3분' },
 ]
 
 export const liarModeList: ISimpleType[] = [
-  { value: 'detault', label: '기본'},
-  { value: 'spy', label: '스파이'},
-  { value: 'fool', label: '바보'},
+  { value: 'detault', label: '기본' },
+  { value: 'spy', label: '스파이' },
+  { value: 'fool', label: '바보' },
 ]
 
 export const countDownList: ISimpleType[] = [
-  { value: 3, label: '3'},
-  { value: 4, label: '4'},
-  { value: 5, label: '5'},
-  { value: 6, label: '6'},
+  { value: 3, label: '3' },
+  { value: 4, label: '4' },
+  { value: 5, label: '5' },
+  { value: 6, label: '6' },
 ]
