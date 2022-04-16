@@ -121,8 +121,7 @@ export default defineComponent({
   position: fixed;
   bottom: 20px;
   right: 0;
-  padding: 20px;
-  padding-bottom: $safeBottomHeight;
+  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
   z-index: 1;
   display: flex;
   button {

@@ -113,7 +113,7 @@ pre {
     bottom: 20px;
     right: 0;
     padding: 20px;
-    padding-bottom: $safeBottomHeight;
+    padding-bottom: calc(#{$safeBottomHeight} + 20px);
     z-index: 10;
   }
   .swiper-button-next {
@@ -152,8 +152,7 @@ q {
   box-sizing: border-box;
   left: 0;
   bottom: 20px;
-  padding: 20px;
-  padding-bottom: $safeBottomHeight;
+  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
   color: #ccc;
   font-weight: 100;
   font-size: 1em;
