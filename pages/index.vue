@@ -3,47 +3,61 @@
     <div class="contents">
       <h1>{{ mainInfo.title }}</h1>
       <div class="menu" v-if="gameType === null">
-        <g-button @click="setGameType('talk')">이어말하기</g-button>
-        <g-button @click="setGameType('body')">몸으로 말해요</g-button>
-        <g-button @click="setGameType('liar')">라이어게임</g-button>
-        <g-button @click="setGameType('fit')">맞추기</g-button>
+        <g-button v-for="(option, index) in mainInfos"
+                  v-if="option.type"
+                  :key="`mainInfos_${index}`"
+                  @click="setGameType(option.type)">{{ option.title }}</g-button>
       </div>
       <div class="description-wrap" v-html="mainInfo.description"/>
       <div class="btn-wrap"
            v-if="gameType !== null">
         <g-button :is-gray="true"
                   @click="setGameType(null)">뒤로</g-button>
-        <g-button @click="$router.push(`/detail/${gameType}`)">시작하기</g-button>
+        <g-button @click="setGameStart()">시작하기</g-button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive, toRefs, onMounted } from '@nuxtjs/composition-api';
+import { defineComponent, computed, ref, useRouter } from '@nuxtjs/composition-api';
 import { useGameStore } from '~/store';
 import GButton from '~/components/_atoms/GButton.vue';
+import { mainInfos } from '~/constants';
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     GButton
   },
-  setup() {
+  setup(props, { root }) {
     const game = useGameStore();
     const gameType = computed(() => game.gameType);
     const mainInfo = computed(() => game.mainInfo);
+    const router = useRouter();
 
+    console.log(router);
     const methods = {
       async setGameType(type: string) {
         await game.setGameType(type);
         await game.setMainInfo(type);
       },
+      async setGameStart() {
+        if (gameType.value === 'photo') {
+          await game.setIsGameStart();
+          await root.$swal('Game Start 😆').then(() => {
+            router.push(`/detail/${gameType.value}`);
+          });
+        } else {
+          await router.push(`/detail/${gameType.value}`);
+        }
+      }
     }
 
     return {
       gameType,
       mainInfo,
+      mainInfos,
       ...methods
     }
   }

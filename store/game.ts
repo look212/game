@@ -27,6 +27,11 @@ export default class Game extends VuexModule {
   remainNumbers: any = [];
 
   @Mutation
+  setIsGameStart() {
+    this.isGameStart = true;
+  }
+
+  @Mutation
   setGameType(option: string) {
     this.gameType = option
   }
@@ -133,10 +138,5 @@ export default class Game extends VuexModule {
     this.selectNumbers.forEach((num: number) => {
       this.gameList.push(totalList[num]);
     });
-  }
-
-  @Mutation
-  setBodyStart() {
-
   }
 }

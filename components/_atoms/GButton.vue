@@ -1,5 +1,9 @@
 <template>
-  <button :class="[{'is-block': isBlock},{'is-gray': isGray}]" @click="handleClick">
+  <button :class="[
+    {'is-block': isBlock},
+    {'is-gray': isGray},
+    {'is-active-action': isActiveAction}
+    ]" @click="handleClick">
     <slot/>
   </button>
 </template>
@@ -14,6 +18,10 @@ export default defineComponent({
       default: false,
     },
     isGray: {
+      type: Boolean,
+      default: false,
+    },
+    isActiveAction: {
       type: Boolean,
       default: false,
     }
@@ -56,6 +64,10 @@ button {
   &.is-gray {
     background: #f0f0f0;
     color: #000;
+  }
+
+  &.is-active-action:active {
+    background-color: #ddd;
   }
 }
 </style>

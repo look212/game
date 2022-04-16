@@ -15,6 +15,17 @@
         </div>
       </div>
       <div class="contents">
+        <h2>제한시간
+          <span v-if="timeLimit">({{ timeLimit }}분)</span>
+        </h2>
+        <div class="btn-wrap">
+          <g-button v-for="(option, index) in timeLimitList"
+                    :is-gray="true"
+                    :key="`time_limit_${index}`"
+                    @click="setTimeLimit(option.value)">{{ option.label }}</g-button>
+        </div>
+      </div>
+      <div class="contents">
         <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in questionNumberList"
@@ -23,40 +34,13 @@
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
-      <div class="contents">
-        <h2>카운트 숫자
-          <span v-if="countDownList.find((option) => option.value === countDown)">
-          ({{ countDownList.find((option) => option.value === countDown).label }})
-        </span>
-        </h2>
-        <div class="btn-wrap">
-          <g-button v-for="(option, index) in countDownList"
-                    :is-gray="true"
-                    :key="`delay_${index}`"
-                    @click="setCountDown(option.value)">{{ option.label }}</g-button>
-        </div>
-      </div>
-      <div class="contents">
-        <h2>카운트 속도
-          <span v-if="countSpeedList.find((option) => option.value === countSpeed)">
-          ({{ countSpeedList.find((option) => option.value === countSpeed).label }})
-        </span>
-        </h2>
-        <div class="btn-wrap">
-          <g-button v-for="(option, index) in countSpeedList"
-                    :is-gray="true"
-                    :key="`delay_${index}`"
-                    @click="setCountSpeed(option.value)">{{ option.label }}</g-button>
-        </div>
-        <g-timer ref="timer"></g-timer>
-      </div>
       <div class="footer-btn">
-        <g-button :is-block="true" @click="setTalkStart">게임 시작하기</g-button>
+        <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
       </div>
     </template>
     <template v-else>
       <div class="contents">
-        <talk></talk>
+
       </div>
     </template>
   </div>
@@ -67,72 +51,62 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
-import talk from '~/components/game/talk.vue';
 
 export default defineComponent({
-  name: 'Talk',
+  name: 'Listen',
   components: {
     GTimer,
     GButton,
-    talk,
   },
   setup(props, { root }) {
     const {
-      timer,
       game,
+      setTimeLimit,
+      setSubject,
+      setQuestionCount,
       speed,
       questionCount,
       gameType,
       mainInfo,
-      countSpeed,
-      countDown,
       isGameStart,
+      timeLimit,
       subject,
-      countSpeedList,
-      countDownList,
+      timeLimitList,
       questionNumberList,
-      setCountSpeed,
-      setCountDown,
-      setSubject,
-      setQuestionCount,
     } = gameSetting();
 
     const methods = {
-      setTalkStart() {
+      setGameStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
+          return false;
+        }
+        if (!timeLimit.value) {
+          root.$swal('제한시간을 선택해주세요');
           return false;
         }
         if (!questionCount.value) {
           root.$swal('문제 갯수를 선택해주세요');
           return false;
         }
-        if (!speed.value) {
-          root.$swal('속도를 선택해주세요');
-          return false;
-        }
         root.$swal('Game Start 😆').then(() => {
-          game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
+          // game.setTalkStart();
         });
       }
     }
 
     return {
-      setCountSpeed,
+      setTimeLimit,
       setSubject,
       setQuestionCount,
-      setCountDown,
-      timer,
       speed,
       questionCount,
       gameType,
       mainInfo,
-      countSpeed,
-      countDown,
+      timeLimit,
       isGameStart,
       subject,
-      countSpeedList,
-      countDownList,
+      timeLimitList,
       questionNumberList,
       ...methods,
     }
@@ -163,7 +137,6 @@ header {
     overflow: hidden;
   }
 }
-
 .contents {
   padding: 20px;
 
@@ -190,7 +163,7 @@ header {
 .footer-btn {
   position: fixed;
   width: 100%;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
   padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
 }

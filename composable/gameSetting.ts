@@ -80,11 +80,10 @@ export default function gameSetting() {
       await game.setLiarMode(value);
     },
     async nextSlide() {
-      if (!isTimerStart.value) {
-        await swiper.value.$swiper.slideNext();
-        data.activeIndex = swiper.value.$swiper.activeIndex;
-        await methods.setCountSpeed(countSpeed.value);
-      }
+      if (isTimerStart.value) return false;
+      await swiper.value.$swiper.slideNext();
+      data.activeIndex = swiper.value.$swiper.activeIndex;
+      await methods.setCountSpeed(countSpeed.value);
     },
   }
 
