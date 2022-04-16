@@ -24,18 +24,31 @@
         </div>
       </div>
       <div class="contents">
-        <h2>속도
-          <span v-if="delayList.find((option) => option.value === countSpeed)">
-          ({{ delayList.find((option) => option.value === countSpeed).label }})
+        <h2>카운트 숫자
+          <span v-if="countDownList.find((option) => option.value === countDown)">
+          ({{ countDownList.find((option) => option.value === countDown).label }})
         </span>
         </h2>
         <div class="btn-wrap">
-          <g-button v-for="(option, index) in delayList"
+          <g-button v-for="(option, index) in countDownList"
+                    :is-gray="true"
+                    :key="`delay_${index}`"
+                    @click="setCountDown(option.value)">{{ option.label }}</g-button>
+        </div>
+      </div>
+      <div class="contents">
+        <h2>카운트 속도
+          <span v-if="countSpeedList.find((option) => option.value === countSpeed)">
+          ({{ countSpeedList.find((option) => option.value === countSpeed).label }})
+        </span>
+        </h2>
+        <div class="btn-wrap">
+          <g-button v-for="(option, index) in countSpeedList"
                     :is-gray="true"
                     :key="`delay_${index}`"
                     @click="setCountSpeed(option.value)">{{ option.label }}</g-button>
         </div>
-        <g-timer ref="timer" :delay="speed"></g-timer>
+        <g-timer ref="timer"></g-timer>
       </div>
       <div class="footer-btn">
         <g-button :is-block="true" @click="setTalkStart">게임 시작하기</g-button>
@@ -72,11 +85,14 @@ export default defineComponent({
       gameType,
       mainInfo,
       countSpeed,
+      countDown,
       isGameStart,
       subject,
-      delayList,
+      countSpeedList,
+      countDownList,
       questionNumberList,
       setCountSpeed,
+      setCountDown,
       setSubject,
       setQuestionCount,
     } = gameSetting();
@@ -105,15 +121,18 @@ export default defineComponent({
       setCountSpeed,
       setSubject,
       setQuestionCount,
+      setCountDown,
       timer,
       speed,
       questionCount,
       gameType,
       mainInfo,
       countSpeed,
+      countDown,
       isGameStart,
       subject,
-      delayList,
+      countSpeedList,
+      countDownList,
       questionNumberList,
       ...methods,
     }

@@ -13,7 +13,7 @@ export const mainInfos: IMainInfo[] = [
     title: '이어말하기',
     description: `
     <ul>
-        <li>주제, 속도, 문제 갯수를 고르세요.</li>
+        <li>주제, 문제 갯수, 카운트 숫자, 카운트 속도를 고르세요.</li>
         <li>문제를 보고 문장 또는 단어를 완성하세요.</li>
     </ul>
     `,
@@ -85,7 +85,7 @@ export const mainInfos: IMainInfo[] = [
   },
 ]
 
-export const delayList: ISimpleType[] = [
+export const countSpeedList: ISimpleType[] = [
   { value: 500, label: '0.5s'},
   { value: 700, label: '0.7s'},
   { value: 1000, label: '1s'},
@@ -107,4 +107,11 @@ export const liarModeList: ISimpleType[] = [
   { value: 'detault', label: '기본'},
   { value: 'spy', label: '스파이'},
   { value: 'fool', label: '바보'},
+]
+
+export const countDownList: ISimpleType[] = [
+  { value: 3, label: '3'},
+  { value: 4, label: '4'},
+  { value: 5, label: '5'},
+  { value: 6, label: '6'},
 ]

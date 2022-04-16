@@ -61,11 +61,11 @@ export const saveGuard = (() => {
   let busy = false;
   let timeout = null;
   return {
-    setGuard: () => {
+    setGuard: (option: number) => {
       busy = true;
       timeout = setTimeout(() => {
         busy = false;
-      }, 1000);
+      }, option);
     },
     isBusy: () => {
       return busy;

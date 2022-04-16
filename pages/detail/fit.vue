@@ -57,7 +57,7 @@ export default defineComponent({
       mainInfo,
       isGameStart,
       subject,
-      delayList,
+      countSpeedList,
       questionNumberList,
     } = gameSetting();
 
@@ -85,7 +85,7 @@ export default defineComponent({
       mainInfo,
       isGameStart,
       subject,
-      delayList,
+      countSpeedList,
       questionNumberList,
       ...methods,
     }
