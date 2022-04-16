@@ -117,7 +117,7 @@ export const proverbList = [
   },
   {
     value: '남의 잔치에 감 놓아라 배 놓아라 한다',
-    masking: '남의 잔치에 감 놓아라',
+    masking: '남의 잔치에',
   },
   {
     value: '낫 놓고 기역 자 모른다',
