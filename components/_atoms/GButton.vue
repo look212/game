@@ -1,15 +1,16 @@
 <template>
-  <button :class="[
-    {'is-block': isBlock},
-    {'is-gray': isGray},
-    {'is-active-action': isActiveAction}
-    ]" @click="handleClick">
+  <button :class="[{'is-block': isBlock},
+      {'is-gray': isGray},
+      {'is-active-action': isActiveAction}]"
+          @click="handleClick"
+          @ontouchstart="handleTouchStart"
+          @ontouchend="handleTouchEnd">
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent, ref } from '@nuxtjs/composition-api';
 export default defineComponent({
   name: 'GButton',
   props: {
@@ -21,19 +22,23 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    isActiveAction: {
-      type: Boolean,
-      default: false,
-    }
   },
   setup(props, { emit }) {
+    const isActiveAction = ref<boolean>(false);
     const methods = {
       handleClick(e: Event) {
         emit('click', e);
+      },
+      handleTouchStart() {
+        isActiveAction.value = true;
+      },
+      handleTouchEnd() {
+        isActiveAction.value = false;
       }
     }
 
     return {
+      isActiveAction,
       ...methods
     }
   }
@@ -66,7 +71,11 @@ button {
     color: #000;
   }
 
-  &.is-active-action:active {
+  &.is-active-action {
+    background-color: #ddd;
+  }
+
+  &:active {
     background-color: #ddd;
   }
 }

@@ -9,7 +9,6 @@
         <h2>주제 <span v-if="subject.label">({{ subject.label }})</span></h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in mainInfo.subject"
-                    :is-active-action="true"
                     :is-gray="true"
                     :key="`subject_${index}`"
                     @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
@@ -19,7 +18,6 @@
         <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in questionNumberList"
-                    :is-active-action="true"
                     :is-gray="true"
                     :key="`question_${index}`"
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
@@ -33,7 +31,6 @@
         </h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in countDownList"
-                    :is-active-action="true"
                     :is-gray="true"
                     :key="`delay_${index}`"
                     @click="setCountDown(option.value)">{{ option.label }}</g-button>
@@ -47,7 +44,6 @@
         </h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in countSpeedList"
-                    :is-active-action="true"
                     :is-gray="true"
                     :key="`delay_${index}`"
                     @click="setCountSpeed(option.value)">{{ option.label }}</g-button>
