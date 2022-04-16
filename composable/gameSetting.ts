@@ -18,7 +18,7 @@ export default function gameSetting() {
   const timer = ref();
   const swiper = ref();
   const data = reactive({
-    delay: 0,
+    speed: 0,
     questionCount,
     gameType,
     mainInfo,
@@ -52,28 +52,26 @@ export default function gameSetting() {
   });
 
   const methods = {
-    setDelay(delay: number) {
-      data.delay = delay;
-      setTimeout(() => {
-        timer.value.countDown(delay);
-      })
-      game.setCountSpeed(delay);
+    async setCountSpeed(option: number) {
+      data.speed = option;
+      await timer.value.countDown(option);
+      await game.setCountSpeed(option);
     },
-    setSubject(value: string, label: string) {
-      game.setSubject({ value, label });
+    async setSubject(value: string, label: string) {
+      await game.setSubject({ value, label });
     },
-    setQuestionCount(value: number) {
-      game.setQuestionCount(value);
+    async setQuestionCount(value: number) {
+      await game.setQuestionCount(value);
     },
-    setTimeLimit(value: number) {
-      game.setTimeLimit(value);
+    async setTimeLimit(value: number) {
+      await game.setTimeLimit(value);
     },
-    setLiarMode(value: string) {
-      game.setLiarMode(value);
+    async setLiarMode(value: string) {
+      await game.setLiarMode(value);
     },
     async slideChange() {
       data.activeIndex = swiper.value.$swiper.activeIndex;
-      await methods.setDelay(countSpeed.value);
+      await methods.setCountSpeed(countSpeed.value);
     },
   }
 

@@ -15,6 +15,15 @@
         </div>
       </div>
       <div class="contents">
+        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
+        <div class="btn-wrap">
+          <g-button v-for="(option, index) in questionNumberList"
+                    :is-gray="true"
+                    :key="`question_${index}`"
+                    @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
+        </div>
+      </div>
+      <div class="contents">
         <h2>속도
           <span v-if="delayList.find((option) => option.value === countSpeed)">
           ({{ delayList.find((option) => option.value === countSpeed).label }})
@@ -24,21 +33,12 @@
           <g-button v-for="(option, index) in delayList"
                     :is-gray="true"
                     :key="`delay_${index}`"
-                    @click="setDelay(option.value)">{{ option.label }}</g-button>
+                    @click="setCountSpeed(option.value)">{{ option.label }}</g-button>
         </div>
-        <g-timer ref="timer" :delay="delay"></g-timer>
-      </div>
-      <div class="contents">
-        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
-        <div class="btn-wrap">
-          <g-button v-for="(option, index) in questionNumberList"
-                    :is-gray="true"
-                    :key="`question_${index}`"
-                    @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
-        </div>
+        <g-timer ref="timer" :delay="speed"></g-timer>
       </div>
       <div class="footer-btn">
-        <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
+        <g-button :is-block="true" @click="setTalkStart">게임 시작하기</g-button>
       </div>
     </template>
     <template v-else>
@@ -67,7 +67,7 @@ export default defineComponent({
     const {
       timer,
       game,
-      delay,
+      speed,
       questionCount,
       gameType,
       mainInfo,
@@ -76,37 +76,37 @@ export default defineComponent({
       subject,
       delayList,
       questionNumberList,
-      setDelay,
+      setCountSpeed,
       setSubject,
       setQuestionCount,
     } = gameSetting();
 
     const methods = {
-      setGameStart() {
+      setTalkStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
-          return false;
-        }
-        if (!delay.value) {
-          root.$swal('속도를 선택해주세요');
           return false;
         }
         if (!questionCount.value) {
           root.$swal('문제 갯수를 선택해주세요');
           return false;
         }
+        if (!speed.value) {
+          root.$swal('속도를 선택해주세요');
+          return false;
+        }
         root.$swal('Game Start 😆').then(() => {
-          game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
+          game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
         });
       }
     }
 
     return {
-      setDelay,
+      setCountSpeed,
       setSubject,
       setQuestionCount,
       timer,
-      delay,
+      speed,
       questionCount,
       gameType,
       mainInfo,

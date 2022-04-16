@@ -15,8 +15,8 @@
         <div class="next-wrap"><div class="swiper-button-next">다음</div></div>
       </swiper>
       <div class="btn-wrap" v-if="gameList.length === (activeIndex + 1)">
-        <g-button @click="setGameStart">이어서 게임 시작하기</g-button>
         <g-button :is-gray="true" @click="goHome">처음으로</g-button>
+        <g-button @click="setTalkStart">이어서 게임 시작하기</g-button>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       slideChange,
-      setDelay,
+      setCountSpeed,
     } = gameSetting();
 
     const data = reactive({
@@ -57,12 +57,12 @@ export default defineComponent({
 
     onMounted(() => {
       setTimeout(() => {
-        setDelay(countSpeed.value);
+        setCountSpeed(countSpeed.value);
       })
     })
 
     const methods = {
-      setGameStart() {
+      setTalkStart() {
         root.$swal({
           showCancelButton: true,
           customClass: {
@@ -70,11 +70,11 @@ export default defineComponent({
           },
           confirmButtonText: '예',
           title: 'Next Game Start 👉',
-        }).then(async (result) => {
+        }).then((result) => {
           if (result.isConfirmed) {
-            game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
+            game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
             swiper.value.$swiper.slideTo(0);
-            setDelay(countSpeed.value);
+            setCountSpeed(countSpeed.value);
           }
         });
       },
@@ -86,7 +86,7 @@ export default defineComponent({
           },
           confirmButtonText: '예',
           title: '처음으로 이동하시겠습니까?',
-        }).then(async (result) => {
+        }).then((result) => {
           if (result.isConfirmed) window.location.href = '/game';
         });
       }
@@ -103,7 +103,7 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       timer,
-      setDelay,
+      setCountSpeed,
       slideChange,
       ...methods,
       ...toRefs(data),

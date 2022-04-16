@@ -1,4 +1,4 @@
-import { Module, VuexModule, Mutation } from 'vuex-module-decorators';
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import { IMainInfo, ISimpleType } from '~/types';
 import { mainInfos } from '~/constants';
 import { setTotalList } from '~/utils/utils';
@@ -56,12 +56,28 @@ export default class Game extends VuexModule {
   setQuestionCount(option: number) {
     this.questionCount = option
   }
+
   @Mutation
-  setGameStart(params: { subject: any, questionCount?: number }) {
+  setTimeLimit(option: number) {
+    this.timeLimit = option;
+  }
+
+  @Mutation
+  setLiarMode(option: string) {
+    this.liarMode = option;
+  }
+
+  /**
+   * 이어말하기 게임 시작
+   * @param subject
+   * @param questionCount
+   */
+  @Mutation
+  setTalkStart(params: { subject: any, questionCount?: number }) {
     const { subject, questionCount } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
-    console.log(totalList);1
+    console.log(totalList);
     let totalLength = totalList.length;
     this.totalNumbers = [];
     this.selectNumbers = [];
@@ -114,12 +130,7 @@ export default class Game extends VuexModule {
   }
 
   @Mutation
-  setTimeLimit(option: number) {
-    this.timeLimit = option;
-  }
+  setBodyStart() {
 
-  @Mutation
-  setLiarMode(option: string) {
-    this.liarMode = option;
   }
 }

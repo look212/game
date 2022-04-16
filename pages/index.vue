@@ -35,9 +35,9 @@ export default defineComponent({
     const mainInfo = computed(() => game.mainInfo);
 
     const methods = {
-      setGameType(type: string) {
-        game.setGameType(type);
-        game.setMainInfo(type);
+      async setGameType(type: string) {
+        await game.setGameType(type);
+        await game.setMainInfo(type);
       },
     }
 

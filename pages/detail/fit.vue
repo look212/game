@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="footer-btn">
-        <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
+        <g-button :is-block="true" @click="setTalkStart">게임 시작하기</g-button>
       </div>
     </template>
     <template v-else>
@@ -62,7 +62,7 @@ export default defineComponent({
     } = gameSetting();
 
     const methods = {
-      setGameStart() {
+      setTalkStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
           return false;
@@ -72,7 +72,7 @@ export default defineComponent({
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          // game.setGameStart();
+          // game.setTalkStart();
         });
       }
     }
