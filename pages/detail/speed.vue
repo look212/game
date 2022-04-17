@@ -53,7 +53,7 @@ import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
 
 export default defineComponent({
-  name: 'Explain',
+  name: 'Speed',
   components: {
     GTimer,
     GButton,
