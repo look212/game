@@ -39,6 +39,10 @@ export default defineComponent({
     console.log(router);
     const methods = {
       async setGameType(type: string) {
+        if (type !== 'complete' && type !== 'photo' && type !== null) {
+          root.$swal('준비중 입니다.');
+          return false;
+        }
         await game.setGameType(type);
         await game.setMainInfo(type);
       },

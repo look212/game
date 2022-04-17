@@ -15,6 +15,7 @@ export const mainInfos: IMainInfo[] = [
     <ul>
         <li>주제, 문제 갯수, 카운트 숫자, 카운트 속도를 고르세요.</li>
         <li>문제를 보고 문장 또는 단어를 완성하세요.</li>
+        <li>동일한 제시어가 나오면 이전에 말한 것과 다른 것을 말해야합니다.</li>
     </ul>
     `,
     subject: [
@@ -24,8 +25,8 @@ export const mainInfos: IMainInfo[] = [
     ]
   },
   {
-    type: 'explain',
-    title: '고요속의 외침',
+    type: 'speed',
+    title: '스피드게임',
     description: `
     <ul>
         <li>주제, 제한시간, 문제 갯수를 고르세요.</li>
@@ -70,6 +71,7 @@ export const mainInfos: IMainInfo[] = [
     description: `
     <ul>
         <li>사진 또는 그림을 보고 문제를 맞추세요.</li>
+        <li>같은 인물의 다른 사진이 나올 수 있으므로 주의하세요.</li>
     </ul>
     `,
     subject: []
