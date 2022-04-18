@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{350:function(e,n,t){"use strict";t.r(n);var c=t(44),r=Object(c.b)({name:"Terms"}),s=t(62),a=Object(s.a)(r,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("이용약관")])}),[],!1,null,"1dedb2f4",null);n.default=a.exports}}]);
