@@ -8,9 +8,9 @@
       <swiper ref="swiper"
               class="custom"
               :options="swiperOptions">
-        <swiper-slide v-for="(game, index) in googleImages" :key="`game_${index}`">
+        <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <p v-if="isTimerStart">
-            <img :src="game">
+            <img :src="game.url">
           </p>
         </swiper-slide>
         <div class="next-wrap" v-if="gameList.length !== (activeIndex + 1)">
@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted, ref } from '@nuxtjs/composition-api';
+import { defineComponent, onMounted } from '@nuxtjs/composition-api';
 import gameSetting from '~/composable/gameSetting';
 import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
@@ -51,31 +51,22 @@ export default defineComponent({
       swiperOptions,
       isTimerStart,
       activeIndex,
-      googleImages,
+      searchImages,
+      giParams,
       nextSlide,
       setCountSpeed,
       setCountDown,
+      setKakaoImage,
+      setGoogleImage,
     } = gameSetting();
 
-    const data = reactive({
-
-    })
-
     onMounted(() => {
-
-      setTimeout(() => {
-        setCountDown(1);
-        setCountSpeed(100000);
-        // game.setGoogleImages(null);
-        // game.getGoogleImageSearch(gameList.value[0].name);
-        try {
-          game.getKakaoImageSearch(gameList.value[0].name);
-        } catch (e) {
-
-        }
-      })
-
-    })
+      setTimeout(async () => {
+        await setCountDown(1);
+        await setCountSpeed(2000);
+        await setGoogleImage(gameList.value[0].name);
+      });
+    });
 
     const methods = {
       setGameStart() {
@@ -87,12 +78,14 @@ export default defineComponent({
           },
           confirmButtonText: '예',
           title: 'Next Game Start 👉',
-        }).then((result) => {
+        }).then(async (result) => {
           if (result.isConfirmed) {
-            game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
-            swiper.value.$swiper.slideTo(0);
-            setCountDown(1);
-            setCountSpeed(100000);
+            await game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
+            activeIndex.value = 0;
+            await setGoogleImage(gameList.value[activeIndex.value].name);
+            await swiper.value.$swiper.slideTo(0);
+            await setCountDown(1);
+            await setCountSpeed(2000);
           }
         });
       },
@@ -108,7 +101,7 @@ export default defineComponent({
         }).then((result) => {
           if (result.isConfirmed) window.location.href = '/game';
         });
-      }
+      },
     }
 
     return {
@@ -123,33 +116,18 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       timer,
-      googleImages,
+      searchImages,
+      giParams,
       setCountSpeed,
       nextSlide,
       setCountDown,
+      setKakaoImage,
+      setGoogleImage,
       ...methods,
-      ...toRefs(data),
     }
   }
 })
 </script>
 
 <style lang="scss" scoped>
-.info p{
-  line-height: 1.2em;
-  color: #999;
-}
-.btn-wrap {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
-  z-index: 1;
-  display: flex;
-  button {
-    + button {
-      margin-left: 10px;
-    }
-  }
-}
 </style>

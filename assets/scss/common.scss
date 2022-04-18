@@ -107,6 +107,10 @@ pre {
 
     p {
       font-size: 2em;
+      img {
+        max-width: 100%;
+        max-height: 500px;
+      }
     }
   }
 
@@ -208,11 +212,6 @@ pre {
     .info p{
       line-height: 1.2em;
       color: #999;
-
-      img {
-        max-width: 100%;
-        max-height: 500px;
-      }
     }
     .btn-wrap {
       position: fixed;

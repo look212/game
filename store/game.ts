@@ -4,6 +4,7 @@ import { mainInfos } from '~/constants';
 import { setTotalList } from '~/utils/utils';
 import Vue from 'vue';
 import { $axios } from '~/utils/api';
+import { AxiosResponse } from 'axios';
 
 @Module({
   name: 'game',
@@ -27,7 +28,7 @@ export default class Game extends VuexModule {
   totalNumbers: any = [];
   remainNumbers: any = [];
   giParams: any = [];
-  googleImages: any = [];
+  searchImages: any = [];
 
   @Mutation
   setIsGameStart() {
@@ -143,42 +144,14 @@ export default class Game extends VuexModule {
     });
   }
 
-  @Action
-  async getGoogleImageSearch(param: string) {
-    console.log(param);
-    this.setGoogleImagesParams(param);
-    const { key, cx, searchType, num, q } = this.giParams;
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&searchType=${searchType}&num=${num}&q=${encodeURIComponent(q)}&c2coff=1&cr=ko&gl=ko&imgType=face&lr=lang_ko`, true);
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            const response = JSON.parse(xhr.response);
-            this.setGoogleImages(response);
-            resolve(response);
-          } else {
-            if (xhr.status === 429) Vue.swal({
-              title: '처음으로 이동하시겠습니까?',
-              html: 'google api 조회 할당량이 초과되어 게임을 진행할 수 없습니다.'
-            }).then(() => window.location.href = '/game');
-            reject();
-          }
-        } else {
-          reject();
-        }
-      }
-      xhr.send();
-    })
+  @Mutation
+  setSearchImages(params: { url: string, index: number }){
+    this.gameList[params.index].url = params.url;
   }
 
   @Mutation
-  setGoogleImages(param: any){
-    if (param === null) {
-      this.googleImages = [];
-    } else {
-      this.googleImages.push(param.items[0].link);
-    }
+  setSearchImagesReset() {
+    this.gameList = [];
   }
 
   @Mutation
@@ -190,25 +163,5 @@ export default class Game extends VuexModule {
       num: 1,
       q: param,
     }
-  }
-
-  @Action
-  async getKakaoImageSearch(param: string) {
-    console.log(param);
-    const kakaoImage = await $axios.get(`https://dapi.kakao.com/v2/search/image?query=${param}&size=1`, { headers: {
-        'Authorization': 'KakaoAK f34e842e06dda695d94790ca99ac845d'
-      } });
-    console.log(kakaoImage);
-    return { kakaoImage }
-
-    // return new Promise((resolve, reject) => {
-    //   const xhr = new XMLHttpRequest();
-    //   xhr.open('GET', `https://dapi.kakao.com/v2/search/image?query=${param}&size=1`, true);
-    //   xhr.onreadystatechange = () => {
-    //     const response = JSON.parse(xhr.response);
-    //     console.log(response);
-    //   }
-    //   xhr.send();
-    // })
   }
 }

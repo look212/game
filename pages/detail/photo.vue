@@ -52,7 +52,7 @@ export default defineComponent({
       subject,
       countSpeedList,
       questionNumberList,
-      googleImages,
+      searchImages,
     } = gameSetting();
 
     const methods = {

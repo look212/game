@@ -16,6 +16,7 @@ export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
   axiosInstance.onError(async (error: AxiosError) => {
     console.error('onError');
     console.dir(error);
+    return Promise.reject(error);
   })
 
   $axios = axiosInstance
