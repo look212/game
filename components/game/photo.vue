@@ -1,15 +1,17 @@
 <template>
   <div class="game-in" v-if="gameList.length > 1">
     <div class="info">
-      <p>{{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
+      <p>{{ activeIndex + 1 }}/{{ questionCount }}</p>
     </div>
     <div class="question-wrap">
       <g-timer ref="timer" class="timer"></g-timer>
       <swiper ref="swiper"
               class="custom"
               :options="swiperOptions">
-        <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
-          <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
+        <swiper-slide v-for="(game, index) in googleImages" :key="`game_${index}`">
+          <p v-if="isTimerStart">
+            <img :src="game">
+          </p>
         </swiper-slide>
         <div class="next-wrap" v-if="gameList.length !== (activeIndex + 1)">
           <g-button @click="nextSlide">다음</g-button>
@@ -30,7 +32,7 @@ import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
 
 export default defineComponent({
-  name: 'ComponentComplete',
+  name: 'ComponentPhoto',
   components: {
     GButton,
     GTimer,
@@ -49,6 +51,7 @@ export default defineComponent({
       swiperOptions,
       isTimerStart,
       activeIndex,
+      googleImages,
       nextSlide,
       setCountSpeed,
       setCountDown,
@@ -59,9 +62,19 @@ export default defineComponent({
     })
 
     onMounted(() => {
+
       setTimeout(() => {
-        setCountSpeed(countSpeed.value);
+        setCountDown(1);
+        setCountSpeed(100000);
+        // game.setGoogleImages(null);
+        // game.getGoogleImageSearch(gameList.value[0].name);
+        try {
+          game.getKakaoImageSearch(gameList.value[0].name);
+        } catch (e) {
+
+        }
       })
+
     })
 
     const methods = {
@@ -78,8 +91,8 @@ export default defineComponent({
           if (result.isConfirmed) {
             game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
             swiper.value.$swiper.slideTo(0);
-            setCountSpeed(countSpeed.value);
-            setCountDown(countDown.value);
+            setCountDown(1);
+            setCountSpeed(100000);
           }
         });
       },
@@ -110,6 +123,7 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       timer,
+      googleImages,
       setCountSpeed,
       nextSlide,
       setCountDown,
@@ -121,4 +135,21 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.info p{
+  line-height: 1.2em;
+  color: #999;
+}
+.btn-wrap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
+  z-index: 1;
+  display: flex;
+  button {
+    + button {
+      margin-left: 10px;
+    }
+  }
+}
 </style>

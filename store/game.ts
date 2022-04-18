@@ -1,8 +1,9 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import { Module, VuexModule, Mutation, MutationAction, Action } from 'vuex-module-decorators';
 import { IMainInfo, ISimpleType } from '~/types';
 import { mainInfos } from '~/constants';
 import { setTotalList } from '~/utils/utils';
 import Vue from 'vue';
+import { $axios } from '~/utils/api';
 
 @Module({
   name: 'game',
@@ -25,6 +26,8 @@ export default class Game extends VuexModule {
   selectNumbers: any = [];
   totalNumbers: any = [];
   remainNumbers: any = [];
+  giParams: any = [];
+  googleImages: any = [];
 
   @Mutation
   setIsGameStart() {
@@ -84,11 +87,11 @@ export default class Game extends VuexModule {
    * @param questionCount
    */
   @Mutation
-  setTalkStart(params: { subject: any, questionCount?: number }) {
+  async setGameStart(params: { subject: any, questionCount?: number }) {
     const { subject, questionCount } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
-    console.log(totalList);
+    console.log('totalList:::', totalList);
     let totalLength = totalList.length;
     this.totalNumbers = [];
     this.selectNumbers = [];
@@ -138,5 +141,74 @@ export default class Game extends VuexModule {
     this.selectNumbers.forEach((num: number) => {
       this.gameList.push(totalList[num]);
     });
+  }
+
+  @Action
+  async getGoogleImageSearch(param: string) {
+    console.log(param);
+    this.setGoogleImagesParams(param);
+    const { key, cx, searchType, num, q } = this.giParams;
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&searchType=${searchType}&num=${num}&q=${encodeURIComponent(q)}&c2coff=1&cr=ko&gl=ko&imgType=face&lr=lang_ko`, true);
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.response);
+            this.setGoogleImages(response);
+            resolve(response);
+          } else {
+            if (xhr.status === 429) Vue.swal({
+              title: '처음으로 이동하시겠습니까?',
+              html: 'google api 조회 할당량이 초과되어 게임을 진행할 수 없습니다.'
+            }).then(() => window.location.href = '/game');
+            reject();
+          }
+        } else {
+          reject();
+        }
+      }
+      xhr.send();
+    })
+  }
+
+  @Mutation
+  setGoogleImages(param: any){
+    if (param === null) {
+      this.googleImages = [];
+    } else {
+      this.googleImages.push(param.items[0].link);
+    }
+  }
+
+  @Mutation
+  setGoogleImagesParams(param: string) {
+    this.giParams = {
+      key: 'AIzaSyDUb83T2nPDoylcZudPoGo28JufTvftFhc',
+      cx: '1ed3b086a03fc3e3e',
+      searchType: 'image',
+      num: 1,
+      q: param,
+    }
+  }
+
+  @Action
+  async getKakaoImageSearch(param: string) {
+    console.log(param);
+    const kakaoImage = await $axios.get(`https://dapi.kakao.com/v2/search/image?query=${param}&size=1`, { headers: {
+        'Authorization': 'KakaoAK f34e842e06dda695d94790ca99ac845d'
+      } });
+    console.log(kakaoImage);
+    return { kakaoImage }
+
+    // return new Promise((resolve, reject) => {
+    //   const xhr = new XMLHttpRequest();
+    //   xhr.open('GET', `https://dapi.kakao.com/v2/search/image?query=${param}&size=1`, true);
+    //   xhr.onreadystatechange = () => {
+    //     const response = JSON.parse(xhr.response);
+    //     console.log(response);
+    //   }
+    //   xhr.send();
+    // })
   }
 }

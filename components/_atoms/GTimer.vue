@@ -1,6 +1,8 @@
 <template>
   <div v-if="isTimerStart" class="timer-wrap">
-    <p :class="{'is-active': isTimerStart}">
+    <p :class="[
+      { 'is-active': isTimerStart },
+      { 'is-hidden': countDownNumber === 1}]">
       {{ initialCount }}
     </p>
   </div>
@@ -18,14 +20,14 @@ export default defineComponent({
     });
     const game = useGameStore();
     const isTimerStart = computed(() => game.isTimerStart);
-    const countDown = computed(() => game.countDown);
+    const countDownNumber = computed(() => game.countDown);
 
     onMounted(() => {
-      data.initialCount = countDown.value;
+      data.initialCount = countDownNumber.value;
     });
 
-    watch(() => countDown.value, (newValue: number) => {
-      data.initialCount = countDown.value;
+    watch(() => countDownNumber.value, (newValue: number) => {
+      data.initialCount = countDownNumber.value;
     })
 
     const methods = {
@@ -38,13 +40,14 @@ export default defineComponent({
           }, speed)
         } else {
           game.setStartTimer(false);
-          data.initialCount = countDown.value;
+          data.initialCount = countDownNumber.value;
         }
       },
     }
 
     return {
       isTimerStart,
+      countDownNumber,
       ...toRefs(data),
       ...methods
     }
@@ -64,6 +67,9 @@ export default defineComponent({
 
     &.is-active {
       color: #ddd;
+    }
+    &.is-hidden {
+      visibility: hidden;
     }
   }
 }

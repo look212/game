@@ -16,6 +16,7 @@ export default function gameSetting() {
   const liarMode = computed(() => game.liarMode);
   const gameList = computed(() => game.gameList);
   const isTimerStart = computed(() => game.isTimerStart);
+  const googleImages = computed(() => game.googleImages);
   const route = useRoute();
   const timer = ref();
   const swiper = ref();
@@ -32,6 +33,7 @@ export default function gameSetting() {
     liarMode,
     gameList,
     isTimerStart,
+    googleImages,
     activeIndex: 0,
     countSpeedList,
     questionNumberList,
@@ -81,8 +83,11 @@ export default function gameSetting() {
     },
     async nextSlide() {
       if (isTimerStart.value) return false;
-      await swiper.value.$swiper.slideNext();
       data.activeIndex = swiper.value.$swiper.activeIndex;
+      await swiper.value.$swiper.slideNext();
+      if (gameType.value === 'photo') {
+        await game.getGoogleImageSearch(gameList.value[data.activeIndex].name);
+      }
       await methods.setCountSpeed(countSpeed.value);
     },
   }

@@ -47,14 +47,7 @@ export default defineComponent({
         await game.setMainInfo(type);
       },
       async setGameStart() {
-        if (gameType.value === 'photo') {
-          await game.setIsGameStart();
-          await root.$swal('Game Start 😆').then(() => {
-            router.push(`/detail/${gameType.value}`);
-          });
-        } else {
-          await router.push(`/detail/${gameType.value}`);
-        }
+        await router.push(`/detail/${gameType.value}`);
       }
     }
 

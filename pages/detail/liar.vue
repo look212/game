@@ -67,7 +67,7 @@ export default defineComponent({
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          // game.setTalkStart();
+          // game.setGameStart();
         });
       }
     }
