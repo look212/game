@@ -1,12 +1,26 @@
 <template>
-  <div>
+  <div class="detail-wrap">
     <header>
       <a href="/game" class="btn__home">home</a>
       <h1>{{ mainInfo.title }}</h1>
     </header>
-    <template v-if="isGameStart">
+    <template v-if="!isGameStart">
       <div class="contents">
-
+        <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
+        <div class="btn-wrap">
+          <g-button v-for="(option, index) in questionNumberList"
+                    :is-gray="true"
+                    :key="`question_${index}`"
+                    @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
+      </div>
+    </template>
+    <template v-else>
+      <div class="contents">
+        <photo></photo>
       </div>
     </template>
   </div>
@@ -17,12 +31,14 @@ import { defineComponent, onMounted } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
+import photo from '~/components/game/photo.vue';
 
 export default defineComponent({
   name: 'Photo',
   components: {
     GTimer,
     GButton,
+    photo,
   },
   setup(props, { root }) {
     const {
@@ -36,12 +52,18 @@ export default defineComponent({
       subject,
       countSpeedList,
       questionNumberList,
+      searchImages,
     } = gameSetting();
 
     const methods = {
       setGameStart() {
+        if (!questionCount.value) {
+          root.$swal('문제 갯수를 선택해주세요');
+          return false;
+        }
+
         root.$swal('Game Start 😆').then(() => {
-          // game.setTalkStart();
+          game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
         });
       }
     }

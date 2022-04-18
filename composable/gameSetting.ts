@@ -2,8 +2,10 @@ import { computed, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/co
 import { countSpeedList, questionNumberList, timeLimitList, liarModeList, countDownList } from '~/constants';
 import { useGameStore } from '~/store';
 import { saveGuard } from '~/utils/utils';
+import { useContext } from '@nuxtjs/composition-api';
 
 export default function gameSetting() {
+  const { $axios } = useContext();
   const game = useGameStore();
   const gameType = computed(() => game.gameType);
   const mainInfo = computed(() => game.mainInfo);
@@ -16,6 +18,8 @@ export default function gameSetting() {
   const liarMode = computed(() => game.liarMode);
   const gameList = computed(() => game.gameList);
   const isTimerStart = computed(() => game.isTimerStart);
+  const giParams = computed(() => game.giParams);
+  const searchImages = computed(() => game.searchImages);
   const route = useRoute();
   const timer = ref();
   const swiper = ref();
@@ -32,6 +36,8 @@ export default function gameSetting() {
     liarMode,
     gameList,
     isTimerStart,
+    searchImages,
+    giParams,
     activeIndex: 0,
     countSpeedList,
     questionNumberList,
@@ -83,8 +89,38 @@ export default function gameSetting() {
       if (isTimerStart.value) return false;
       await swiper.value.$swiper.slideNext();
       data.activeIndex = swiper.value.$swiper.activeIndex;
+      console.log(data.activeIndex);
+      if (gameType.value === 'photo') {
+        await methods.setGoogleImage(gameList.value[data.activeIndex].name);
+      }
       await methods.setCountSpeed(countSpeed.value);
     },
+    async setKakaoImage(params: string) {
+      console.log(params);
+      await $axios.get(
+        `https://dapi.kakao.com/v2/search/image?query=${gameList.value[data.activeIndex].name}&size=1`, {
+          headers: {
+            'Authorization': 'KakaoAK f34e842e06dda695d94790ca99ac845d'
+          }
+        }
+      ).then((response: any) => {
+        console.log('kakao image:::', response.data.documents[0].image_url)
+        game.setSearchImages({ url: response.data.documents[0].image_url, index: data.activeIndex });
+      });
+    },
+    async setGoogleImage(params: string) {
+      console.log(params);
+      game.setGoogleImagesParams(params);
+      const { key, cx, searchType, num, q } = giParams.value;
+      try {
+        await $axios.get(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&searchType=${searchType}&num=${num}&q=${encodeURIComponent(q)}&c2coff=1&cr=ko&gl=ko&imgType=face&lr=lang_ko`).then(async (response: any) => {
+          console.log('google image:::', response.data.items[0].link)
+          game.setSearchImages({ url: response.data.items[0].link, index: data.activeIndex });
+        })
+      } catch (e: any) {
+        await methods.setKakaoImage(gameList.value[data.activeIndex].name);
+      }
+    }
   }
 
   return {

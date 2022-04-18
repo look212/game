@@ -63,6 +63,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'stuff', label: '물건' },
       { value: 'celebrity', label: '연예인' },
       { value: 'appliance', label: '전자제품' },
+      { value: 'company', label: '회사' },
     ]
   },
   {
@@ -70,11 +71,10 @@ export const mainInfos: IMainInfo[] = [
     title: '인물게임',
     description: `
     <ul>
+        <li>문제 갯수를 고르세요.</li>
         <li>사진 또는 그림을 보고 문제를 맞추세요.</li>
-        <li>같은 인물의 다른 사진이 나올 수 있으므로 주의하세요.</li>
     </ul>
     `,
-    subject: []
   },
   {
     type: 'listen',

@@ -1,4 +1,20 @@
-import { proverbList, idiomList, fourLetterVocabList, animalList, movieList, singerList, musicList, stuffList, emotionList, celebrityList, applianceList, scriptList, classicList, animationList } from '~/dummy/data';
+import {
+  proverbList,
+  idiomList,
+  fourLetterVocabList,
+  animalList,
+  movieList,
+  singerList,
+  musicList,
+  stuffList,
+  emotionList,
+  celebrityList,
+  applianceList,
+  scriptList,
+  classicList,
+  animationList,
+  photoList
+} from '~/dummy/data';
 
 /**
  * 문제 주제 선택 후 전체 목록 가져오기
@@ -49,6 +65,8 @@ export const setTotalList = (subject: any) => {
     case 'animation':
       totalList = animationList
       break;
+    case 'photo':
+      totalList = photoList
   }
 
   return { totalList };

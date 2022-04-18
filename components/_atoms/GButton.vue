@@ -73,10 +73,10 @@ button {
 
   &.is-active-action {
     background-color: #ddd;
-  }
 
-  &:active {
-    background-color: #ddd;
+    &:active {
+      background-color: #ddd;
+    }
   }
 }
 </style>

@@ -74,7 +74,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'vue-sweetalert2/nuxt',
+    'vue-sweetalert2/nuxt', '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -99,5 +99,12 @@ export default {
 
   router: {
     base: '/game'
+  },
+
+  compilerOptions: {
+    types: ['@nuxt/types', '@nuxtjs/axios'],
+  },
+  axios: {
+    proxy: false,
   },
 }

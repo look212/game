@@ -115,7 +115,7 @@ export default defineComponent({
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          game.setTalkStart({ subject: subject.value.value, questionCount: questionCount.value });
+          game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
         });
       }
     }
@@ -145,60 +145,4 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.detail-wrap {
-  margin-bottom: 100px;
-}
-header {
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-  padding: 10px;
-
-  h1 {
-    font-size: 1.5em;
-    font-weight: 400;
-  }
-
-  .btn__home {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    @include transform(translateY(-50%));
-    width: 38px; height: 38px;
-    background: $ic-30-common-arrow-left center no-repeat;
-    text-indent: -9999em;
-    overflow: hidden;
-  }
-}
-
-.contents {
-  padding: 20px;
-
-  h2 {
-    font-weight: 400;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-
-    span {
-      display: inline-block;
-      color: #aaa;
-      font-size: .8em;
-    }
-  }
-
-  .btn-wrap {
-    margin: 0 0 0 -10px;
-  }
-  button {
-    margin: 0 0 10px 10px;
-  }
-}
-
-.footer-btn {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  padding: 20px 20px calc(#{$safeBottomHeight} + 20px);
-}
 </style>

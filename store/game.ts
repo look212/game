@@ -1,8 +1,10 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import { Module, VuexModule, Mutation, MutationAction, Action } from 'vuex-module-decorators';
 import { IMainInfo, ISimpleType } from '~/types';
 import { mainInfos } from '~/constants';
 import { setTotalList } from '~/utils/utils';
 import Vue from 'vue';
+import { $axios } from '~/utils/api';
+import { AxiosResponse } from 'axios';
 
 @Module({
   name: 'game',
@@ -25,6 +27,8 @@ export default class Game extends VuexModule {
   selectNumbers: any = [];
   totalNumbers: any = [];
   remainNumbers: any = [];
+  giParams: any = [];
+  searchImages: any = [];
 
   @Mutation
   setIsGameStart() {
@@ -84,11 +88,11 @@ export default class Game extends VuexModule {
    * @param questionCount
    */
   @Mutation
-  setTalkStart(params: { subject: any, questionCount?: number }) {
+  async setGameStart(params: { subject: any, questionCount?: number }) {
     const { subject, questionCount } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
-    console.log(totalList);
+    console.log('totalList:::', totalList);
     let totalLength = totalList.length;
     this.totalNumbers = [];
     this.selectNumbers = [];
@@ -138,5 +142,26 @@ export default class Game extends VuexModule {
     this.selectNumbers.forEach((num: number) => {
       this.gameList.push(totalList[num]);
     });
+  }
+
+  @Mutation
+  setSearchImages(params: { url: string, index: number }){
+    this.gameList[params.index].url = params.url;
+  }
+
+  @Mutation
+  setSearchImagesReset() {
+    this.gameList = [];
+  }
+
+  @Mutation
+  setGoogleImagesParams(param: string) {
+    this.giParams = {
+      key: 'AIzaSyDUb83T2nPDoylcZudPoGo28JufTvftFhc',
+      cx: '1ed3b086a03fc3e3e',
+      searchType: 'image',
+      num: 1,
+      q: param,
+    }
   }
 }

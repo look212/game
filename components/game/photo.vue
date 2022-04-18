@@ -1,7 +1,7 @@
 <template>
   <div class="game-in" v-if="gameList.length > 1">
     <div class="info">
-      <p>{{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
+      <p>{{ activeIndex + 1 }}/{{ questionCount }}</p>
     </div>
     <div class="question-wrap">
       <g-timer ref="timer" class="timer"></g-timer>
@@ -9,7 +9,9 @@
               class="custom"
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
-          <p v-if="isTimerStart">{{ subject.value === 'proverb' ? game.masking : game.value.slice(0,2) }}</p>
+          <p v-if="isTimerStart">
+            <img :src="game.url">
+          </p>
         </swiper-slide>
         <div class="next-wrap" v-if="gameList.length !== (activeIndex + 1)">
           <g-button @click="nextSlide">다음</g-button>
@@ -24,13 +26,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted, ref } from '@nuxtjs/composition-api';
+import { defineComponent, onMounted } from '@nuxtjs/composition-api';
 import gameSetting from '~/composable/gameSetting';
 import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
 
 export default defineComponent({
-  name: 'ComponentComplete',
+  name: 'ComponentPhoto',
   components: {
     GButton,
     GTimer,
@@ -49,20 +51,22 @@ export default defineComponent({
       swiperOptions,
       isTimerStart,
       activeIndex,
+      searchImages,
+      giParams,
       nextSlide,
       setCountSpeed,
       setCountDown,
+      setKakaoImage,
+      setGoogleImage,
     } = gameSetting();
 
-    const data = reactive({
-
-    })
-
     onMounted(() => {
-      setTimeout(() => {
-        setCountSpeed(countSpeed.value);
-      })
-    })
+      setTimeout(async () => {
+        await setCountDown(1);
+        await setCountSpeed(2000);
+        await setGoogleImage(gameList.value[0].name);
+      });
+    });
 
     const methods = {
       setGameStart() {
@@ -74,13 +78,14 @@ export default defineComponent({
           },
           confirmButtonText: '예',
           title: 'Next Game Start 👉',
-        }).then((result) => {
+        }).then(async (result) => {
           if (result.isConfirmed) {
-            game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
+            await game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
             activeIndex.value = 0;
-            swiper.value.$swiper.slideTo(0);
-            setCountSpeed(countSpeed.value);
-            setCountDown(countDown.value);
+            await setGoogleImage(gameList.value[activeIndex.value].name);
+            await swiper.value.$swiper.slideTo(0);
+            await setCountDown(1);
+            await setCountSpeed(2000);
           }
         });
       },
@@ -96,7 +101,7 @@ export default defineComponent({
         }).then((result) => {
           if (result.isConfirmed) window.location.href = '/game';
         });
-      }
+      },
     }
 
     return {
@@ -111,11 +116,14 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       timer,
+      searchImages,
+      giParams,
       setCountSpeed,
       nextSlide,
       setCountDown,
+      setKakaoImage,
+      setGoogleImage,
       ...methods,
-      ...toRefs(data),
     }
   }
 })
