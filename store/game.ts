@@ -21,7 +21,6 @@ export default class Game extends VuexModule {
   isGameStart: boolean = false;
   subject: ISimpleType = { value: '', label: '' }; // 주제
   questionCount: number = 0; // 문제 개수
-  timeLimit: number = 0; // 제한 시간
   liarMode: string = 'default'; // 라이어게임 모드;
   gameList: any = [];
   selectNumbers: any = [];
@@ -70,11 +69,6 @@ export default class Game extends VuexModule {
   @Mutation
   setQuestionCount(option: number) {
     this.questionCount = option
-  }
-
-  @Mutation
-  setTimeLimit(option: number) {
-    this.timeLimit = option;
   }
 
   @Mutation

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="detail-wrap">
     <header>
       <a href="/game" class="btn__home">home</a>
       <h1>{{ mainInfo.title }}</h1>
@@ -12,17 +12,6 @@
                     :is-gray="true"
                     :key="`subject_${index}`"
                     @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
-        </div>
-      </div>
-      <div class="contents">
-        <h2>제한시간
-          <span v-if="timeLimit">({{ timeLimit }}분)</span>
-        </h2>
-        <div class="btn-wrap">
-          <g-button v-for="(option, index) in timeLimitList"
-                    :is-gray="true"
-                    :key="`time_limit_${index}`"
-                    @click="setTimeLimit(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="contents">
@@ -40,7 +29,7 @@
     </template>
     <template v-else>
       <div class="contents">
-
+        <speed></speed>
       </div>
     </template>
   </div>
@@ -51,17 +40,18 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
+import speed from '~/components/game/speed.vue';
 
 export default defineComponent({
   name: 'Speed',
   components: {
     GTimer,
     GButton,
+    speed,
   },
   setup(props, { root }) {
     const {
       game,
-      setTimeLimit,
       setSubject,
       setQuestionCount,
       speed,
@@ -69,9 +59,7 @@ export default defineComponent({
       gameType,
       mainInfo,
       isGameStart,
-      timeLimit,
       subject,
-      timeLimitList,
       questionNumberList,
     } = gameSetting();
 
@@ -81,32 +69,25 @@ export default defineComponent({
           root.$swal('주제를 선택해주세요');
           return false;
         }
-        if (!timeLimit.value) {
-          root.$swal('제한시간을 선택해주세요');
-          return false;
-        }
         if (!questionCount.value) {
           root.$swal('문제 갯수를 선택해주세요');
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          // game.setGameStart();
+          game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
         });
       }
     }
 
     return {
-      setTimeLimit,
       setSubject,
       setQuestionCount,
       speed,
       questionCount,
       gameType,
       mainInfo,
-      timeLimit,
       isGameStart,
       subject,
-      timeLimitList,
       questionNumberList,
       ...methods,
     }

@@ -29,8 +29,9 @@ export const mainInfos: IMainInfo[] = [
     title: '스피드게임',
     description: `
     <ul>
-        <li>주제, 제한시간, 문제 갯수를 고르세요.</li>
-        <li>문제를 보고 설명하세요.</li>
+        <li>주제, 문제 갯수를 고르세요.</li>
+        <li>팀을 나눠 문제 내는 사람과 맞추는 사람을 정하세요.</li>
+        <li>제한시간을 정하고 타이머를 맞추세요.</li>
         <li>답을 맞추세요.</li>
     </ul>
     `,
@@ -57,9 +58,9 @@ export const mainInfos: IMainInfo[] = [
     `,
     subject: [
       { value: 'animal', label: '동물' },
-      { value: 'singer', label: '가수' },
       { value: 'music', label: '노래' },
       { value: 'movie', label: '영화' },
+      { value: 'drama', label: '드라마' },
       { value: 'stuff', label: '물건' },
       { value: 'celebrity', label: '연예인' },
       { value: 'appliance', label: '전자제품' },
@@ -89,6 +90,26 @@ export const mainInfos: IMainInfo[] = [
     subject: [
       { value: 'music', label: '노래' },
       { value: 'movie', label: '영화' },
+      { value: 'drama', label: '드라마' },
+      { value: 'classic', label: '클래식' },
+      { value: 'animal', label: '동물' },
+      { value: 'stuff', label: '사물' },
+    ]
+  },
+  {
+    type: 'look',
+    title: '보고 맞추기',
+    description: `
+    <ul>
+        <li>듣고 맞추는 게임입니다.</li>
+        <li>주제를 선택해주세요.</li>
+        <li>문제를 맞추세요</li>
+    </ul>
+    `,
+    subject: [
+      { value: 'music', label: '노래' },
+      { value: 'movie', label: '영화' },
+      { value: 'drama', label: '드라마' },
       { value: 'classic', label: '클래식' },
       { value: 'animal', label: '동물' },
       { value: 'stuff', label: '사물' },
@@ -106,12 +127,6 @@ export const questionNumberList: ISimpleType[] = [
   { value: 10, label: '10개' },
   { value: 20, label: '20개' },
   { value: 30, label: '30개' },
-]
-
-export const timeLimitList: ISimpleType[] = [
-  { value: 1, label: '1분' },
-  { value: 2, label: '2분' },
-  { value: 3, label: '3분' },
 ]
 
 export const liarModeList: ISimpleType[] = [

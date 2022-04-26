@@ -15,17 +15,6 @@
         </div>
       </div>
       <div class="contents">
-        <h2>제한시간
-          <span v-if="timeLimit">({{ timeLimit }}분)</span>
-        </h2>
-        <div class="btn-wrap">
-          <g-button v-for="(option, index) in timeLimitList"
-                    :is-gray="true"
-                    :key="`time_limit_${index}`"
-                    @click="setTimeLimit(option.value)">{{ option.label }}</g-button>
-        </div>
-      </div>
-      <div class="contents">
         <h2>문제 갯수 <span v-if="questionCount">({{ questionCount }}개)</span></h2>
         <div class="btn-wrap">
           <g-button v-for="(option, index) in questionNumberList"
@@ -61,7 +50,6 @@ export default defineComponent({
   setup(props, { root }) {
     const {
       game,
-      setTimeLimit,
       setSubject,
       setQuestionCount,
       speed,
@@ -69,9 +57,7 @@ export default defineComponent({
       gameType,
       mainInfo,
       isGameStart,
-      timeLimit,
       subject,
-      timeLimitList,
       questionNumberList,
     } = gameSetting();
 
@@ -79,10 +65,6 @@ export default defineComponent({
       setGameStart() {
         if (!subject.value.value) {
           root.$swal('주제를 선택해주세요');
-          return false;
-        }
-        if (!timeLimit.value) {
-          root.$swal('제한시간을 선택해주세요');
           return false;
         }
         if (!questionCount.value) {
@@ -96,17 +78,14 @@ export default defineComponent({
     }
 
     return {
-      setTimeLimit,
       setSubject,
       setQuestionCount,
       speed,
       questionCount,
       gameType,
       mainInfo,
-      timeLimit,
       isGameStart,
       subject,
-      timeLimitList,
       questionNumberList,
       ...methods,
     }
