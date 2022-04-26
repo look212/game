@@ -1,5 +1,5 @@
 import { computed, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/composition-api';
-import { countSpeedList, questionNumberList, timeLimitList, liarModeList, countDownList } from '~/constants';
+import { countSpeedList, questionNumberList, liarModeList, countDownList } from '~/constants';
 import { useGameStore } from '~/store';
 import { saveGuard } from '~/utils/utils';
 import { useContext } from '@nuxtjs/composition-api';
@@ -14,7 +14,6 @@ export default function gameSetting() {
   const countDown = computed(() => game.countDown);
   const questionCount = computed(() => game.questionCount);
   const isGameStart = computed(() => game.isGameStart);
-  const timeLimit = computed(() => game.timeLimit);
   const liarMode = computed(() => game.liarMode);
   const gameList = computed(() => game.gameList);
   const isTimerStart = computed(() => game.isTimerStart);
@@ -32,7 +31,6 @@ export default function gameSetting() {
     countDown,
     isGameStart,
     subject,
-    timeLimit,
     liarMode,
     gameList,
     isTimerStart,
@@ -41,7 +39,6 @@ export default function gameSetting() {
     activeIndex: 0,
     countSpeedList,
     questionNumberList,
-    timeLimitList,
     liarModeList,
     countDownList,
     swiperOptions: {
@@ -79,9 +76,6 @@ export default function gameSetting() {
     async setQuestionCount(value: number) {
       await game.setQuestionCount(value);
     },
-    async setTimeLimit(value: number) {
-      await game.setTimeLimit(value);
-    },
     async setLiarMode(value: string) {
       await game.setLiarMode(value);
     },
@@ -90,15 +84,13 @@ export default function gameSetting() {
       await swiper.value.$swiper.slideNext();
       data.activeIndex = swiper.value.$swiper.activeIndex;
       console.log(data.activeIndex);
-      if (gameType.value === 'photo') {
-        await methods.setGoogleImage(gameList.value[data.activeIndex].name);
-      }
-      await methods.setCountSpeed(countSpeed.value);
+      if (gameType.value === 'photo') await methods.setGoogleImage(gameList.value[data.activeIndex].value);
+      if (gameType.value === 'complete' || gameType.value === 'photo') await methods.setCountSpeed(countSpeed.value);
     },
     async setKakaoImage(params: string) {
       console.log(params);
       await $axios.get(
-        `https://dapi.kakao.com/v2/search/image?query=${gameList.value[data.activeIndex].name}&size=1`, {
+        `https://dapi.kakao.com/v2/search/image?query=${gameList.value[data.activeIndex].value}&size=1`, {
           headers: {
             'Authorization': 'KakaoAK f34e842e06dda695d94790ca99ac845d'
           }
@@ -118,7 +110,7 @@ export default function gameSetting() {
           game.setSearchImages({ url: response.data.items[0].link, index: data.activeIndex });
         })
       } catch (e: any) {
-        await methods.setKakaoImage(gameList.value[data.activeIndex].name);
+        await methods.setKakaoImage(gameList.value[data.activeIndex].value);
       }
     }
   }

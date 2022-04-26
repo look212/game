@@ -4,16 +4,13 @@ import {
   fourLetterVocabList,
   animalList,
   movieList,
-  singerList,
   musicList,
   stuffList,
   emotionList,
-  celebrityList,
   applianceList,
-  scriptList,
   classicList,
-  animationList,
-  photoList
+  photoList,
+  foodList,
 } from '~/dummy/data';
 
 /**
@@ -38,11 +35,15 @@ export const setTotalList = (subject: any) => {
     case 'movie':
       totalList = movieList
       break;
-    case 'singer':
-      totalList = singerList
-      break;
     case 'music':
-      totalList = musicList
+      totalList = musicList.map((music) => {
+        return { value: music.music, youtube_id: music.youtube_id }
+      })
+      break;
+    case 'singer':
+      totalList = totalList = musicList.map((music) => {
+        return { value: music.singer }
+      })
       break;
     case 'stuff':
       totalList = stuffList
@@ -50,23 +51,16 @@ export const setTotalList = (subject: any) => {
     case 'emotion':
       totalList = emotionList
       break;
-    case 'celebrity':
-      totalList = celebrityList
-      break;
     case 'appliance':
       totalList = applianceList
-      break;
-    case 'script':
-      totalList = scriptList
       break;
     case 'classic':
       totalList = classicList
       break;
-    case 'animation':
-      totalList = animationList
-      break;
     case 'photo':
       totalList = photoList
+    case 'food':
+      totalList = foodList
   }
 
   return { totalList };
