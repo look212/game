@@ -59,8 +59,10 @@ export const setTotalList = (subject: any) => {
       break;
     case 'photo':
       totalList = photoList
+      break;
     case 'food':
       totalList = foodList
+      break;
   }
 
   return { totalList };
@@ -84,3 +86,37 @@ export const saveGuard = (() => {
     }
   }
 })();
+
+export const getRandom = ((min: number, max: number) => {
+  return Math.floor((Math.random() * (max - min + 1)) + min);
+})
+
+export const getRandomArray = ((min: number, max: number, count: number) => {
+  // 종료
+  if (max - min + 1 < count) return;
+
+  // 배열 생성
+  var rst = [];
+
+  while (1) {
+    var index = getRandom(min, max);
+
+    // 중복 여부를 체크
+    if (rst.indexOf(index) > -1) {
+      continue;
+    }
+
+    rst.push(index);
+
+    // 원하는 배열 갯수가 되면 종료
+    if (rst.length == count) {
+      break;
+    }
+  }
+
+  return rst;
+  // 정렬
+  // return rst.sort(function (a, b) {
+  //   return a - b;
+  // });
+})
