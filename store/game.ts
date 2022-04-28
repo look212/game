@@ -119,7 +119,7 @@ export default class Game extends VuexModule {
     // 문제 갯수만큼의 랜덤 선택 숫자 배열
     if (questionCount && this.selectNumbers.length < questionCount) {
       for (let i = 0; i < questionCount; i++) {
-        const newNumb = getRandom(0, remainLength);
+        const newNumb = getRandom(0, remainLength - 1);
         if (!this.selectNumbers.find((num: any) => num === this.remainNumbers[newNumb])) {
           this.selectNumbers.push(this.remainNumbers[newNumb]);
         }
@@ -148,7 +148,7 @@ export default class Game extends VuexModule {
 
       this.liar.participants = [ ...arr ];
 
-      let liarArr = getRandomArray(0, participants, 2);
+      let liarArr = getRandomArray(0, participants - 1, 2);
       let copyLiarArr = liarArr ?? [];
 
       this.liar.liar = copyLiarArr[0];
@@ -182,14 +182,5 @@ export default class Game extends VuexModule {
       num: 1,
       q: param,
     }
-  }
-
-  @Mutation
-  setLiarStart(params: { participants: number, mode: string }) {
-    this.isGameStart = true;
-    this.participants = params.participants;
-    this.liarMode = params.mode;
-    let totalList = setTotalList(this.subject).totalList;
-    console.log('totalList:::', totalList);
   }
 }
