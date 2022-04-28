@@ -71,7 +71,6 @@ export const mainInfos: IMainInfo[] = [
       { value: 'stuff', label: '물건' },
       { value: 'photo', label: '인물' },
       { value: 'appliance', label: '전자제품' },
-      { value: 'company', label: '회사' },
     ]
   },
   {

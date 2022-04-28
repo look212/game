@@ -3,6 +3,7 @@ import { countSpeedList, questionNumberList, liarModeList, countDownList } from 
 import { useGameStore, useAppStore } from '~/store';
 import { saveGuard } from '~/utils/utils';
 import { useContext } from '@nuxtjs/composition-api';
+import Vue from 'vue';
 
 export default function gameSetting() {
   const { $axios } = useContext();
@@ -83,6 +84,10 @@ export default function gameSetting() {
     },
     async nextSlide() {
       if (isTimerStart.value) return false;
+      if (gameType.value === 'liar' && data.isShow) {
+        Vue.swal('확인 후 다음을 눌러주세요.');
+        return false;
+      }
       await swiper.value.$swiper.slideNext();
       data.isShow = true;
       data.activeIndex = swiper.value.$swiper.activeIndex;
