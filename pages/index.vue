@@ -36,10 +36,9 @@ export default defineComponent({
     const mainInfo = computed(() => game.mainInfo);
     const router = useRouter();
 
-    console.log(router);
     const methods = {
       async setGameType(type: string) {
-        if (type !== 'complete' && type !== 'photo' && type !== 'speed' && type !== null) {
+        if (type === 'listen' || type === 'look') {
           root.$swal('준비중 입니다.');
           return false;
         }

@@ -1,7 +1,7 @@
 import { Module, VuexModule, Mutation, MutationAction, Action } from 'vuex-module-decorators';
 import { IMainInfo, ISimpleType } from '~/types';
 import { mainInfos } from '~/constants';
-import { setTotalList } from '~/utils/utils';
+import { getRandom, getRandomArray, setTotalList } from '~/utils/utils';
 import Vue from 'vue';
 import { $axios } from '~/utils/api';
 import { AxiosResponse } from 'axios';
@@ -27,12 +27,8 @@ export default class Game extends VuexModule {
   totalNumbers: any = [];
   remainNumbers: any = [];
   giParams: any = [];
-  searchImages: any = [];
-
-  @Mutation
-  setIsGameStart() {
-    this.isGameStart = true;
-  }
+  participants: number = 3;
+  liar: any = { participants: [], liar: 0, spy: 0, quiz: '' };
 
   @Mutation
   setGameType(option: string) {
@@ -62,6 +58,7 @@ export default class Game extends VuexModule {
 
   @Mutation
   setSubject(params: { value: string, label: string }) {
+    console.log('setSubject:::', params)
     this.subject.value = params.value;
     this.subject.label = params.label;
   }
@@ -77,13 +74,14 @@ export default class Game extends VuexModule {
   }
 
   /**
-   * 이어말하기 게임 시작
+   * 게임 시작
    * @param subject
    * @param questionCount
    */
   @Mutation
-  async setGameStart(params: { subject: any, questionCount?: number }) {
-    const { subject, questionCount } = params;
+  async setGameStart(params: { subject: any, questionCount?: number, participants?: number, mode?: string }) {
+    console.log(params);
+    const { subject, questionCount, participants, mode } = params;
     this.isGameStart = true;
     let totalList = setTotalList(subject).totalList;
     console.log('totalList:::', totalList);
@@ -91,6 +89,8 @@ export default class Game extends VuexModule {
     this.totalNumbers = [];
     this.selectNumbers = [];
     this.gameList = [];
+    this.participants = participants ?? 3;
+    this.liarMode = mode ?? 'default';
 
     // 선택된 주제 전체 숫자 배열
     for (let j = 0; j < totalLength; j++) {
@@ -119,7 +119,7 @@ export default class Game extends VuexModule {
     // 문제 갯수만큼의 랜덤 선택 숫자 배열
     if (questionCount && this.selectNumbers.length < questionCount) {
       for (let i = 0; i < questionCount; i++) {
-        const newNumb = Math.floor(Math.random() * remainLength + 1);
+        const newNumb = getRandom(0, remainLength);
         if (!this.selectNumbers.find((num: any) => num === this.remainNumbers[newNumb])) {
           this.selectNumbers.push(this.remainNumbers[newNumb]);
         }
@@ -136,6 +136,31 @@ export default class Game extends VuexModule {
     this.selectNumbers.forEach((num: number) => {
       this.gameList.push(totalList[num]);
     });
+
+    console.log('gameList::: ', this.gameList);
+
+    // 라이어 게임 세팅
+    if (participants) {
+      let arr = [];
+      for(let i = 0; i < participants ; i++) {
+        arr.push(i);
+      }
+
+      this.liar.participants = [ ...arr ];
+
+      let liarArr = getRandomArray(0, participants, 2);
+      let copyLiarArr = liarArr ?? [];
+
+      this.liar.liar = copyLiarArr[0];
+      this.liar.spy = copyLiarArr[1];
+
+      // 라이어 정답
+      const quizNum = getRandomArray(0, 15, 2)
+
+      this.liar.quiz = quizNum ?? [];
+
+      console.log('liar::: ', this.liar);
+    }
   }
 
   @Mutation
@@ -157,5 +182,14 @@ export default class Game extends VuexModule {
       num: 1,
       q: param,
     }
+  }
+
+  @Mutation
+  setLiarStart(params: { participants: number, mode: string }) {
+    this.isGameStart = true;
+    this.participants = params.participants;
+    this.liarMode = params.mode;
+    let totalList = setTotalList(this.subject).totalList;
+    console.log('totalList:::', totalList);
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="detail-wrap">
     <header>
       <a href="/game" class="btn__home">home</a>
       <h1>{{ mainInfo.title }}</h1>
@@ -23,22 +23,29 @@
                     @click="setLiarMode(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
+      <div class="contents">
+        <h2>참여 인원 <span>({{ parties }}명)</span></h2>
+        <div class="range-wrap">
+          <input type="range" v-model="parties" :min="3" :max="10">
+        </div>
+      </div>
       <div class="footer-btn">
         <g-button :is-block="true" @click="setGameStart">게임 시작하기</g-button>
       </div>
     </template>
     <template v-else>
       <div class="contents">
-
+        <liar></liar>
       </div>
     </template>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent, ref, toRefs, reactive } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
+import liar from '~/components/game/liar.vue';
 import gameSetting from '~/composable/gameSetting';
 
 export default defineComponent({
@@ -46,6 +53,7 @@ export default defineComponent({
   components: {
     GTimer,
     GButton,
+    liar,
   },
   setup(props, { root }) {
     const {
@@ -58,16 +66,21 @@ export default defineComponent({
       isGameStart,
       subject,
       liarModeList,
+      participants,
     } = gameSetting();
+    const data = reactive({
+      parties: 3,
+      // isGameStart: false,
+    });
 
     const methods = {
       setGameStart() {
-        if (!subject.value.value) {
-          root.$swal('주제를 선택해주세요');
-          return false;
-        }
+        // if (!subject.value.value) {
+        //   root.$swal('주제를 선택해주세요');
+        //   return false;
+        // }
         root.$swal('Game Start 😆').then(() => {
-          // game.setGameStart();
+          game.setGameStart({ subject: subject.value.value, participants: Number(data.parties), mode: liarMode.value, questionCount: 16 });
         });
       }
     }
@@ -78,10 +91,12 @@ export default defineComponent({
       liarMode,
       gameType,
       mainInfo,
-      isGameStart,
       subject,
       liarModeList,
+      participants,
+      isGameStart,
       ...methods,
+      ...toRefs(data),
     }
   }
 })
@@ -128,6 +143,7 @@ header {
   .btn-wrap {
     margin: 0 0 0 -10px;
   }
+
   button {
     margin: 0 0 10px 10px;
   }

@@ -52,7 +52,14 @@ export const mainInfos: IMainInfo[] = [
     description: `
     <ul>
         <li>주제를 고르세요.</li>
-        <li>모드를 고르세요.(일반, 스파이, 바보)</li>
+        <li>모드를 고르세요.(기본, 스파이, 바보)
+            <ul>
+                <li>기본모드: 제시어를 모르는 라이어 1명</li>
+                <li>스파이모드: 라이어 1명, 제시어 아는 스파이 1명</li>
+                <li>바보모드: 다른 제시어를 받지만 스스로도 라이어인지 모르는 바보 1명</li>
+            </ul>
+        </li>
+        <li>게임에 참여하는 인원을 입력하세요.</li>
         <li>라이어게임을 즐기세요.</li>
     </ul>
     `,
@@ -62,7 +69,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'movie', label: '영화' },
       { value: 'drama', label: '드라마' },
       { value: 'stuff', label: '물건' },
-      { value: 'celebrity', label: '연예인' },
+      { value: 'photo', label: '인물' },
       { value: 'appliance', label: '전자제품' },
       { value: 'company', label: '회사' },
     ]

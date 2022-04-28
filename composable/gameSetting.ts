@@ -1,12 +1,13 @@
 import { computed, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/composition-api';
 import { countSpeedList, questionNumberList, liarModeList, countDownList } from '~/constants';
-import { useGameStore } from '~/store';
+import { useGameStore, useAppStore } from '~/store';
 import { saveGuard } from '~/utils/utils';
 import { useContext } from '@nuxtjs/composition-api';
 
 export default function gameSetting() {
   const { $axios } = useContext();
   const game = useGameStore();
+  const app = useAppStore();
   const gameType = computed(() => game.gameType);
   const mainInfo = computed(() => game.mainInfo);
   const subject = computed(() => game.subject);
@@ -18,7 +19,7 @@ export default function gameSetting() {
   const gameList = computed(() => game.gameList);
   const isTimerStart = computed(() => game.isTimerStart);
   const giParams = computed(() => game.giParams);
-  const searchImages = computed(() => game.searchImages);
+  const participants = computed(() => game.participants);
   const route = useRoute();
   const timer = ref();
   const swiper = ref();
@@ -34,8 +35,9 @@ export default function gameSetting() {
     liarMode,
     gameList,
     isTimerStart,
-    searchImages,
     giParams,
+    participants,
+    isShow: true,
     activeIndex: 0,
     countSpeedList,
     questionNumberList,
@@ -82,6 +84,7 @@ export default function gameSetting() {
     async nextSlide() {
       if (isTimerStart.value) return false;
       await swiper.value.$swiper.slideNext();
+      data.isShow = true;
       data.activeIndex = swiper.value.$swiper.activeIndex;
       console.log(data.activeIndex);
       if (gameType.value === 'photo') await methods.setGoogleImage(gameList.value[data.activeIndex].value);
