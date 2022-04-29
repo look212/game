@@ -149,6 +149,29 @@ pre {
     @include transform(translateX(-50%));
     z-index: 10;
   }
+  .shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    width: 90vw;
+    height: 55vh;
+    background-color: $Gray25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+
+    p {
+      span {
+        font-size: 2em;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      font-size: 1.5em;
+    }
+  }
 }
 
 .detail-wrap {

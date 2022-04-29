@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-wrap">
+  <div>
     <header>
       <a href="/game" class="btn__home">home</a>
       <h1>{{ mainInfo.title }}</h1>
@@ -11,7 +11,6 @@
           <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
                     :key="`subject_${index}`"
-                    :class="{ 'is-active': subject.value === option.value }"
                     @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
         </div>
       </div>
@@ -21,7 +20,6 @@
           <g-button v-for="(option, index) in questionNumberList"
                     :is-gray="true"
                     :key="`question_${index}`"
-                    :class="{ 'is-active': questionCount === option.value }"
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
@@ -31,7 +29,7 @@
     </template>
     <template v-else>
       <div class="contents">
-        <speed></speed>
+        <music></music>
       </div>
     </template>
   </div>
@@ -42,14 +40,14 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
-import speed from '~/components/game/speed.vue';
+import music from '~/components/game/music.vue';
 
 export default defineComponent({
-  name: 'Speed',
+  name: 'Drama',
   components: {
     GTimer,
     GButton,
-    speed,
+    music,
   },
   setup(props, { root }) {
     const {

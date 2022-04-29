@@ -169,11 +169,6 @@ export default class Game extends VuexModule {
   }
 
   @Mutation
-  setSearchImagesReset() {
-    this.gameList = [];
-  }
-
-  @Mutation
   setGoogleImagesParams(param: string) {
     this.giParams = {
       key: 'AIzaSyDUb83T2nPDoylcZudPoGo28JufTvftFhc',

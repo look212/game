@@ -84,41 +84,33 @@ export const mainInfos: IMainInfo[] = [
     `,
   },
   {
-    type: 'listen',
-    title: '듣고 맞추기',
+    type: 'music',
+    title: '노래 맞추기',
     description: `
     <ul>
-        <li>듣고 맞추는 게임입니다.</li>
-        <li>주제를 선택해주세요.</li>
-        <li>문제를 맞추세요</li>
+        <li>주제를 고르세요.</li>
+        <li>문제 갯수를 고르세요.</li>
+        <li>노래를 듣고 맞추세요.</li>
     </ul>
     `,
     subject: [
-      { value: 'music', label: '노래' },
-      { value: 'movie', label: '영화' },
-      { value: 'drama', label: '드라마' },
+      { value: 'music', label: '가요' },
       { value: 'classic', label: '클래식' },
-      { value: 'animal', label: '동물' },
-      { value: 'stuff', label: '사물' },
     ]
   },
   {
-    type: 'look',
-    title: '보고 맞추기',
+    type: 'drama',
+    title: '영화 & 드라마',
     description: `
     <ul>
-        <li>듣고 맞추는 게임입니다.</li>
-        <li>주제를 선택해주세요.</li>
-        <li>문제를 맞추세요</li>
+        <li>주제를 고르세요.</li>
+        <li>문제 갯수를 고르세요.</li>
+        <li>스샷을 보고 대사 또는 제목을 맞추세요.</li>
     </ul>
     `,
     subject: [
-      { value: 'music', label: '노래' },
       { value: 'movie', label: '영화' },
       { value: 'drama', label: '드라마' },
-      { value: 'classic', label: '클래식' },
-      { value: 'animal', label: '동물' },
-      { value: 'stuff', label: '사물' },
     ]
   },
 ]

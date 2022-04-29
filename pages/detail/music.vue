@@ -29,7 +29,7 @@
     </template>
     <template v-else>
       <div class="contents">
-
+        <music></music>
       </div>
     </template>
   </div>
@@ -40,12 +40,14 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
+import music from '~/components/game/music.vue';
 
 export default defineComponent({
-  name: 'Listen',
+  name: 'Music',
   components: {
     GTimer,
     GButton,
+    music,
   },
   setup(props, { root }) {
     const {
@@ -72,7 +74,7 @@ export default defineComponent({
           return false;
         }
         root.$swal('Game Start 😆').then(() => {
-          // game.setGameStart();
+          game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
         });
       }
     }

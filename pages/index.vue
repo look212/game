@@ -38,7 +38,7 @@ export default defineComponent({
 
     const methods = {
       async setGameType(type: string) {
-        if (type === 'listen' || type === 'look') {
+        if (type === 'drama') {
           root.$swal('준비중 입니다.');
           return false;
         }

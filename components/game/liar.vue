@@ -87,6 +87,7 @@ export default defineComponent({
       activeIndex,
       isShow,
       nextSlide,
+      setIsShow,
     } = gameSetting();
 
     const data = reactive({
@@ -95,9 +96,6 @@ export default defineComponent({
     })
 
     const methods = {
-      setIsShow() {
-        isShow.value = false;
-      },
       endLiar() {
         data.isEndLiar = true;
       },
@@ -141,6 +139,7 @@ export default defineComponent({
       activeIndex,
       isShow,
       nextSlide,
+      setIsShow,
       ...methods,
       ...toRefs(data),
     }
@@ -150,26 +149,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .question-wrap {
-  .shadow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include transform(translate(-50%, -50%));
-    width: 90vw;
-    height: 50vh;
-    background-color: $Gray25;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-      span {
-        font-size: 2em;
-        display: inline-block;
-        margin-bottom: 20px;
-      }
-      font-size: 1.5em;
-    }
-  }
   .swiper-slide {
     p {
       line-height: 1.4em;

@@ -11,6 +11,7 @@
           <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
                     :key="`subject_${index}`"
+                    :class="{ 'is-active': subject.value === option.value }"
                     @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
         </div>
       </div>
@@ -20,6 +21,7 @@
           <g-button v-for="(option, index) in questionNumberList"
                     :is-gray="true"
                     :key="`question_${index}`"
+                    :class="{ 'is-active': questionCount === option.value }"
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
@@ -33,6 +35,7 @@
           <g-button v-for="(option, index) in countDownList"
                     :is-gray="true"
                     :key="`delay_${index}`"
+                    :class="{ 'is-active': countDown === option.value }"
                     @click="setCountDown(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
@@ -46,6 +49,7 @@
           <g-button v-for="(option, index) in countSpeedList"
                     :is-gray="true"
                     :key="`delay_${index}`"
+                    :class="{ 'is-active': countSpeed === option.value }"
                     @click="setCountSpeed(option.value)">{{ option.label }}</g-button>
         </div>
         <g-timer ref="timer"></g-timer>

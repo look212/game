@@ -11,6 +11,7 @@
           <g-button v-for="(option, index) in questionNumberList"
                     :is-gray="true"
                     :key="`question_${index}`"
+                    :class="{ 'is-active': questionCount === option.value }"
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
         </div>
       </div>
