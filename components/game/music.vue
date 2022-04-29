@@ -20,10 +20,11 @@
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <div v-if="index === activeIndex">
-            <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.singer}} - {{ game.value }}</p>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.singer || game.composer }} - {{ game.value }}</p>
             <client-only>
               <youtube :video-id="game.youtube_id"
                        player-width="100%"
+                       player-height="56.25%"
                        @ready="ready"
                        @playing="playing($event, type)"></youtube>
             </client-only>
