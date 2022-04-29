@@ -1,7 +1,6 @@
 <template>
   <button :class="[{'is-block': isBlock},
-      {'is-gray': isGray},
-      {'is-active-action': isActiveAction}]"
+      {'is-gray': isGray}]"
           @click="handleClick"
           @ontouchstart="handleTouchStart"
           @ontouchend="handleTouchEnd">
@@ -58,6 +57,7 @@ button {
   font-weight: bold;
   font-size: 1.2em;
   outline: none;
+  border: 1px solid transparent;
 
   &.is-block {
     display: block;
@@ -71,12 +71,9 @@ button {
     color: #000;
   }
 
-  &.is-active-action {
-    background-color: #ddd;
-
-    &:active {
-      background-color: #ddd;
-    }
+  &.is-active {
+    background: $Gray00;
+    border-color: $Gray90;
   }
 }
 </style>

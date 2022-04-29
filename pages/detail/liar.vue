@@ -8,10 +8,11 @@
       <div class="contents">
         <h2>주제 <span v-if="subject.label">({{ subject.label }})</span></h2>
         <div class="btn-wrap">
-          <g-button v-for="(subject, index) in mainInfo.subject"
+          <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
                     :key="`subject_${index}`"
-                    @click="setSubject(subject.value, subject.label)">{{ subject.label }}</g-button>
+                    :class="{ 'is-active': subject.value === option.value }"
+                    @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
         </div>
       </div>
       <div class="contents">
@@ -20,6 +21,7 @@
           <g-button v-for="(option, index) in liarModeList"
                     :is-gray="true"
                     :key="`liar_${index}`"
+                    :class="{ 'is-active': liarMode === option.value }"
                     @click="setLiarMode(option.value)">{{ option.label }}</g-button>
         </div>
       </div>

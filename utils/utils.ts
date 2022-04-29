@@ -37,12 +37,15 @@ export const setTotalList = (subject: any) => {
       break;
     case 'music':
       totalList = musicList.map((music) => {
-        return { value: music.music, youtube_id: music.youtube_id }
+        return { value: music.music, singer: music.singer, youtube_id: music.youtube_id }
       })
       break;
     case 'singer':
-      totalList = totalList = musicList.map((music) => {
+      const arr = musicList.map((music) => {
         return { value: music.singer }
+      })
+      totalList = arr.filter((el: any, index: number) => {
+        return arr.indexOf(el) === index;
       })
       break;
     case 'stuff':
