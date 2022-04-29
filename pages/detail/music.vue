@@ -10,6 +10,7 @@
         <div class="btn-wrap">
           <g-button v-for="(option, index) in mainInfo.subject"
                     :is-gray="true"
+                    :class="{ 'is-active': subject.value === option.value }"
                     :key="`subject_${index}`"
                     :class="{ 'is-active': subject.value === option.value }"
                     @click="setSubject(option.value, option.label)">{{ option.label }}</g-button>
@@ -20,6 +21,7 @@
         <div class="btn-wrap">
           <g-button v-for="(option, index) in questionNumberList"
                     :is-gray="true"
+                    :class="{ 'is-active': questionCount === option.value }"
                     :key="`question_${index}`"
                     :class="{ 'is-active': questionCount === option.value }"
                     @click="setQuestionCount(option.value)">{{ option.label }}</g-button>
