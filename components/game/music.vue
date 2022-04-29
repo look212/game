@@ -6,10 +6,10 @@
     <div class="controls">
       <g-button :is-gray="true"
                 @click="handlePlay"
-                :class="{'is-active': type === 'play'}"><img src="/images/icon/play.png" alt="play" height="14px;">️</g-button>
+                :class="{'is-active': type === 'play'}"><img src="../../static/images/icon/play.png" alt="play" height="14px;">️</g-button>
       <g-button :is-gray="true"
                 @click="handleStop"
-                :class="{'is-active': type === 'stop'}"><img src="/images/icon/stop.png" alt="stop" height="14px"></g-button>
+                :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
     <div class="question-wrap">
       <div class="shadow" v-if="isShow" @click="setIsShow">
