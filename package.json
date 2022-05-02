@@ -12,7 +12,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/composition-api": "^0.32.0",
     "@types/lodash-es": "^4.17.6",
-    "core-js": "^3.19.3",
+    "core-js": "^3.22.3",
     "lodash-es": "^4.17.21",
     "nuxt": "^2.15.8",
     "swiper": "5.3.7",
