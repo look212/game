@@ -112,6 +112,10 @@ pre {
         max-height: 500px;
       }
     }
+
+    &.swiper-slide-active {
+      z-index: 10;
+    }
   }
 
   .next-wrap {
