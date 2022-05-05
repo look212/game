@@ -11,6 +11,7 @@ import {
   classicList,
   photoList,
   foodList,
+  dramaList,
 } from '~/dummy/data';
 
 /**
@@ -65,6 +66,9 @@ export const setTotalList = (subject: any) => {
       break;
     case 'food':
       totalList = foodList
+      break;
+    case 'drama':
+      totalList = dramaList
       break;
   }
 

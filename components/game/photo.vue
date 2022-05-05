@@ -9,9 +9,15 @@
               class="custom"
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
-          <p v-if="isTimerStart">
-            <img :src="game.url">
-          </p>
+          <div v-if="isTimerStart">
+            <img :src="game.url" v-if="index === activeIndex" class="swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div v-else class="txt" @click="setIsShow">
+            <div :class="{'is-active': !isShow}">
+              {{ game.value }}
+            </div>
+          </div>
         </swiper-slide>
         <div class="next-wrap" v-if="gameList.length !== (activeIndex + 1)">
           <g-button @click="nextSlide">다음</g-button>
@@ -26,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from '@nuxtjs/composition-api';
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api';
 import gameSetting from '~/composable/gameSetting';
 import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
@@ -52,12 +58,15 @@ export default defineComponent({
       isTimerStart,
       activeIndex,
       giParams,
+      isShow,
       nextSlide,
       setCountSpeed,
       setCountDown,
       setKakaoImage,
       setGoogleImage,
+      setIsShow,
     } = gameSetting();
+    // const isShow = ref(true);
 
     onMounted(() => {
       setTimeout(async () => {
@@ -116,11 +125,13 @@ export default defineComponent({
       activeIndex,
       timer,
       giParams,
+      isShow,
       setCountSpeed,
       nextSlide,
       setCountDown,
       setKakaoImage,
       setGoogleImage,
+      setIsShow,
       ...methods,
     }
   }
@@ -128,4 +139,30 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.swiper-slide {
+  img {
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+  .txt {
+    position: relative;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+
+    > div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include transform(translate(-50%, -50%));
+      width: max-content;
+      height: max-content;
+      background: $Gray90;
+
+      &.is-active {
+        background: transparent;
+      }
+    }
+  }
+}
 </style>
