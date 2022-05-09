@@ -1494,7 +1494,7 @@ export const musicList = [
   { singer: '세븐', music: '와줘', youtube_id: '9vpTUcFb1J8' },
   { singer: '세븐', music: '열정', youtube_id: 'Cqokr695Gic' },
   { singer: '박화요비', music: '그런일은', youtube_id: 'lVYLj8GNNyw' },
-  { singer: '박화요비', music: '어떤가요', youtube_id: 'EtHD_aLrfo' },
+  { singer: '박화요비', music: '어떤가요', youtube_id: '-EtHD_aLrfo' },
   { singer: '박화요비', music: '당신과의 키스를 세어보아요', youtube_id: 'hNiTVOjpfRE' },
   { singer: '박화요비', music: 'Lie', youtube_id: '91nYFfqt7HQ' },
   { singer: '앤 원', music: '혼자하는 사랑', youtube_id: '2PVULzeTXdI' },
@@ -1808,7 +1808,7 @@ export const musicList = [
   { singer: '자우림', music: '미안해 널 미워해', youtube_id: 'rBa4ZYxI4vM' },
   { singer: '자우림', music: '매직 카펫 라이드', youtube_id: 'kUlMiYseY_U' },
   { singer: '자우림', music: '하하하쏭', youtube_id: 'fqoY2Hf-quk' },
-  { singer: '자우림', music: '팬이야', youtube_id: 'A5009Oi1qw' },
+  { singer: '자우림', music: '팬이야', youtube_id: '-A5009Oi1qw' },
   { singer: '자우림', music: '일탈', youtube_id: 'es1-ui7O6vI' },
   { singer: '넬', music: '기억을 걷는 시간', youtube_id: 'VZnfZ14fIig' },
   { singer: '넬', music: '지구가 태양을 네 번', youtube_id: 'AJpPIu1gNms' },
@@ -1876,7 +1876,7 @@ export const musicList = [
   { singer: '(여자)아이들', music: '한', youtube_id: 'IoNrByu93BA' },
   { singer: '2NE1', music: 'Lonely', youtube_id: 'vfRTbJNy87Q' },
   { singer: '2NE1', music: 'Fire', youtube_id: '48ZRVhNl1wA' },
-  { singer: '2NE1', music: 'You and I', youtube_id: 'dYHMGICzyPc' },
+  { singer: '박봄', music: 'You and I', youtube_id: 'dYHMGICzyPc' },
   { singer: '2NE1', music: 'I Don\'t Care', youtube_id: 'ORHR-ZA4RyM' },
   { singer: '가인', music: 'Bloom(피어나)', youtube_id: 'Qr3rcr7H2AQ' },
   { singer: '가인', music: 'Carnival (The Last Day)', youtube_id: 'wAuLtKPoaRs' },
@@ -2311,7 +2311,7 @@ export const classicList = [
   { value: '지고이네르바이젠', composer: '사라사테', youtube_id: 'tQhpibnOWTw' },
   { value: '소나타 16번', composer: '모차르트', youtube_id: 'qjk-YRuQZDE' },
   { value: '사라방드', composer: '헨델', youtube_id: 'up1gDwjRVqs' },
-  { value: '달빛', composer: '드뷔시', youtube_id: 'Y-HuPlQjnx0' },
+  { value: '달빛', composer: '드뷔시', youtube_id: 'xl6qDlPCTUM' },
 ]
 
 export const foodList = [
