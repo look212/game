@@ -89,6 +89,7 @@ export default defineComponent({
         }).then((result) => {
           if (result.isConfirmed) {
             game.setGameStart({ subject: subject.value.value, questionCount: questionCount.value });
+            isShow.value = true;
             activeIndex.value = 0;
             swiper.value.$swiper.slideTo(0);
           }

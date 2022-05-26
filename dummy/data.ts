@@ -1183,63 +1183,316 @@ export const animalList = [
 ]
 
 export const movieList = [
-  { value: '쇼생크 탈출', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20160216_244%2F1455603307357dh5WY_JPEG%2Fmovie_image.jpg', script: '' },
-  { value: '라라랜드', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20161101_284%2F14779623657454Yd9v_JPEG%2Fmovie_image.jpg', script: '' },
-  { value: '인턴', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20150916_225%2F1442389492471m9uGb_JPEG%2Fmovie_image.jpg', script: '' },
-  { value: '내부자들', screenshot: '/images/movie/soqnwkemf.png', script: '모히또 가서 몰디브 한 잔할라니까' },
-  { value: '부당거래', screenshot: '/images/movie/qnekdrjfo.png', script: '호의가 계속되면 그게 권리인줄 알아요' },
-  { value: '범죄와의 전쟁', screenshot: '/images/movie/qjawhldhkdmlwjswod.png', script: '느그 서장 남천동 살제?' },
-  { value: '추격자', screenshot: '/images/movie/cnrurwk.png', script: '야 4885 너지?', sound: '' },
-  { value: '늑대의 유혹', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20160204_147%2F1454589383205v7NjP_JPEG%2Fmovie_image.jpg', script: '', sound: '' },
-  { value: '노인을 위한 나라는 없다', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20180813_232%2F1534121461320IfxaF_JPEG%2Fmovie_image.jpg', script: '', sound: '' },
-  { value: '말할 수 없는 비밀', screenshot: '/images/movie/akfgkftndjqtsmsqlalf.png', script: '', sound: '' },
-  { value: '어벤져스: 엔드게임', screenshot: 'https://img.huffingtonpost.com/asset/5cc67e6d24000033007782ea.png?ops=scalefit_630_noupscale', script: '', sound: '' },
-  { value: '미스터 & 미세스 스미스', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111223_205%2F1324582189493CRHBz_JPEG%2Fmovie_image.jpg', script: '', sound: '' },
-  { value: '신세계', screenshot: '/images/movie/tlstprp.png', script: '뭐 갈때 가더라도 담배 한대 정도는 괜찮잖아?', sound: '' },
-  { value: '신세계', screenshot: '/images/movie/rjwnrrl.png', script: '거 죽기 딱 좋은 날씨네', sound: '' },
-  { value: '신세계', screenshot: '/images/movie/ttlstprp.png', script: '중구 형님 거 장난이 너무 심한거 아니오', sound: '' },
-  { value: '신세계', screenshot: 'https://blog.kakaocdn.net/dn/wzppq/btqTvRDBMok/gzeVAiVl7syECpaYfKW5H1/img.jpg', script: '살려는 드릴께', sound: '' },
-  { value: '신세계', screenshot: 'https://instablank.com/files/jjalbox/2016/08/20160812_57adcaab2d38c.gif', script: '드루와 드루와', sound: '' },
-  { value: '신세계', screenshot: '/images/movei/tlstprpvmfhwprxm.png', script: '신세계 신세계 프로젝트', sound: '' },
-  { value: '건축학개론', screenshot: '/images/movie/rjscnrgkrrofhs.png', script: '키스라는건 말이야 봐봐 입술이 딱 붙잖아 근데 걔혀 니혀가 자연스럽게 들어온다고 스르륵 뱀처럼...', sound: '' },
-  { value: '내 머리 속의 지우개', screenshot: 'https://img.sbs.co.kr/newimg/news/20181211/201259490.jpg', script: '이거 마시면 나랑 사귀는거다?', sound: '' },
-  { value: '1987', screenshot: 'https://w.namu.la/s/760efbabc2b8a054e96b9b076662dadd3b27e17d8edfe33b20a215b834d7b440aba6bf8fda4d5a418ffcfc615387ef2030af9ad3b184beb35c681c23344030e0c16165830c53fc9969c4101513d76580fd9b0c5bec43328b26dffddf7265daf4', script: '그거 손으로 닦음 더 따가워요, 세수하세요.', sound: '' },
-  { value: '캐치 미 이프 유캔', screenshot: 'https://movie-phinf.pstatic.net/20111223_19/1324578807821Gmlct_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '시동', screenshot: '/images/movie/tlehd.png', script: '', sound: '' },
-  { value: '가타카', screenshot: 'https://movie-phinf.pstatic.net/20111222_47/1324541845985qvCC9_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '비포선라이즈', screenshot: 'https://movie-phinf.pstatic.net/20160324_259/1458798387486UACDQ_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '극한직업', screenshot: '/images/movie/d0050518_5c87c9cad0963.png', script: '지금까지 이런 맛은 없었다. 이것은 갈비인가 통닭인가', sound: '' },
-  { value: '어바웃타임', screenshot: 'https://movie-phinf.pstatic.net/20131017_111/13819797321865byFb_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '트루먼쇼', screenshot: 'https://movie-phinf.pstatic.net/20111221_261/1324475725070XHLGR_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '화양연화', screenshot: 'https://movie-phinf.pstatic.net/20201203_112/1606986402195J3Gbd_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '소림축구', screenshot: 'https://movie-phinf.pstatic.net/20111222_80/1324544020449IrzCV_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '노팅힐', screenshot: 'https://movie-phinf.pstatic.net/20190402_153/1554169860877NDhCI_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '이웃집 토토로', screenshot: 'https://movie-phinf.pstatic.net/20190605_90/1559698578705XYqxw_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '하울의 움직이는 성', screenshot: 'https://movie-phinf.pstatic.net/20141119_47/1416357055571DHsVB_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '센과 치히로의 행방불명', screenshot: 'https://movie-phinf.pstatic.net/20150108_83/1420706407615GKsAa_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '인터스텔라', screenshot: 'https://movie-phinf.pstatic.net/20141112_202/1415776906972fTbqE_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '기생충', screenshot: 'https://i.ytimg.com/vi/j_SiPdl-9c8/sddefault.jpg', script: '아들아 너는 다 계획이 있구나', sound: '' },
-  { value: '완벽한 타인', screenshot: 'https://movie-phinf.pstatic.net/20181001_259/1538357997818FRHvN_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '당신 거기 있어줄래요', screenshot: 'https://movie-phinf.pstatic.net/20161031_217/1477891709300J1mdG_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '택시운전사', screenshot: 'https://movie-phinf.pstatic.net/20170619_291/1497860513033DKbVq_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '아바타', screenshot: 'https://t1.daumcdn.net/cfile/tistory/192262044B94BE3B72', script: 'I see you', sound: '' },
-  { value: '아가씨', screenshot: 'https://movie-phinf.pstatic.net/20160411_25/1460361115500WvGpr_JPEG/movie_image.jpg?type=m665_443_2', script: '', sound: '' },
-  { value: '엽기적인 그녀', screenshot: 'https://mblogthumb-phinf.pstatic.net/MjAxOTA1MzBfNzEg/MDAxNTU5MjIzNzE1MTAw.eykWNwSGz2unTj-vfrkq0Mt-WoveJBFVd-Edqe9d78Yg.Djez5bHlLWekwF7ys7yTm0fvP6whdY9f4Oy9FqFUQoMg.PNG.kimdg4488/SE-6fbb9ac2-6bec-4645-a53b-e24f65bcc506.png', script: '견우야 미안해 나도 어쩔 수 없는 여자인가봐', sound: '' },
-  { value: '신과함께 죄와 벌', screenshot: 'https://movie-phinf.pstatic.net/20171211_26/1512956431379ySenO_JPEG/movie_image.jpg', script: '', sound: '' },
-  { value: '리틀포레스트', screenshot: 'https://movie-phinf.pstatic.net/20180205_174/1517796368738tiA8V_JPEG/movie_image.jpg?type=m665_443_2', script: '', sound: '' },
-  { value: '타짜', screenshot: 'https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202001/30/6034a444-c3cb-4d41-af98-08aa8947cb80.jpg', script: '묻고 더블로 가', sound: '' },
-  { value: '타짜', screenshot: 'https://image.kmib.co.kr/online_image/2019/0923/611718110013743046_1.jpg', script: '마포 대교는 무너졌냐 이 새끼야', sound: '' },
-  { value: '타짜', screenshot: '/images/movie/dleoskdhsduwk.png', script: '나 이대나온 여자야', sound: '' },
-  { value: '타짜', screenshot: '/images/movie/thftndlTdj.png', script: '쏠 수 있어', sound: '' },
-  { value: '타짜', screenshot: '/images/movei/ehdwkrrmaks.png', script: '동작그만 밑장빼기냐?', sound: '' },
-  { value: '타짜', screenshot: '/images/movei/rktmadpqltnrk.png', script: '싸늘하다, 가슴에 비수가 날아와 꽃힌다. 하지만 걱정하지마라. 손은 눈보다 빠르니까.', sound: '' },
-  { value: '친구', screenshot: '/images/movie/smrmdkqnwl.png', script: '느그 아부지 뭐하시노?', sound: '' },
-  { value: '친구', screenshot: '/images/movie/slrkrkfk.png', script: '니가 가라 하와이', sound: '' },
-  { value: '친구', screenshot: '/images/movie/tlekqkfl.png', script: '내가 니 시다바리가', sound: '' },
-  { value: '친구', screenshot: '/images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라', sound: '' },
-  { value: '바람', screenshot: '/images/movei/rmfkansdkseho.png', script: '그라믄 안돼 정상한테 처 밟히고 그렇게 해서는 안돼!', sound: '' },
-  { value: '홀리데이', screenshot: '/imgaes/movie/ghfflepdl.png', script: '이건 경고 사격을 위한 공포탄', sound: '' },
-  { value: '홀리데이', screenshot: '/imgaes/movie/anwjsdbwhl.png', script: '유전무죄 무전유죄', sound: '' },
+  {
+    value: '쇼생크 탈출',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20160216_244%2F1455603307357dh5WY_JPEG%2Fmovie_image.jpg'
+  },
+  {
+    value: '라라랜드',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20161101_284%2F14779623657454Yd9v_JPEG%2Fmovie_image.jpg'
+  },
+  {
+    value: '인턴',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20150916_225%2F1442389492471m9uGb_JPEG%2Fmovie_image.jpg'
+  },
+  {
+    value: '내부자들', scriptList: [
+      {
+        screenshot: '/images/movie/soqnwkemf.png',
+        script: '모히또 가서 몰디브 한 잔할라니까',
+      }
+    ]
+  },
+  {
+    value: '부당거래', scriptList: [
+      {
+        screenshot: '/images/movie/qnekdrjfo.png',
+        script: '호의가 계속되면 그게 권리인줄 알아요',
+      }
+    ]
+  },
+  {
+    value: '범죄와의 전쟁', scriptList: [
+      {
+        screenshot: '/images/movie/qjawhldhkdmlwjswod.png',
+        script: '느그 서장 남천동 살제?',
+      },
+      {
+        screenshot: '/images/movie/sksflsksfl.png',
+        script: '난리났네 난리났어 어디 오빠 없는 사람 서러워 살겠나',
+      }
+    ]
+  },
+  {
+    value: '추격자', scriptList: [
+      {
+        screenshot: '/images/movie/cnrurwk.png',
+        script: '야 4885 너지?',
+      }
+    ]
+  },
+  {
+    value: '늑대의 유혹',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20160204_147%2F1454589383205v7NjP_JPEG%2Fmovie_image.jpg',
+  },
+  {
+    value: '노인을 위한 나라는 없다',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20180813_232%2F1534121461320IfxaF_JPEG%2Fmovie_image.jpg',
+  },
+  { value: '말할 수 없는 비밀', screenshot: '/images/movie/akfgkftndjqtsmsqlalf.png', },
+  {
+    value: '어벤져스: 엔드게임',
+    screenshot: 'https://img.huffingtonpost.com/asset/5cc67e6d24000033007782ea.png?ops=scalefit_630_noupscale',
+  },
+  {
+    value: '미스터 & 미세스 스미스',
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111223_205%2F1324582189493CRHBz_JPEG%2Fmovie_image.jpg',
+  },
+  {
+    value: '신세계', scriptList: [
+      {
+        screenshot: '/images/movie/tlstprp.png',
+        script: '뭐 갈때 가더라도 담배 한대 정도는 괜찮잖아?',
+      },
+      {
+        screenshot: '/images/movie/rjwnrrl.png',
+        script: '거 죽기 딱 좋은 날씨네',
+      },
+      {
+        screenshot: '/images/movie/ttlstprp.png',
+        script: '중구 형님 거 장난이 너무 심한거 아니오',
+      },
+      {
+        screenshot: 'https://blog.kakaocdn.net/dn/wzppq/btqTvRDBMok/gzeVAiVl7syECpaYfKW5H1/img.jpg',
+        script: '살려는 드릴께',
+      },
+      {
+        screenshot: 'https://instablank.com/files/jjalbox/2016/08/20160812_57adcaab2d38c.gif',
+        script: '드루와 드루와',
+      },
+      {
+        screenshot: '/images/movei/tlstprpvmfhwprxm.png',
+        script: '신세계 신세계 프로젝트',
+      }
+    ]
+  },
+  {
+    value: '건축학개론', scriptList: [
+      {
+        screenshot: '/images/movie/rjscnrgkrrofhs.png',
+        script: '키스라는건 말이야 봐봐 입술이 딱 붙잖아 근데 걔혀 니혀가 자연스럽게 들어온다고 스르륵 뱀처럼...',
+      }
+    ]
+  },
+  {
+    value: '내 머리 속의 지우개', scriptList: [
+      {
+        screenshot: 'https://img.sbs.co.kr/newimg/news/20181211/201259490.jpg',
+        script: '이거 마시면 나랑 사귀는거다?',
+      }
+    ]
+
+  },
+  {
+    value: '1987', scriptList: [
+      {
+        screenshot: 'https://w.namu.la/s/760efbabc2b8a054e96b9b076662dadd3b27e17d8edfe33b20a215b834d7b440aba6bf8fda4d5a418ffcfc615387ef2030af9ad3b184beb35c681c23344030e0c16165830c53fc9969c4101513d76580fd9b0c5bec43328b26dffddf7265daf4',
+        script: '그거 손으로 닦음 더 따가워요, 세수하세요.',
+      }
+    ]
+  },
+  {
+    value: '캐치 미 이프 유캔',
+    screenshot: 'https://movie-phinf.pstatic.net/20111223_19/1324578807821Gmlct_JPEG/movie_image.jpg',
+  },
+  { value: '시동', screenshot: '/images/movie/tlehd.png' },
+  {
+    value: '가타카',
+    screenshot: 'https://movie-phinf.pstatic.net/20111222_47/1324541845985qvCC9_JPEG/movie_image.jpg',
+  },
+  {
+    value: '비포선라이즈',
+    screenshot: 'https://movie-phinf.pstatic.net/20160324_259/1458798387486UACDQ_JPEG/movie_image.jpg',
+  },
+  {
+    value: '극한직업',
+    scriptList: [
+      {
+        screenshot: '/images/movie/d0050518_5c87c9cad0963.png',
+        script: '지금까지 이런 맛은 없었다. 이것은 갈비인가 통닭인가',
+      }
+    ]
+  },
+  {
+    value: '어바웃타임',
+    screenshot: 'https://movie-phinf.pstatic.net/20131017_111/13819797321865byFb_JPEG/movie_image.jpg',
+  },
+  {
+    value: '트루먼쇼',
+    screenshot: 'https://movie-phinf.pstatic.net/20111221_261/1324475725070XHLGR_JPEG/movie_image.jpg',
+  },
+  {
+    value: '화양연화',
+    screenshot: 'https://movie-phinf.pstatic.net/20201203_112/1606986402195J3Gbd_JPEG/movie_image.jpg',
+  },
+  {
+    value: '소림축구',
+    screenshot: 'https://movie-phinf.pstatic.net/20111222_80/1324544020449IrzCV_JPEG/movie_image.jpg',
+  },
+  {
+    value: '노팅힐',
+    screenshot: 'https://movie-phinf.pstatic.net/20190402_153/1554169860877NDhCI_JPEG/movie_image.jpg',
+  },
+  {
+    value: '이웃집 토토로',
+    screenshot: 'https://movie-phinf.pstatic.net/20190605_90/1559698578705XYqxw_JPEG/movie_image.jpg',
+  },
+  {
+    value: '하울의 움직이는 성',
+    screenshot: 'https://movie-phinf.pstatic.net/20141119_47/1416357055571DHsVB_JPEG/movie_image.jpg',
+  },
+  {
+    value: '센과 치히로의 행방불명',
+    screenshot: 'https://movie-phinf.pstatic.net/20150108_83/1420706407615GKsAa_JPEG/movie_image.jpg',
+  },
+  {
+    value: '인터스텔라',
+    screenshot: 'https://movie-phinf.pstatic.net/20141112_202/1415776906972fTbqE_JPEG/movie_image.jpg',
+  },
+  {
+    value: '기생충',
+    scriptList: [
+      {
+        screenshot: 'https://i.ytimg.com/vi/j_SiPdl-9c8/sddefault.jpg',
+        script: '아들아 너는 다 계획이 있구나',
+      },
+      {
+        screenshot: '/images/movie/jessica.png',
+        script: '제시카 외동딸 일리노이 시카고 과선배는 김진모 그는 네 사촌.'
+      },
+      {
+        screenshot: '/images/movie/tkdwldwjr.png',
+        script: '진짜 상징적이다.',
+      },
+      {
+        screenshot: '/images/movie/dhk.png',
+        script: '와 여기 진짜 상징적이다. 아부지 우리가 기사식당에서 밥을 먹고있네요 하필이면',
+      },
+      {
+        screenshot: '/images/movie/tlfwjsdmsrltp.png',
+        script: '실전은 기세야. 기세. 알겠어?'
+      },
+      {
+        screenshot: '/images/movie/serious.png',
+        script: 'I\'m deadly serious. 믿는 사람 소개로 연결 연결.. 이게 베스트 인거 같아요. 일종의 뭐랄까 믿음의 벨트?'
+      },
+      {
+        screenshot: '/images/movie/serious.png',
+        script: '부잔데 착해가 아니라 부자니까 착한거지'
+      },
+      {
+        screenshot: '/images/movie/sofurkqhtlrp.png',
+        script: '같이 내려가 보시겠어요?',
+      },
+      {
+        screenshot: '/images/movie/respect.png',
+        script: 'Respect!!!',
+      },
+      {
+        screenshot: '/images/movie/noplan.png',
+        script: '너 절대 실패하지 않는 계획이 뭔줄 아니? 무계획이야, 무계획. No plan.',
+      },
+    ]
+  },
+  {
+    value: '완벽한 타인',
+    screenshot: 'https://movie-phinf.pstatic.net/20181001_259/1538357997818FRHvN_JPEG/movie_image.jpg',
+  },
+  {
+    value: '당신 거기 있어줄래요',
+    screenshot: 'https://movie-phinf.pstatic.net/20161031_217/1477891709300J1mdG_JPEG/movie_image.jpg',
+  },
+  {
+    value: '택시운전사',
+    screenshot: 'https://movie-phinf.pstatic.net/20170619_291/1497860513033DKbVq_JPEG/movie_image.jpg',
+  },
+  {
+    value: '아바타',
+    scriptList: [
+      {
+        screenshot: 'https://t1.daumcdn.net/cfile/tistory/192262044B94BE3B72',
+        script: 'I see you',
+      }
+    ]
+  },
+  {
+    value: '아가씨',
+    screenshot: 'https://movie-phinf.pstatic.net/20160411_25/1460361115500WvGpr_JPEG/movie_image.jpg?type=m665_443_2',
+  },
+  {
+    value: '엽기적인 그녀',
+    scriptList: [
+      {
+        screenshot: 'https://mblogthumb-phinf.pstatic.net/MjAxOTA1MzBfNzEg/MDAxNTU5MjIzNzE1MTAw.eykWNwSGz2unTj-vfrkq0Mt-WoveJBFVd-Edqe9d78Yg.Djez5bHlLWekwF7ys7yTm0fvP6whdY9f4Oy9FqFUQoMg.PNG.kimdg4488/SE-6fbb9ac2-6bec-4645-a53b-e24f65bcc506.png',
+        script: '견우야 미안해 나도 어쩔 수 없는 여자인가봐',
+      }
+    ]
+  },
+  {
+    value: '신과함께 죄와 벌',
+    screenshot: 'https://movie-phinf.pstatic.net/20171211_26/1512956431379ySenO_JPEG/movie_image.jpg',
+  },
+  {
+    value: '리틀포레스트',
+    screenshot: 'https://movie-phinf.pstatic.net/20180205_174/1517796368738tiA8V_JPEG/movie_image.jpg?type=m665_443_2',
+  },
+  {
+    value: '타짜',
+    scriptList: [
+      {
+        screenshot: 'https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202001/30/6034a444-c3cb-4d41-af98-08aa8947cb80.jpg',
+        script: '묻고 더블로 가'
+      },
+      {
+        screenshot: 'https://image.kmib.co.kr/online_image/2019/0923/611718110013743046_1.jpg',
+        script: '마포 대교는 무너졌냐 이 새끼야',
+      },
+      {
+        screenshot: '/images/movie/dleoskdhsduwk.png',
+        script: '나 이대나온 여자야',
+      },
+      {
+        screenshot: '/images/movie/thftndlTdj.png',
+        script: '쏠 수 있어',
+      },
+      {
+        screenshot: '/images/movei/ehdwkrrmaks.png',
+        script: '동작그만 밑장빼기냐?',
+      },
+      {
+        screenshot: '/images/movei/rktmadpqltnrk.png',
+        script: '싸늘하다, 가슴에 비수가 날아와 꽃힌다. 하지만 걱정하지마라. 손은 눈보다 빠르니까.',
+      }
+    ],
+  },
+  {
+    value: '친구',
+    scriptList: [
+      { screenshot: '/images/movie/smrmdkqnwl.png', script: '느그 아부지 뭐하시노?' },
+      { screenshot: '/images/movie/slrkrkfk.png', script: '니가 가라 하와이' },
+      { screenshot: '/images/movie/tlekqkfl.png', script: '내가 니 시다바리가' },
+      { screenshot: '/images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라' }
+    ]
+  },
+  { value: '바람', scriptList: [
+      { screenshot: '/images/movei/rmfkansdkseho.png', script: '그라믄 안돼 정상한테 처 밟히고 그렇게 해서는 안돼!' }
+    ]
+  },
+  { value: '홀리데이', scriptList: [
+      { screenshot: '/imgaes/movie/ghfflepdl.png', script: '이건 경고 사격을 위한 공포탄', },
+      { screenshot: '/imgaes/movie/anwjsdbwhl.png', script: '유전무죄 무전유죄', }
+    ]
+  },
   { value: '실미도', screenshot: '', script: '비겁한 변명입니다.', sound: '' },
   { value: '실미도', screenshot: '', script: '날 쏘고가라', sound: '' },
   { value: '친절한 금자씨', screenshot: '', script: '너나 잘하세요', sound: '' },
@@ -1252,7 +1505,12 @@ export const movieList = [
   { value: '해바라기', screenshot: '', script: '병진이형은 나가있어...', sound: '' },
   { value: '해바라기', screenshot: '', script: '꼭 그렇게 다가져 가야만 속이후련했냐!!', sound: '' },
   { value: '관상', screenshot: '', script: '어찌 내가 왕이될 상인가', sound: '' },
-  { value: '베테랑', screenshot: '', script: '맷돌 손잡이가 뭔지 알아요? 어이라고 해요. 맷돌을 돌리다가 손잡이가 빠져 그럼 일을 못하죠? 그걸 어이가 없어 해야할 일을 못한다는 뜻으로 어이가 없다 라고 하는거에요. 내가 지금 그래 어이가 없네 ?', sound: '' },
+  {
+    value: '베테랑',
+    screenshot: '',
+    script: '맷돌 손잡이가 뭔지 알아요? 어이라고 해요. 맷돌을 돌리다가 손잡이가 빠져 그럼 일을 못하죠? 그걸 어이가 없어 해야할 일을 못한다는 뜻으로 어이가 없다 라고 하는거에요. 내가 지금 그래 어이가 없네 ?',
+    sound: ''
+  },
   { value: '베테랑', screenshot: '', script: '나 여기 아트박스 사장인데...', sound: '' },
   { value: '베테랑', screenshot: '', script: '야 우리가 돈이 없지 가오가 없어? 가오 떨어지는 짓 좀 하지 말자', sound: '' },
   { value: '말아톤', screenshot: '', script: '초원이 다리는 백만불짜리 다리', sound: '' },
@@ -1350,7 +1608,7 @@ export const movieList = [
   { value: '포레스트 검프', screenshot: '', script: '', sound: '' },
   { value: '더 테러 라이브', screenshot: '', script: '', sound: '' },
   { value: '스쿨오브락', screenshot: '', script: '', sound: '' },
-  { value: '말죽거리 잔혹사', screenshot: '', script: '옥상으로 따라와'  },
+  { value: '말죽거리 잔혹사', screenshot: '', script: '옥상으로 따라와' },
   { value: '히트맨', screenshot: '', script: '', sound: '' },
   { value: '동갑내기 과외하기', screenshot: '', script: '', sound: '' },
   { value: '협상', screenshot: '', script: '', sound: '' },
@@ -1359,118 +1617,118 @@ export const movieList = [
 ]
 
 export const dramaList = [
-  { value: '스물 다섯 스물 하나', screenshot: '', sound: ''  },
+  { value: '스물 다섯 스물 하나', screenshot: '', sound: '' },
   { value: '유미의 세포들', screenshot: '', script: '', sound: '' },
-  { value: '부부의 세계', screenshot: '', sound: ''  },
-  { value: '별에서 온 그대', screenshot: '', sound: ''  },
-  { value: '천국의 계단', screenshot: '', sound: ''  },
-  { value: '동백꽃 필 무렵', screenshot: '', sound: ''  },
-  { value: '파스타', screenshot: '', sound: ''  },
-  { value: '나인', screenshot: '', sound: ''  },
-  { value: '로맨스가 필요해2', screenshot: '', sound: ''  },
-  { value: '나의 아저씨', screenshot: '', sound: ''  },
-  { value: '눈이 부시게', screenshot: '', sound: ''  },
-  { value: '시그널', screenshot: '', sound: ''  },
-  { value: '쌈 마이웨이', screenshot: '', sound: ''  },
-  { value: '이태원클라스', screenshot: '', sound: ''  },
-  { value: '도깨비', screenshot: '', sound: ''  },
-  { value: '오징어 게임', screenshot: '', sound: ''  },
-  { value: '지금 우리 학교는', screenshot: '', sound: ''  },
-  { value: '응답하라 1997', screenshot: '', sound: ''  },
-  { value: '응답하라 1994', screenshot: '', sound: ''  },
-  { value: '응답하라 1988', screenshot: '', sound: ''  },
-  { value: '슬기로운 의사생활', screenshot: '', sound: ''  },
-  { value: 'D.P', screenshot: '', sound: ''  },
-  { value: '호텔델루나', screenshot: '', sound: ''  },
-  { value: '가을동화', screenshot: '', sound: ''  },
-  { value: '겨울연가', screenshot: '', sound: ''  },
-  { value: '여름향기', screenshot: '', sound: ''  },
-  { value: '태양의 후예', screenshot: '', sound: ''  },
-  { value: '검색어를 입력하세요', screenshot: '', sound: ''  },
-  { value: '미안하다 사랑한다', screenshot: '', sound: ''  },
-  { value: '비밀의 숲', screenshot: '', sound: ''  },
-  { value: '파리의 연인', screenshot: '', sound: ''  },
-  { value: '별을 쏘다', screenshot: '', sound: ''  },
-  { value: '네 멋대로 해라', screenshot: '', sound: ''  },
-  { value: '로망스', screenshot: '', sound: ''  },
-  { value: '풀하우스', screenshot: '', sound: ''  },
-  { value: '아이리스', screenshot: '', sound: ''  },
-  { value: '커피프린스 1호점', screenshot: '', sound: ''  },
-  { value: '내이름은 김삼순', screenshot: '', sound: ''  },
-  { value: '대장금', screenshot: '', sound: ''  },
-  { value: '돌아온 일지매', screenshot: '', sound: ''  },
-  { value: '개와 늑대의 시간', screenshot: '', sound: ''  },
-  { value: '궁', screenshot: '', sound: ''  },
-  { value: '발리에서 생긴일', screenshot: '', sound: ''  },
-  { value: '하얀거탑', screenshot: '', sound: ''  },
-  { value: '뉴하트', screenshot: '', sound: ''  },
-  { value: '환상의 커플', screenshot: '', sound: ''  },
-  { value: '모래시계', screenshot: '', sound: ''  },
-  { value: '디어마이프렌즈', screenshot: '', sound: ''  },
-  { value: '베토벤 바이러스', screenshot: '', sound: ''  },
-  { value: '그들이 사는 세상', screenshot: '', sound: ''  },
-  { value: '거침없이 하이킥', screenshot: '', sound: ''  },
-  { value: '지붕뚫고 하이킥', screenshot: '', sound: ''  },
-  { value: '웬만해선 그들을 막을 수 없다', screenshot: '', sound: ''  },
-  { value: '순풍산부인과', screenshot: '', sound: ''  },
-  { value: '안녕프란체스카', screenshot: '', sound: ''  },
-  { value: '전원일기', screenshot: '', sound: ''  },
-  { value: '김비서가 왜그럴까', screenshot: '', sound: ''  },
-  { value: '뷰티 인사이드', screenshot: '', sound: ''  },
-  { value: '킬미힐미', screenshot: '', sound: ''  },
-  { value: '미생', screenshot: '', sound: ''  },
-  { value: '카이스트', screenshot: '', sound: ''  },
-  { value: '질투의 화신', screenshot: '', sound: ''  },
-  { value: '괜찮아 사랑이야', screenshot: '', sound: ''  },
-  { value: '프로듀사', screenshot: '', sound: ''  },
-  { value: '주군의 태양', screenshot: '', sound: ''  },
-  { value: '최고의 사랑', screenshot: '', sound: ''  },
-  { value: '건빵선생과 별사탕', screenshot: '', sound: ''  },
-  { value: '달콤한 나의 도시', screenshot: '', sound: ''  },
-  { value: '빅', screenshot: '', sound: ''  },
-  { value: '킹덤', screenshot: '', sound: ''  },
-  { value: '지옥', screenshot: '', sound: ''  },
-  { value: '육룡이 나르샤', screenshot: '', sound: ''  },
-  { value: '뿌리깊은 나무', screenshot: '', sound: ''  },
-  { value: '태왕사신기', screenshot: '', sound: ''  },
-  { value: '팬트하우스', screenshot: '', sound: ''  },
-  { value: '선덕여왕', screenshot: '', sound: ''  },
-  { value: '여인천하', screenshot: '', sound: ''  },
-  { value: '고백부부', screenshot: '', sound: ''  },
-  { value: '그 해 우리는', screenshot: '', sound: ''  },
-  { value: '스카이캐슬', screenshot: '', sound: ''  },
-  { value: '빈센조', screenshot: '', sound: ''  },
-  { value: '경이로운 소문', screenshot: '', sound: ''  },
-  { value: '힘쎈여자 도봉순', screenshot: '', sound: ''  },
-  { value: '스위트 홈', screenshot: '', sound: ''  },
-  { value: '시크릿 가든', screenshot: '', sound: ''  },
-  { value: '추노', screenshot: '', sound: ''  },
-  { value: '동이', screenshot: '', sound: ''  },
-  { value: '대장금', screenshot: '', sound: ''  },
-  { value: '이산', screenshot: '', sound: ''  },
-  { value: '공부의 신', screenshot: '', sound: ''  },
-  { value: '드림하이', screenshot: '', sound: ''  },
-  { value: '간 떨어지는 동거', screenshot: '', sound: ''  },
-  { value: '성균관 스캔들', screenshot: '', sound: ''  },
-  { value: '재빵왕 김탁구', screenshot: '', sound: ''  },
-  { value: '아내의 유혹', screenshot: '', sound: ''  },
-  { value: '신기생뎐', screenshot: '', sound: ''  },
-  { value: '푸른 바다의 전설', screenshot: '', sound: ''  },
-  { value: '라이브', screenshot: '', sound: ''  },
-  { value: '탐정', screenshot: '', sound: ''  },
-  { value: '브레인', screenshot: '', sound: ''  },
-  { value: '빠담빠담', screenshot: '', sound: ''  },
-  { value: '해를 품은 달', screenshot: '', sound: ''  },
-  { value: '신사의 품격', screenshot: '', sound: ''  },
-  { value: '넝쿨째 굴러온 당신', screenshot: '', sound: ''  },
-  { value: '각시탈', screenshot: '', sound: ''  },
-  { value: '또 오해영', screenshot: '', sound: ''  },
-  { value: '그 겨울, 바람이 분다', screenshot: '', sound: ''  },
-  { value: '논스톱', screenshot: '', sound: ''  },
-  { value: '너의 목소리가 들려', screenshot: '', sound: ''  },
-  { value: '피노키오', screenshot: '', sound: ''  },
-  { value: '알함브라 궁전의 추억', screenshot: '', sound: ''  },
-  { value: '스타트업', screenshot: '', sound: ''  },
+  { value: '부부의 세계', screenshot: '', sound: '' },
+  { value: '별에서 온 그대', screenshot: '', sound: '' },
+  { value: '천국의 계단', screenshot: '', sound: '' },
+  { value: '동백꽃 필 무렵', screenshot: '', sound: '' },
+  { value: '파스타', screenshot: '', sound: '' },
+  { value: '나인', screenshot: '', sound: '' },
+  { value: '로맨스가 필요해2', screenshot: '', sound: '' },
+  { value: '나의 아저씨', screenshot: '', sound: '' },
+  { value: '눈이 부시게', screenshot: '', sound: '' },
+  { value: '시그널', screenshot: '', sound: '' },
+  { value: '쌈 마이웨이', screenshot: '', sound: '' },
+  { value: '이태원클라스', screenshot: '', sound: '' },
+  { value: '도깨비', screenshot: '', sound: '' },
+  { value: '오징어 게임', screenshot: '', sound: '' },
+  { value: '지금 우리 학교는', screenshot: '', sound: '' },
+  { value: '응답하라 1997', screenshot: '', sound: '' },
+  { value: '응답하라 1994', screenshot: '', sound: '' },
+  { value: '응답하라 1988', screenshot: '', sound: '' },
+  { value: '슬기로운 의사생활', screenshot: '', sound: '' },
+  { value: 'D.P', screenshot: '', sound: '' },
+  { value: '호텔델루나', screenshot: '', sound: '' },
+  { value: '가을동화', screenshot: '', sound: '' },
+  { value: '겨울연가', screenshot: '', sound: '' },
+  { value: '여름향기', screenshot: '', sound: '' },
+  { value: '태양의 후예', screenshot: '', sound: '' },
+  { value: '검색어를 입력하세요', screenshot: '', sound: '' },
+  { value: '미안하다 사랑한다', screenshot: '', sound: '' },
+  { value: '비밀의 숲', screenshot: '', sound: '' },
+  { value: '파리의 연인', screenshot: '', sound: '' },
+  { value: '별을 쏘다', screenshot: '', sound: '' },
+  { value: '네 멋대로 해라', screenshot: '', sound: '' },
+  { value: '로망스', screenshot: '', sound: '' },
+  { value: '풀하우스', screenshot: '', sound: '' },
+  { value: '아이리스', screenshot: '', sound: '' },
+  { value: '커피프린스 1호점', screenshot: '', sound: '' },
+  { value: '내이름은 김삼순', screenshot: '', sound: '' },
+  { value: '대장금', screenshot: '', sound: '' },
+  { value: '돌아온 일지매', screenshot: '', sound: '' },
+  { value: '개와 늑대의 시간', screenshot: '', sound: '' },
+  { value: '궁', screenshot: '', sound: '' },
+  { value: '발리에서 생긴일', screenshot: '', sound: '' },
+  { value: '하얀거탑', screenshot: '', sound: '' },
+  { value: '뉴하트', screenshot: '', sound: '' },
+  { value: '환상의 커플', screenshot: '', sound: '' },
+  { value: '모래시계', screenshot: '', sound: '' },
+  { value: '디어마이프렌즈', screenshot: '', sound: '' },
+  { value: '베토벤 바이러스', screenshot: '', sound: '' },
+  { value: '그들이 사는 세상', screenshot: '', sound: '' },
+  { value: '거침없이 하이킥', screenshot: '', sound: '' },
+  { value: '지붕뚫고 하이킥', screenshot: '', sound: '' },
+  { value: '웬만해선 그들을 막을 수 없다', screenshot: '', sound: '' },
+  { value: '순풍산부인과', screenshot: '', sound: '' },
+  { value: '안녕프란체스카', screenshot: '', sound: '' },
+  { value: '전원일기', screenshot: '', sound: '' },
+  { value: '김비서가 왜그럴까', screenshot: '', sound: '' },
+  { value: '뷰티 인사이드', screenshot: '', sound: '' },
+  { value: '킬미힐미', screenshot: '', sound: '' },
+  { value: '미생', screenshot: '', sound: '' },
+  { value: '카이스트', screenshot: '', sound: '' },
+  { value: '질투의 화신', screenshot: '', sound: '' },
+  { value: '괜찮아 사랑이야', screenshot: '', sound: '' },
+  { value: '프로듀사', screenshot: '', sound: '' },
+  { value: '주군의 태양', screenshot: '', sound: '' },
+  { value: '최고의 사랑', screenshot: '', sound: '' },
+  { value: '건빵선생과 별사탕', screenshot: '', sound: '' },
+  { value: '달콤한 나의 도시', screenshot: '', sound: '' },
+  { value: '빅', screenshot: '', sound: '' },
+  { value: '킹덤', screenshot: '', sound: '' },
+  { value: '지옥', screenshot: '', sound: '' },
+  { value: '육룡이 나르샤', screenshot: '', sound: '' },
+  { value: '뿌리깊은 나무', screenshot: '', sound: '' },
+  { value: '태왕사신기', screenshot: '', sound: '' },
+  { value: '팬트하우스', screenshot: '', sound: '' },
+  { value: '선덕여왕', screenshot: '', sound: '' },
+  { value: '여인천하', screenshot: '', sound: '' },
+  { value: '고백부부', screenshot: '', sound: '' },
+  { value: '그 해 우리는', screenshot: '', sound: '' },
+  { value: '스카이캐슬', screenshot: '', sound: '' },
+  { value: '빈센조', screenshot: '', sound: '' },
+  { value: '경이로운 소문', screenshot: '', sound: '' },
+  { value: '힘쎈여자 도봉순', screenshot: '', sound: '' },
+  { value: '스위트 홈', screenshot: '', sound: '' },
+  { value: '시크릿 가든', screenshot: '', sound: '' },
+  { value: '추노', screenshot: '', sound: '' },
+  { value: '동이', screenshot: '', sound: '' },
+  { value: '대장금', screenshot: '', sound: '' },
+  { value: '이산', screenshot: '', sound: '' },
+  { value: '공부의 신', screenshot: '', sound: '' },
+  { value: '드림하이', screenshot: '', sound: '' },
+  { value: '간 떨어지는 동거', screenshot: '', sound: '' },
+  { value: '성균관 스캔들', screenshot: '', sound: '' },
+  { value: '재빵왕 김탁구', screenshot: '', sound: '' },
+  { value: '아내의 유혹', screenshot: '', sound: '' },
+  { value: '신기생뎐', screenshot: '', sound: '' },
+  { value: '푸른 바다의 전설', screenshot: '', sound: '' },
+  { value: '라이브', screenshot: '', sound: '' },
+  { value: '탐정', screenshot: '', sound: '' },
+  { value: '브레인', screenshot: '', sound: '' },
+  { value: '빠담빠담', screenshot: '', sound: '' },
+  { value: '해를 품은 달', screenshot: '', sound: '' },
+  { value: '신사의 품격', screenshot: '', sound: '' },
+  { value: '넝쿨째 굴러온 당신', screenshot: '', sound: '' },
+  { value: '각시탈', screenshot: '', sound: '' },
+  { value: '또 오해영', screenshot: '', sound: '' },
+  { value: '그 겨울, 바람이 분다', screenshot: '', sound: '' },
+  { value: '논스톱', screenshot: '', sound: '' },
+  { value: '너의 목소리가 들려', screenshot: '', sound: '' },
+  { value: '피노키오', screenshot: '', sound: '' },
+  { value: '알함브라 궁전의 추억', screenshot: '', sound: '' },
+  { value: '스타트업', screenshot: '', sound: '' },
 ]
 
 export const musicList = [

@@ -89,6 +89,7 @@ export default defineComponent({
         }).then(async (result) => {
           if (result.isConfirmed) {
             await game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
+            isTimerStart.value = true;
             activeIndex.value = 0;
             await setGoogleImage(gameList.value[activeIndex.value].name);
             await swiper.value.$swiper.slideTo(0);
