@@ -12,7 +12,7 @@
                 :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
     <div class="question-wrap">
-      <div class="shadow" v-if="isShow" @click="setIsShow(true)">
+      <div class="shadow" v-if="isShow" @click="setIsShow(false)">
         <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
       </div>
       <swiper ref="swiper"

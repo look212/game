@@ -11,7 +11,7 @@
                 class="custom"
                 :options="swiperOptions">
           <swiper-slide v-for="(index) in game.liar.participants" :key="`game_${index}`">
-            <div class="shadow" v-if="isShow" @click="setIsShow(true)">
+            <div class="shadow" v-if="isShow" @click="setIsShow(false)">
               <p><span>{{ index + 1 }}</span><br>클릭하여 확인해주세요</p>
             </div>
             <p v-if="liarMode !== 'fool' && index === game.liar.liar">

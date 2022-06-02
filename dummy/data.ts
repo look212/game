@@ -1198,7 +1198,7 @@ export const movieList = [
   {
     value: '내부자들', scriptList: [
       {
-        screenshot: '/images/movie/soqnwkemf.png',
+        screenshot: 'images/movie/soqnwkemf.png',
         script: '모히또 가서 몰디브 한 잔할라니까',
       }
     ]
@@ -1206,7 +1206,7 @@ export const movieList = [
   {
     value: '부당거래', scriptList: [
       {
-        screenshot: '/images/movie/qnekdrjfo.png',
+        screenshot: 'images/movie/qnekdrjfo.png',
         script: '호의가 계속되면 그게 권리인줄 알아요',
       }
     ]
@@ -1214,11 +1214,11 @@ export const movieList = [
   {
     value: '범죄와의 전쟁', scriptList: [
       {
-        screenshot: '/images/movie/qjawhldhkdmlwjswod.png',
+        screenshot: 'images/movie/qjawhldhkdmlwjswod.png',
         script: '느그 서장 남천동 살제?',
       },
       {
-        screenshot: '/images/movie/sksflsksfl.png',
+        screenshot: 'images/movie/sksflsksfl.png',
         script: '난리났네 난리났어 어디 오빠 없는 사람 서러워 살겠나',
       }
     ]
@@ -1226,7 +1226,7 @@ export const movieList = [
   {
     value: '추격자', scriptList: [
       {
-        screenshot: '/images/movie/cnrurwk.png',
+        screenshot: 'images/movie/cnrurwk.png',
         script: '야 4885 너지?',
       }
     ]
@@ -1239,7 +1239,7 @@ export const movieList = [
     value: '노인을 위한 나라는 없다',
     screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20180813_232%2F1534121461320IfxaF_JPEG%2Fmovie_image.jpg',
   },
-  { value: '말할 수 없는 비밀', screenshot: '/images/movie/akfgkftndjqtsmsqlalf.png', },
+  { value: '말할 수 없는 비밀', screenshot: 'images/movie/akfgkftndjqtsmsqlalf.png', },
   {
     value: '어벤져스: 엔드게임',
     screenshot: 'https://img.huffingtonpost.com/asset/5cc67e6d24000033007782ea.png?ops=scalefit_630_noupscale',
@@ -1251,15 +1251,15 @@ export const movieList = [
   {
     value: '신세계', scriptList: [
       {
-        screenshot: '/images/movie/tlstprp.png',
+        screenshot: 'images/movie/tlstprp.png',
         script: '뭐 갈때 가더라도 담배 한대 정도는 괜찮잖아?',
       },
       {
-        screenshot: '/images/movie/rjwnrrl.png',
+        screenshot: 'images/movie/rjwnrrl.png',
         script: '거 죽기 딱 좋은 날씨네',
       },
       {
-        screenshot: '/images/movie/ttlstprp.png',
+        screenshot: 'images/movie/ttlstprp.png',
         script: '중구 형님 거 장난이 너무 심한거 아니오',
       },
       {
@@ -1267,11 +1267,11 @@ export const movieList = [
         script: '살려는 드릴께',
       },
       {
-        screenshot: '/images/movie/emfndhkemfndhk.png',
+        screenshot: 'images/movie/emfndhkemfndhk.png',
         script: '드루와 드루와',
       },
       {
-        screenshot: '/images/movie/tlstprpvmfhwprxm.png',
+        screenshot: 'images/movie/tlstprpvmfhwprxm.png',
         script: '신세계 신세계 프로젝트',
       }
     ]
@@ -1279,7 +1279,7 @@ export const movieList = [
   {
     value: '건축학개론', scriptList: [
       {
-        screenshot: '/images/movie/rjscnrgkrrofhs.png',
+        screenshot: 'images/movie/rjscnrgkrrofhs.png',
         script: '키스라는건 말이야 봐봐 입술이 딱 붙잖아 근데 걔혀 니혀가 자연스럽게 들어온다고 스르륵 뱀처럼...',
       }
     ]
@@ -1305,7 +1305,7 @@ export const movieList = [
     value: '캐치 미 이프 유캔',
     screenshot: 'https://movie-phinf.pstatic.net/20111223_19/1324578807821Gmlct_JPEG/movie_image.jpg',
   },
-  { value: '시동', screenshot: '/images/movie/tlehd.png' },
+  { value: '시동', screenshot: 'images/movie/tlehd.png' },
   {
     value: '가타카',
     screenshot: 'https://movie-phinf.pstatic.net/20111222_47/1324541845985qvCC9_JPEG/movie_image.jpg',
@@ -1318,7 +1318,7 @@ export const movieList = [
     value: '극한직업',
     scriptList: [
       {
-        screenshot: '/images/movie/d0050518_5c87c9cad0963.png',
+        screenshot: 'images/movie/d0050518_5c87c9cad0963.png',
         script: '지금까지 이런 맛은 없었다. 이것은 갈비인가 통닭인가',
       }
     ]
@@ -1367,35 +1367,35 @@ export const movieList = [
         script: '아들아 너는 다 계획이 있구나',
       },
       {
-        screenshot: '/images/movie/jessica.png',
+        screenshot: 'images/movie/jessica.png',
         script: '제시카 외동딸 일리노이 시카고 과선배는 김진모 그는 네 사촌.'
       },
       {
-        screenshot: '/images/movie/tkdwldwjr.png',
+        screenshot: 'images/movie/tkdwldwjr.png',
         script: '진짜 상징적이다.',
       },
       {
-        screenshot: '/images/movie/dhk.png',
+        screenshot: 'images/movie/dhk.png',
         script: '와 여기 진짜 상징적이다. 아부지 우리가 기사식당에서 밥을 먹고있네요 하필이면',
       },
       {
-        screenshot: '/images/movie/tlfwjsdmsrltp.png',
+        screenshot: 'images/movie/tlfwjsdmsrltp.png',
         script: '실전은 기세야. 기세. 알겠어?'
       },
       {
-        screenshot: '/images/movie/belt.png',
+        screenshot: 'images/movie/belt.png',
         script: 'I\'m deadly serious. 믿는 사람 소개로 연결 연결.. 이게 베스트 인거 같아요. 일종의 뭐랄까 믿음의 벨트?'
       },
       {
-        screenshot: '/images/movie/sofurkqhtlrp.png',
+        screenshot: 'images/movie/sofurkqhtlrp.png',
         script: '같이 내려가 보시겠어요?',
       },
       {
-        screenshot: '/images/movie/respect.png',
+        screenshot: 'images/movie/respect.png',
         script: 'Respect!!!',
       },
       {
-        screenshot: '/images/movie/noplan.png',
+        screenshot: 'images/movie/noplan.png',
         script: '너 절대 실패하지 않는 계획이 뭔줄 아니? 무계획이야, 무계획. No plan.',
       },
     ]
@@ -1454,19 +1454,19 @@ export const movieList = [
         script: '마포 대교는 무너졌냐 이 새끼야',
       },
       {
-        screenshot: '/images/movie/dleoskdhsduwk.png',
+        screenshot: 'images/movie/dleoskdhsduwk.png',
         script: '나 이대나온 여자야',
       },
       {
-        screenshot: '/images/movie/thftndlTdj.png',
+        screenshot: 'images/movie/thftndlTdj.png',
         script: '쏠 수 있어',
       },
       {
-        screenshot: '/images/movie/ehdwkrrmaks.png',
+        screenshot: 'images/movie/ehdwkrrmaks.png',
         script: '동작그만 밑장빼기냐?',
       },
       {
-        screenshot: '/images/movie/rktmadpqltnrk.png',
+        screenshot: 'images/movie/rktmadpqltnrk.png',
         script: '싸늘하다, 가슴에 비수가 날아와 꽃힌다. 하지만 걱정하지마라. 손은 눈보다 빠르니까.',
       }
     ],
@@ -1474,102 +1474,102 @@ export const movieList = [
   {
     value: '친구',
     scriptList: [
-      { screenshot: '/images/movie/smrmdkqnwl.png', script: '느그 아부지 뭐하시노?' },
-      { screenshot: '/images/movie/slrkrkfk.png', script: '니가 가라 하와이' },
-      { screenshot: '/images/movie/tlekqkfl.png', script: '내가 니 시다바리가' },
-      { screenshot: '/images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라' }
+      { screenshot: 'images/movie/smrmdkqnwl.png', script: '느그 아부지 뭐하시노?' },
+      { screenshot: 'images/movie/slrkrkfk.png', script: '니가 가라 하와이' },
+      { screenshot: 'images/movie/tlekqkfl.png', script: '내가 니 시다바리가' },
+      { screenshot: 'images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라' }
     ]
   },
   { value: '바람', scriptList: [
-      { screenshot: '/images/movie/rmfkansdkseho.png', script: '그라믄 안돼 정상한테 처 밟히고 그렇게 해서는 안돼!' }
+      { screenshot: 'images/movie/rmfkansdkseho.png', script: '그라믄 안돼 정상한테 처 밟히고 그렇게 해서는 안돼!' }
     ]
   },
   { value: '홀리데이', scriptList: [
-      { screenshot: '/images/movie/ghfflepdl.png', script: '이건 경고 사격을 위한 공포탄', },
-      { screenshot: '/images/movie/anwjsdbwhl.png', script: '유전무죄 무전유죄', }
+      { screenshot: 'images/movie/ghfflepdl.png', script: '이건 경고 사격을 위한 공포탄', },
+      { screenshot: 'images/movie/anwjsdbwhl.png', script: '유전무죄 무전유죄', }
     ]
   },
   { value: '실미도', scriptList: [
-      { screenshot: '/images/movie/silmido01.png', script: '비겁한 변명입니다!' },
-      { screenshot: '/images/movie/silmido02.png', script: '날 쏘고가라' },
+      { screenshot: 'images/movie/silmido01.png', script: '비겁한 변명입니다!' },
+      { screenshot: 'images/movie/silmido02.png', script: '날 쏘고가라' },
     ]
   },
   { value: '친절한 금자씨', scriptList: [
-      { screenshot: '/images/movie/geumja.png', script: '너나 잘하세요' }
+      { screenshot: 'images/movie/geumja.png', script: '너나 잘하세요' }
     ]
   },
   { value: '봄날은 간다', scriptList: [
-      { screenshot: '/images/movie/bomnal01.png', script: '라면 먹을래요?' },
-      { screenshot: '/images/movie/bomnal02.png', script: '어떻게 사랑이 변하니?' }
+      { screenshot: 'images/movie/bomnal01.png', script: '라면 먹을래요?' },
+      { screenshot: 'images/movie/bomnal02.png', script: '어떻게 사랑이 변하니?' }
     ]
   },
   { value: '올드보이', scriptList: [
-      { screenshot: '/images/movie/oldboy01.png', script: '누구냐 너' },
-      { screenshot: '/images/movie/oldboy02.png', script: '잘가라 오대수' },
-      { screenshot: '/images/movie/oldboy03.png', script: '내가 이제부터 이우진의 개야. 나 개새끼야. 왈 왈왈 왈왈. 꼬리 살랑살랑' },
-      { screenshot: '/images/movie/oldboy04.png', script: '사랑해요 아저씨' },
+      { screenshot: 'images/movie/oldboy01.png', script: '누구냐 너' },
+      { screenshot: 'images/movie/oldboy02.png', script: '잘가라 오대수' },
+      { screenshot: 'images/movie/oldboy03.png', script: '내가 이제부터 이우진의 개야. 나 개새끼야. 왈 왈왈 왈왈. 꼬리 살랑살랑' },
+      { screenshot: 'images/movie/oldboy04.png', script: '사랑해요 아저씨' },
     ]
   },
   { value: '명량', scriptList: [
-      { screenshot: '/images/movie/myeongryang02.png', script: '아직 신에게는 아직 12척의 배가 남아있사옵니다.' },
-      { screenshot: '/images/movie/myeongryang01.png', script: '목숨에 기대지마라. 살고자하면 필히 죽을것이고 또한 죽고자하면 살것이니 ' }
+      { screenshot: 'images/movie/myeongryang02.png', script: '아직 신에게는 아직 12척의 배가 남아있사옵니다.' },
+      { screenshot: 'images/movie/myeongryang01.png', script: '목숨에 기대지마라. 살고자하면 필히 죽을것이고 또한 죽고자하면 살것이니 ' }
     ]
   },
   { value: '해바라기', scriptList: [
-      { screenshot: '/images/movie/sunflower01.png', script: '나다 이씹새끼야' },
-      { screenshot: '/images/movie/sunflower02.png', script: '꼭 그렇게 다 가져 가야만 속이후련했냐!!' }
+      { screenshot: 'images/movie/sunflower01.png', script: '나다 이씹새끼야' },
+      { screenshot: 'images/movie/sunflower02.png', script: '꼭 그렇게 다 가져 가야만 속이후련했냐!!' }
     ] },
   { value: '관상', scriptList: [
-      { screenshot: '/images/movie/face01.png', script: '어째 내 얼굴이 왕이될 상인가' },
-      { screenshot: '/images/movie/face02.png', script: '헌데 관상가 양반, 생각해 보니 영 이상하구만. 이미 나는 왕이 되었는데 왕이 될 상이라니.' }
+      { screenshot: 'images/movie/face01.png', script: '어째 내 얼굴이 왕이될 상인가' },
+      { screenshot: 'images/movie/face02.png', script: '헌데 관상가 양반, 생각해 보니 영 이상하구만. 이미 나는 왕이 되었는데 왕이 될 상이라니.' }
     ] },
   {
     value: '도둑들',
     scriptList: [
-      { screenshot: '/images/movie/thieves01.png', script: '안가니? (저 아세요?) 내가 널 어떻게 아니? 내 차 끌고 왔으니까 알지.'},
-      { screenshot: '/images/movie/thieves02.png', script: '내가 볼 땐 어마어마한 썅년같애'},
+      { screenshot: 'images/movie/thieves01.png', script: '안가니? (저 아세요?) 내가 널 어떻게 아니? 내 차 끌고 왔으니까 알지.'},
+      { screenshot: 'images/movie/thieves02.png', script: '내가 볼 땐 어마어마한 썅년같애'},
     ]
   },
   {
     value: '베테랑',
     scriptList: [
-      { screenshot: '/images/movie/veteran01.png', script: '어이가 없네 ?' },
-      { screenshot: '/images/movie/veteran02.png', script: '우리 쪽팔리게 살진 말자' },
-      { screenshot: '/images/movie/veteran03.png', script: '야 우리가 돈이 없지 가오가 없어?' },
-      { screenshot: '/images/movie/veteran04.png', script: '나 여기 아트박스 사장인데...' }
+      { screenshot: 'images/movie/veteran01.png', script: '어이가 없네 ?' },
+      { screenshot: 'images/movie/veteran02.png', script: '우리 쪽팔리게 살진 말자' },
+      { screenshot: 'images/movie/veteran03.png', script: '야 우리가 돈이 없지 가오가 없어?' },
+      { screenshot: 'images/movie/veteran04.png', script: '나 여기 아트박스 사장인데...' }
     ],
   },
   { value: '말아톤', scriptList: [
-      { screenshot: '/images/movie/marathon.png', script: '초원이 다리는 백만불짜리 다리' }
+      { screenshot: 'images/movie/marathon.png', script: '초원이 다리는 백만불짜리 다리' }
     ] },
   { value: '박하사탕', scriptList: [
-      { screenshot: '/images/movie/mint.png', script: '나 다시 돌아갈래~~~~~' }
+      { screenshot: 'images/movie/mint.png', script: '나 다시 돌아갈래~~~~~' }
     ] },
   { value: '왕의 남자', scriptList: [
-      { screenshot: '/images/movie/dhkddmlskawk.png', script: '너 거기있고 나여기있지? 아니지 너 여기있고 나거기있지?' }
+      { screenshot: 'images/movie/dhkddmlskawk.png', script: '너 거기있고 나여기있지? 아니지 너 여기있고 나거기있지?' }
     ] },
   { value: '달콤한 인생', scriptList: [
-      { screenshot: '/images/movie/sweetlife.png', script: '넌 나에게 모욕감을 줬어' }
+      { screenshot: 'images/movie/sweetlife.png', script: '넌 나에게 모욕감을 줬어' }
     ] },
   { value: '곡성', scriptList: [
-      { screenshot: '/images/movie/goksung01.png', script: '뭣이 중헌디?' },
-      { screenshot: '/images/movie/goksung02.png', script: '그 놈은 미끼를 던져분 것이고, 자네 딸래미는 고것을 콱 물어분 것이여' },
-      { screenshot: '/images/movie/goksung03.png', script: '와따시다!!!!' }
+      { screenshot: 'images/movie/goksung01.png', script: '뭣이 중헌디?' },
+      { screenshot: 'images/movie/goksung02.png', script: '그 놈은 미끼를 던져분 것이고, 자네 딸래미는 고것을 콱 물어분 것이여' },
+      { screenshot: 'images/movie/goksung03.png', script: '와따시다!!!!' }
     ] },
   { value: '엑시트', scriptList: [
-      { screenshot: '/images/movie/exit.png', script: '따따따 따 따 따 따따따' }
+      { screenshot: 'images/movie/exit.png', script: '따따따 따 따 따 따따따' }
     ] },
   { value: '알라딘', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20190417_212%2F1555463319238lklmS_JPEG%2Fmovie_image.jpg' },
   { value: '라이온킹', screenshot: 'http://t1.daumcdn.net/cfile/116955364EC098F61B' },
-  { value: '신데렐라', screenshot: '/images/movie/cinderella.png' },
+  { value: '신데렐라', screenshot: 'images/movie/cinderella.png' },
   { value: '살인의 추억', scriptList:[
-      { screenshot: '/images/movie/tkfdlsdmlcndjr01.png', script: '향숙이? 향숙이 예쁘지' },
-      { screenshot: '/images/movie/tkfdlsdmlcndjr02.png', script: '밥은 먹고 다니냐?' }
+      { screenshot: 'images/movie/tkfdlsdmlcndjr01.png', script: '향숙이? 향숙이 예쁘지' },
+      { screenshot: 'images/movie/tkfdlsdmlcndjr02.png', script: '밥은 먹고 다니냐?' }
     ] },
   { value: '500일의 썸머', screenshot: 'http://t1.daumcdn.net/movie/360f48053a5d34a8bb3b7cbe1a2df633d5ca0770' },
   { value: '쿵푸팬더', screenshot: 'http://t1.daumcdn.net/cfile/13497810B04369D307' },
   { value: '설국열차', screenshot: 'http://t1.daumcdn.net/cfile/2740BA4751D65C7F33' },
-  { value: '오아시스', screenshot: '/images/movie/oasis.png' },
+  { value: '오아시스', screenshot: 'images/movie/oasis.png' },
   { value: '라푼젤', screenshot: 'http://t1.daumcdn.net/cfile/14378B364D51091514' },
   { value: '공조', screenshot: 'http://t1.daumcdn.net/movie/962fc7b195455f21a4a7da7617283291f43d05fa' },
   { value: '검사외전', screenshot: 'http://t1.daumcdn.net/movie/fc9b3cef912a7c5546104fc4f4db8ba54df362d8' },
@@ -1585,19 +1585,19 @@ export const movieList = [
   { value: '히말라야', screenshot: 'http://t1.daumcdn.net/movie/459a7ccc0cfc901d255dc1d0c8707bd02b6e5a5a' },
   { value: '터널', scriptList: [
       {
-        screenshot: '/images/movie/tunnel01.png',
+        screenshot: 'images/movie/tunnel01.png',
         script: '다 꺼져 이 개새끼들아. 라고 이분이 말씀하셨습니다.',
       },
       {
-        screenshot: '/images/movie/tunnel02.png',
+        screenshot: 'images/movie/tunnel02.png',
         script: '누구? 나? 왜?',
       },
     ]
   },
   { value: '부산행', screenshot: 'https://movie-phinf.pstatic.net/20160427_60/1461745425689JBP24_JPEG/movie_image.jpg' },
   { value: '국제시장', scriptList: [
-      { screenshot: '/images/movie/globalmarket01.png', script: '여 운동장이 아이다. 놀러나온게 아이다.' },
-      { screenshot: '/images/movie/globalmarket02.png', script: '아버지. 내 약속 잘 지켰지예? 막순이도 찾았고, 이만하면 내 잘 살았지예? 근데 내 진짜 힘들었거든예' }
+      { screenshot: 'images/movie/globalmarket01.png', script: '여 운동장이 아이다. 놀러나온게 아이다.' },
+      { screenshot: 'images/movie/globalmarket02.png', script: '아버지. 내 약속 잘 지켰지예? 막순이도 찾았고, 이만하면 내 잘 살았지예? 근데 내 진짜 힘들었거든예' }
     ] },
   { value: '트랜스포머', screenshot: 'http://t1.daumcdn.net/cfile/126F1B10AB8C7E4691' },
   { value: '늑대소년', screenshot: 'http://t1.daumcdn.net/cfile/116B164A5085EEAE1D' },
@@ -1605,15 +1605,15 @@ export const movieList = [
   { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg' },
   { value: '웰컴 투 동막골', screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg' },
   { value: '내 아내의 모든것', screenshot: 'https://movie-phinf.pstatic.net/20120423_299/1335166025862kFb6W_JPEG/movie_image.jpg' },
-  { value: '김종욱 찾기', screenshot: '/images/movie/findkimjongguk.png' },
+  { value: '김종욱 찾기', screenshot: 'images/movie/findkimjongguk.png' },
   { value: '전우치', screenshot: 'http://t1.daumcdn.net/cfile/1146B4264B2F33E207' },
-  { value: '군도', screenshot: '/images/movie/gundo.png' },
+  { value: '군도', screenshot: 'images/movie/gundo.png' },
   { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441' },
   { value: '화이: 괴물을 삼킨 아이', screenshot: 'http://t1.daumcdn.net/cfile/214858495215AB990A' },
   { value: '독전', screenshot: 'https://movie-phinf.pstatic.net/20180604_284/1528074809424DdA9C_JPEG/movie_image.jpg' },
   { value: '접속', screenshot: 'https://movie-phinf.pstatic.net/20111222_52/1324534270853gMs61_JPEG/movie_image.jpg' },
   { value: '약속', scriptList: [
-      { screenshot: '/images/movie/promise.png',
+      { screenshot: 'images/movie/promise.png',
         script: '당신께서 저한테... 니 죄가 무엇이냐 고 물으신다면... 이 사람을 만나고... 사랑하고... 홀로 남겨두고 떠난다는 것이 가장 큰 죄일 것입니다.' }
     ] },
   { value: '은교', screenshot: 'https://movie-phinf.pstatic.net/20120330_215/1333097862663h3pdn_JPEG/movie_image.jpg' },

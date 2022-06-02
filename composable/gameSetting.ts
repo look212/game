@@ -122,6 +122,7 @@ export default function gameSetting() {
       }
     },
     setIsShow(value: boolean) {
+      console.log(value);
       data.isShow = value;
     },
   }
