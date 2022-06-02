@@ -70,6 +70,78 @@ export const setTotalList = (subject: any) => {
     case 'drama':
       totalList = dramaList
       break;
+    case 'movie_script':
+      movieList.filter((option: any) => option.scriptList).map((option: any) => {
+        option.scriptList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            screenshot: script.screenshot,
+            script: script.script,
+          })
+        })
+      })
+      break;
+    case 'movie_title':
+      movieList.filter((option: any) => option.scriptList).map((option: any) => {
+        option.scriptList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            screenshot: script.screenshot,
+            script: script.script,
+          })
+        })
+      });
+      const filterMovie = movieList.filter((option: any) => option.screenshot)
+      totalList.concat(filterMovie);
+      break;
+    case 'movie_sound':
+      movieList.filter((option: any) => option.soundList).map((option: any) => {
+        option.soundList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            youtube_id: script.youtube_id,
+            singer: script.singer,
+            title: script.title,
+          })
+        })
+      })
+      break;
+    case 'drama_script':
+      dramaList.filter((option: any) => option.scriptList).map((option: any) => {
+        option.scriptList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            screenshot: script.screenshot,
+            script: script.script,
+          })
+        })
+      })
+      break;
+    case 'drama_title':
+      dramaList.map((option: any) => {
+        option.scriptList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            screenshot: script.screenshot,
+            script: script.script,
+          })
+        })
+      });
+      const filterDrama = dramaList.filter((option: any) => option.screenshot)
+      totalList.concat(filterDrama);
+      break;
+    case 'drama_sound':
+      dramaList.filter((option: any) => option.soundList).map((option: any) => {
+        option.soundList.forEach((script: any) => {
+          totalList.push({
+            value: option.value,
+            youtube_id: script.youtube_id,
+            singer: script.singer,
+            title: script.title,
+          })
+        })
+      })
+      break;
   }
 
   return { totalList };

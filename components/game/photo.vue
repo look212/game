@@ -13,7 +13,7 @@
             <img :src="game.url" v-if="index === activeIndex" class="swiper-lazy">
             <div class="swiper-lazy-preloader"></div>
           </div>
-          <div v-else class="txt" @click="setIsShow">
+          <div v-else class="txt" @click="setIsShow(true)">
             <div :class="{'is-active': !isShow}">
               {{ game.value }}
             </div>
@@ -89,6 +89,7 @@ export default defineComponent({
         }).then(async (result) => {
           if (result.isConfirmed) {
             await game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
+            isTimerStart.value = true;
             activeIndex.value = 0;
             await setGoogleImage(gameList.value[activeIndex.value].name);
             await swiper.value.$swiper.slideTo(0);
