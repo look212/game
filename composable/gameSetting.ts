@@ -121,8 +121,8 @@ export default function gameSetting() {
         await methods.setKakaoImage(gameList.value[data.activeIndex].value);
       }
     },
-    setIsShow() {
-      data.isShow = false;
+    setIsShow(value: boolean) {
+      data.isShow = value;
     },
   }
 

@@ -99,18 +99,19 @@ export const mainInfos: IMainInfo[] = [
     ]
   },
   {
-    type: 'drama',
-    title: '영화 & 드라마',
+    type: 'movie',
+    title: '영화 맞추기',
     description: `
     <ul>
-        <li>주제를 고르세요.</li>
+        <li>문제 유형을 고르세요.</li>
         <li>문제 갯수를 고르세요.</li>
-        <li>스샷을 보고 대사 또는 제목을 맞추세요.</li>
+        <li>답을 맞추세요.</li>
     </ul>
     `,
     subject: [
-      { value: 'movie', label: '영화' },
-      { value: 'drama', label: '드라마' },
+      { value: 'movie_script', label: '스샷보고 대사 맞추기' },
+      { value: 'movie_title', label: '스샷보고 제목 맞추기' },
+      // { value: 'movie_sound', label: 'OST 듣고 제목 맞추기' },
     ]
   },
 ]

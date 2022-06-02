@@ -1,9 +1,9 @@
 <template>
   <div class="game-in" v-if="gameList.length > 1">
     <div class="info">
-      <p>{{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
+      <p> {{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
     </div>
-    <div class="controls">
+    <div class="controls" v-if="subject.value === 'movie_sound'">
       <g-button :is-gray="true"
                 @click="handlePlay"
                 :class="{'is-active': type === 'play'}"><img src="../../static/images/icon/play.png" alt="play" height="14px;">️</g-button>
@@ -12,7 +12,7 @@
                 :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
     <div class="question-wrap">
-      <div class="shadow" v-if="isShow" @click="setIsShow(true)">
+      <div class="shadow" v-if="isShow && subject.value === 'movie_sound'" @click="setIsShow(true)">
         <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
       </div>
       <swiper ref="swiper"
@@ -20,14 +20,26 @@
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <div v-if="index === activeIndex">
-            <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.singer || game.composer }} - {{ game.value }}</p>
-            <client-only>
-              <youtube :video-id="game.youtube_id"
-                       player-width="100%"
-                       player-height="56.25%"
-                       @ready="ready"
-                       @playing="playing($event, type)"></youtube>
-            </client-only>
+            <template v-if="subject.value === 'movie_sound'">
+              <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.value }}</p>
+              <client-only>
+                <youtube :video-id="game.youtube_id"
+                         player-width="100%"
+                         player-height="56.25%"
+                         @ready="ready"
+                         @playing="playing($event, type)"></youtube>
+              </client-only>
+            </template>
+            <template v-else>
+              <img :src="game.screenshot" alt="">
+              <div class="txt"  @click="setIsShow(!isShow)">
+                <div :class="{'is-active': !isShow}">
+                  {{ game.value }}
+                  <i v-if="subject.value === 'movie_script'">{{ game.script }}</i>
+                </div>
+              </div>
+              <div class="swiper-lazy-preloader"></div>
+            </template>
           </div>
         </swiper-slide>
         <div class="next-wrap" v-if="gameList.length !== (activeIndex + 1)">
@@ -49,7 +61,7 @@ import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
 
 export default defineComponent({
-  name: 'ComponentMusic',
+  name: 'ComponentMovie',
   components: {
     GButton,
     GTimer,
@@ -167,6 +179,34 @@ export default defineComponent({
   button {
     img {
       margin-top: -5px;
+    }
+  }
+}
+.swiper-slide {
+  img {
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+  .txt {
+    position: relative;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+    > div {
+      background: $Gray90;
+      line-height: 1.2em;
+      i {
+        display: block;
+        margin-top: 16px;
+        opacity: .4;
+        font-size: .8em;
+      }
+
+      &.is-active {
+        background: transparent;
+      }
     }
   }
 }
