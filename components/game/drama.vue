@@ -61,7 +61,7 @@ import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
 
 export default defineComponent({
-  name: 'ComponentMovie',
+  name: 'ComponentDrama',
   components: {
     GButton,
     GTimer,

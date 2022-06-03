@@ -23,7 +23,7 @@ export default {
       { name: 'google-site-verification', content: 'TzeBX7E_eVuV7BLV_xFhnxkzkXnHi2lhhUGpRlJ-3uw' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
       {
         rel: 'stylesheet',
         type: 'text/css',

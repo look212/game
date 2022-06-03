@@ -31,7 +31,7 @@
     </template>
     <template v-else>
       <div class="contents">
-        <music></music>
+        <drama></drama>
       </div>
     </template>
   </div>
@@ -42,14 +42,14 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import GTimer from '~/components/_atoms/GTimer.vue';
 import GButton from '~/components/_atoms/GButton.vue';
 import gameSetting from '~/composable/gameSetting';
-import music from '~/components/game/music.vue';
+import drama from '~/components/game/drama.vue';
 
 export default defineComponent({
   name: 'Drama',
   components: {
     GTimer,
     GButton,
-    music,
+    drama,
   },
   setup(props, { root }) {
     const {
