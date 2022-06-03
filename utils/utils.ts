@@ -92,16 +92,16 @@ export const setTotalList = (subject: any) => {
         })
       });
       const filterMovie = movieList.filter((option: any) => option.screenshot)
-      totalList.concat(filterMovie);
+      totalList.push(...filterMovie);
       break;
     case 'movie_sound':
       movieList.filter((option: any) => option.soundList).map((option: any) => {
-        option.soundList.forEach((script: any) => {
+        option.soundList.forEach((sound: any) => {
           totalList.push({
             value: option.value,
-            youtube_id: script.youtube_id,
-            singer: script.singer,
-            title: script.title,
+            singer: sound.singer,
+            title: sound.title,
+            youtube_id: sound.youtube_id,
           })
         })
       })
@@ -128,16 +128,16 @@ export const setTotalList = (subject: any) => {
         })
       });
       const filterDrama = dramaList.filter((option: any) => option.screenshot)
-      totalList.concat(filterDrama);
+      totalList.push(...filterDrama);
       break;
     case 'drama_sound':
       dramaList.filter((option: any) => option.soundList).map((option: any) => {
-        option.soundList.forEach((script: any) => {
+        option.soundList.forEach((sound: any) => {
           totalList.push({
             value: option.value,
-            youtube_id: script.youtube_id,
-            singer: script.singer,
-            title: script.title,
+            singer: sound.singer,
+            title: sound.title,
+            youtube_id: sound.youtube_id,
           })
         })
       })

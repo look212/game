@@ -1189,7 +1189,12 @@ export const movieList = [
   },
   {
     value: '라라랜드',
-    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20161101_284%2F14779623657454Yd9v_JPEG%2Fmovie_image.jpg'
+    screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20161101_284%2F14779623657454Yd9v_JPEG%2Fmovie_image.jpg',
+    soundList: [
+      { singer: 'La La Land Cast', title: 'Another Day Of Sun', youtube_id: 'WxCz0UNUNeQ' },
+      { singer: '엠마 스톤, 캘리 허낸데즈, 소노야 미즈노 및 제시카 로테', title: 'Someone In The Crowd', youtube_id: '-62YbRZqxjs' },
+      { singer: 'Ryan Gosling(라이언 고즐링) 및 엠마 스톤', title: 'City Of Stars', youtube_id: 'xkqfm3muuhM' },
+    ]
   },
   {
     value: '인턴',
@@ -1221,6 +1226,9 @@ export const movieList = [
         screenshot: 'images/movie/sksflsksfl.png',
         script: '난리났네 난리났어 어디 오빠 없는 사람 서러워 살겠나',
       }
+    ],
+    soundList: [
+      { singer: '장기하와 얼굴들', title: '풍문으로 들었소', youtube_id: 'OLAK5uy_ny' },
     ]
   },
   {
@@ -1239,7 +1247,13 @@ export const movieList = [
     value: '노인을 위한 나라는 없다',
     screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20180813_232%2F1534121461320IfxaF_JPEG%2Fmovie_image.jpg',
   },
-  { value: '말할 수 없는 비밀', screenshot: 'images/movie/akfgkftndjqtsmsqlalf.png', },
+  { value: '말할 수 없는 비밀', screenshot: 'images/movie/akfgkftndjqtsmsqlalf.png', soundList: [
+      { singer: '주걸륜', title: '두금', youtube_id: 'z57bPySr1Cw' },
+      { singer: '주걸륜', title: '자전거', youtube_id: 'v7iAcSRY7vo' },
+      { singer: '주걸륜', title: '아침체조', youtube_id: '4RAY8_MXJgU' },
+      { singer: '주걸륜', title: '이슬비', youtube_id: 'fOEeDDyMyws' },
+    ]
+  },
   {
     value: '어벤져스: 엔드게임',
     screenshot: 'https://img.huffingtonpost.com/asset/5cc67e6d24000033007782ea.png?ops=scalefit_630_noupscale',
@@ -1247,6 +1261,12 @@ export const movieList = [
   {
     value: '미스터 & 미세스 스미스',
     screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111223_205%2F1324582189493CRHBz_JPEG%2Fmovie_image.jpg',
+  },
+  {
+    value: '기쿠지로의 여름',
+    soundList: [
+      { singer: '히사이시 조', title: 'Summer', youtube_id: 'z8zHpZOZodQ' },
+    ]
   },
   {
     value: '신세계', scriptList: [
@@ -1282,6 +1302,9 @@ export const movieList = [
         screenshot: 'images/movie/rjscnrgkrrofhs.png',
         script: '키스라는건 말이야 봐봐 입술이 딱 붙잖아 근데 걔혀 니혀가 자연스럽게 들어온다고 스르륵 뱀처럼...',
       }
+    ],
+    soundList: [
+      { singer: '전람회', title: '기억의 습작', youtube_id: 'kRfqsYQSSvY' },
     ]
   },
   {
@@ -1296,7 +1319,11 @@ export const movieList = [
   {
     value: '1987', scriptList: [
       {
-        screenshot: 'https://w.namu.la/s/760efbabc2b8a054e96b9b076662dadd3b27e17d8edfe33b20a215b834d7b440aba6bf8fda4d5a418ffcfc615387ef2030af9ad3b184beb35c681c23344030e0c16165830c53fc9969c4101513d76580fd9b0c5bec43328b26dffddf7265daf4',
+        screenshot: 'images/movie/1987_01.png',
+        script: '조사관이 책상을 탁 치니 억 하고 읭? 쓰러졌답니다',
+      },
+      {
+        screenshot: 'images/movie/1987_02.png',
         script: '그거 손으로 닦음 더 따가워요, 세수하세요.',
       }
     ]
@@ -1313,6 +1340,9 @@ export const movieList = [
   {
     value: '비포선라이즈',
     screenshot: 'https://movie-phinf.pstatic.net/20160324_259/1458798387486UACDQ_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '줄리 델피', title: 'A Waltz for a Night', youtube_id: 'rHBZ5TohNYI' },
+    ]
   },
   {
     value: '극한직업',
@@ -1334,6 +1364,9 @@ export const movieList = [
   {
     value: '화양연화',
     screenshot: 'https://movie-phinf.pstatic.net/20201203_112/1606986402195J3Gbd_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '우메바야시 시게루', title: 'Yumeji\'s Theme', youtube_id: 'LUssJ1oi4cA' },
+    ]
   },
   {
     value: '소림축구',
@@ -1342,6 +1375,9 @@ export const movieList = [
   {
     value: '노팅힐',
     screenshot: 'https://movie-phinf.pstatic.net/20190402_153/1554169860877NDhCI_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '엘비스 코스텔로', title: 'She', youtube_id: 'ZWG8enSfkCY' },
+    ]
   },
   {
     value: '이웃집 토토로',
@@ -1350,14 +1386,23 @@ export const movieList = [
   {
     value: '하울의 움직이는 성',
     screenshot: 'https://movie-phinf.pstatic.net/20141119_47/1416357055571DHsVB_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '히사이시 조', title: 'Merry-Go-Round of Life', youtube_id: '1WJxOivfZxI' },
+    ]
   },
   {
     value: '센과 치히로의 행방불명',
     screenshot: 'https://movie-phinf.pstatic.net/20150108_83/1420706407615GKsAa_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '', title: 'Always With Me(언제나 몇 번이라도)', youtube_id: 'ESJ7TQvFFrA' },
+    ]
   },
   {
     value: '인터스텔라',
     screenshot: 'https://movie-phinf.pstatic.net/20141112_202/1415776906972fTbqE_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: 'Hans Zimmer', title: 'Cornfield Chase', youtube_id: '7GlsxNI4LVI' },
+    ]
   },
   {
     value: '기생충',
@@ -1398,6 +1443,9 @@ export const movieList = [
         screenshot: 'images/movie/noplan.png',
         script: '너 절대 실패하지 않는 계획이 뭔줄 아니? 무계획이야, 무계획. No plan.',
       },
+    ],
+    soundList: [
+      { singer: '정재일', title: 'Zappaguri', youtube_id: 'DHVijvx-hG4' },
     ]
   },
   {
@@ -1429,8 +1477,8 @@ export const movieList = [
     value: '엽기적인 그녀',
     scriptList: [
       {
-        screenshot: 'https://mblogthumb-phinf.pstatic.net/MjAxOTA1MzBfNzEg/MDAxNTU5MjIzNzE1MTAw.eykWNwSGz2unTj-vfrkq0Mt-WoveJBFVd-Edqe9d78Yg.Djez5bHlLWekwF7ys7yTm0fvP6whdY9f4Oy9FqFUQoMg.PNG.kimdg4488/SE-6fbb9ac2-6bec-4645-a53b-e24f65bcc506.png',
-        script: '견우야 미안해 나도 어쩔 수 없는 여자인가봐',
+        screenshot: 'images/movie/duqrlwjrdlsrmsu.png',
+        script: '견우야 미안해 나도 정말 어쩔 수가 없나봐, 난 다르다고 생각했는데 나도 어쩔 수 없는 여잔가봐',
       }
     ]
   },
@@ -1470,6 +1518,9 @@ export const movieList = [
         script: '싸늘하다, 가슴에 비수가 날아와 꽃힌다. 하지만 걱정하지마라. 손은 눈보다 빠르니까.',
       }
     ],
+    soundList: [
+      { singer: '장영규', title: 'Intro', youtube_id: 'pKKAogAn4Nw' },
+    ]
   },
   {
     value: '친구',
@@ -1492,6 +1543,9 @@ export const movieList = [
   { value: '실미도', scriptList: [
       { screenshot: 'images/movie/silmido01.png', script: '비겁한 변명입니다!' },
       { screenshot: 'images/movie/silmido02.png', script: '날 쏘고가라' },
+    ],
+    soundList: [
+      { singer: '조영욱', title: '684부대', youtube_id: 'Li6QmD_aHHs' },
     ]
   },
   { value: '친절한 금자씨', scriptList: [
@@ -1508,6 +1562,10 @@ export const movieList = [
       { screenshot: 'images/movie/oldboy02.png', script: '잘가라 오대수' },
       { screenshot: 'images/movie/oldboy03.png', script: '내가 이제부터 이우진의 개야. 나 개새끼야. 왈 왈왈 왈왈. 꼬리 살랑살랑' },
       { screenshot: 'images/movie/oldboy04.png', script: '사랑해요 아저씨' },
+    ],
+    soundList: [
+      { singer: '이지수', title: 'Cries of whispers', youtube_id: 'o5CxL3CJmaM' },
+      { singer: '심현정', title: 'The last waltz', youtube_id: 'JJQHhceoXU8' },
     ]
   },
   { value: '명량', scriptList: [
@@ -1528,6 +1586,9 @@ export const movieList = [
     scriptList: [
       { screenshot: 'images/movie/thieves01.png', script: '안가니? (저 아세요?) 내가 널 어떻게 아니? 내 차 끌고 왔으니까 알지.'},
       { screenshot: 'images/movie/thieves02.png', script: '내가 볼 땐 어마어마한 썅년같애'},
+    ],
+    soundList: [
+      { singer: 'Studio Musicians', title: 'Freedom', youtube_id: 'DAxLds4naB8' },
     ]
   },
   {
@@ -1538,6 +1599,9 @@ export const movieList = [
       { screenshot: 'images/movie/veteran03.png', script: '야 우리가 돈이 없지 가오가 없어?' },
       { screenshot: 'images/movie/veteran04.png', script: '나 여기 아트박스 사장인데...' }
     ],
+    soundList: [
+      { singer: '방준석, 김명환', title: '베테랑 팀', youtube_id: '1OCLsMlOm0E' },
+    ]
   },
   { value: '말아톤', scriptList: [
       { screenshot: 'images/movie/marathon.png', script: '초원이 다리는 백만불짜리 다리' }
@@ -1559,8 +1623,22 @@ export const movieList = [
   { value: '엑시트', scriptList: [
       { screenshot: 'images/movie/exit.png', script: '따따따 따 따 따 따따따' }
     ] },
-  { value: '알라딘', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20190417_212%2F1555463319238lklmS_JPEG%2Fmovie_image.jpg' },
-  { value: '라이온킹', screenshot: 'http://t1.daumcdn.net/cfile/116955364EC098F61B' },
+  { value: '알라딘', screenshot: 'https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20190417_212%2F1555463319238lklmS_JPEG%2Fmovie_image.jpg',
+    soundList: [
+      { singer: '미나 마수드 및 나오미 스콧', title: 'A Whole New World', youtube_id: 'MAe325dOhlo' },
+      { singer: '나오미 스콧', title: 'Speechless', youtube_id: '1vU4qYnyOlY' },
+      { singer: '윌 스미스', title: 'Friend Like Me', youtube_id: 'mp01r_1g7tE' },
+    ]
+  },
+  { value: '라이온킹', screenshot: 'http://t1.daumcdn.net/cfile/116955364EC098F61B',
+    soundList: [
+      { singer: 'Lindiwe Mkhize, 레보 엠', title: 'Circle of Life/Nants\' Ingonyama', youtube_id: 'BM-khAJP2cU' },
+      { singer: '빌리 아이크너, Seth Rogen, JD McCrary 및 Childish Gambino(차일디쉬 감비노)', title: 'Hakuna Matata', youtube_id: 'vCsHo-lrq9k' },
+      { singer: '비욘세\n' +
+          ', \n' +
+          'Childish Gambino(차일디쉬 감비노)', title: 'Can You Feel the Love Tonight', youtube_id: '95iIdlBtiYY' },
+      { singer: 'JD McCrary, Shahadi Wright Joseph 및 존 올리버', title: 'I Just Can\'t Wait to Be King', youtube_id: 'LYRn9S2hhOY' },
+    ]},
   { value: '신데렐라', screenshot: 'images/movie/cinderella.png' },
   { value: '살인의 추억', scriptList:[
       { screenshot: 'images/movie/tkfdlsdmlcndjr01.png', script: '향숙이? 향숙이 예쁘지' },
@@ -1574,14 +1652,27 @@ export const movieList = [
   { value: '공조', screenshot: 'http://t1.daumcdn.net/movie/962fc7b195455f21a4a7da7617283291f43d05fa' },
   { value: '검사외전', screenshot: 'http://t1.daumcdn.net/movie/fc9b3cef912a7c5546104fc4f4db8ba54df362d8' },
   { value: '좋은놈 나쁜놈 이상한놈', screenshot: 'http://t1.daumcdn.net/cfile/15492110B04F886224' },
-  { value: '국가대표', screenshot: 'http://t1.daumcdn.net/cfile/1349CB254A38FD92C3' },
+  { value: '국가대표', screenshot: 'http://t1.daumcdn.net/cfile/1349CB254A38FD92C3',
+    soundList: [
+      { singer: '러브홀릭스', title: 'Butterfly', youtube_id: 'GBxX5f1UDOg' },
+    ]},
   { value: '아수라', screenshot: 'http://t1.daumcdn.net/movie/e6e4e6cafa20e1e0cc6dfb26723b18d0f34ff753' },
   { value: '은밀하게 위대하게', screenshot: 'http://t1.daumcdn.net/cfile/251E394851789C292E' },
   { value: '색계', screenshot: 'http://t1.daumcdn.net/movie/3f0592e7fef3e8c09ae96e2f0291c75a4566002a' },
   { value: '의형제', screenshot: 'http://t1.daumcdn.net/cfile/1332ED0E4B4657FF36' },
-  { value: '007 스카이폴', screenshot: 'http://t1.daumcdn.net/cfile/2011A84A5073E1161B' },
-  { value: '미션 임파서블: 폴아웃', screenshot: 'http://t1.daumcdn.net/movie/8a0fc02b9a3eb8869ef2682735826f60d09bd0fc' },
-  { value: '메트릭스', screenshot: 'http://t1.daumcdn.net/movie/395e534d66ea43488009d52d87a3a6af1567760609800' },
+  { value: '007 스카이폴', screenshot: 'http://t1.daumcdn.net/cfile/2011A84A5073E1161B',
+    soundList: [
+      { singer: 'Adele', title: 'Skyfall', youtube_id: 'LJzp_mDxaT0' },
+    ]
+  },
+  { value: '미션 임파서블: 폴아웃', screenshot: 'http://t1.daumcdn.net/movie/8a0fc02b9a3eb8869ef2682735826f60d09bd0fc',
+    soundList: [
+      { singer: '론 밸프', title: 'Mission: Accomplished', youtube_id: 'w9xe9nYe9NQ' },
+    ] },
+  { value: '매트릭스', screenshot: 'http://t1.daumcdn.net/movie/395e534d66ea43488009d52d87a3a6af1567760609800',
+    soundList: [
+      { singer: '', title: 'Propellerheads - Spybreak!', youtube_id: 'iCBL33NKvPA' },
+    ]},
   { value: '히말라야', screenshot: 'http://t1.daumcdn.net/movie/459a7ccc0cfc901d255dc1d0c8707bd02b6e5a5a' },
   { value: '터널', scriptList: [
       {
@@ -1600,13 +1691,24 @@ export const movieList = [
       { screenshot: 'images/movie/globalmarket02.png', script: '아버지. 내 약속 잘 지켰지예? 막순이도 찾았고, 이만하면 내 잘 살았지예? 근데 내 진짜 힘들었거든예' }
     ] },
   { value: '트랜스포머', screenshot: 'http://t1.daumcdn.net/cfile/126F1B10AB8C7E4691' },
-  { value: '늑대소년', screenshot: 'http://t1.daumcdn.net/cfile/116B164A5085EEAE1D' },
+  { value: '늑대소년', screenshot: 'http://t1.daumcdn.net/cfile/116B164A5085EEAE1D',
+    soundList: [
+      { singer: '박보영', title: '나의 왕자님', youtube_id: 'rzgN6xaE_eY' },
+    ]
+  },
   { value: '이터널 선샤인', screenshot: 'http://t1.daumcdn.net/movie/6f004dfd2b0e90f4e5f4973a4e76d7114f772cc1' },
   { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg' },
   { value: '웰컴 투 동막골', screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg' },
   { value: '내 아내의 모든것', screenshot: 'https://movie-phinf.pstatic.net/20120423_299/1335166025862kFb6W_JPEG/movie_image.jpg' },
-  { value: '김종욱 찾기', screenshot: 'images/movie/findkimjongguk.png' },
-  { value: '전우치', screenshot: 'http://t1.daumcdn.net/cfile/1146B4264B2F33E207' },
+  { value: '김종욱 찾기', screenshot: 'images/movie/findkimjongguk.png',
+    soundList: [
+      { singer: '공유', title: '두번째 첫사랑', youtube_id: 'w-7UgoD6pxY' },
+    ]
+  },
+  { value: '전우치', screenshot: 'http://t1.daumcdn.net/cfile/1146B4264B2F33E207',
+    soundList: [
+      { singer: '', title: '궁중악사', youtube_id: 'xzsRBKZh1No' },
+    ]},
   { value: '군도', screenshot: 'images/movie/gundo.png' },
   { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441' },
   { value: '화이: 괴물을 삼킨 아이', screenshot: 'http://t1.daumcdn.net/cfile/214858495215AB990A' },
@@ -1618,64 +1720,129 @@ export const movieList = [
     ] },
   { value: '은교', screenshot: 'https://movie-phinf.pstatic.net/20120330_215/1333097862663h3pdn_JPEG/movie_image.jpg' },
   { value: '우리들의 행복한 시간', screenshot: 'https://movie-phinf.pstatic.net/20111222_44/13245617131446aDli_JPEG/movie_image.jpg' },
-  { value: '뷰티 인사이드', screenshot: 'https://movie-phinf.pstatic.net/20150603_144/1433298396491dhWLD_JPEG/movie_image.jpg' },
+  { value: '뷰티 인사이드', screenshot: 'https://movie-phinf.pstatic.net/20150603_144/1433298396491dhWLD_JPEG/movie_image.jpg', soundList: [
+      { singer: '', title: 'Amapola (Orchestra Version)', youtube_id: '60sYc0Gnayw' },
+      { singer: 'Citizens', title: 'True Romance', youtube_id: 'G1jQahN-Zcc' },
+    ] },
   { value: '퍼펙트 게임', screenshot: 'https://movie-phinf.pstatic.net/20111224_230/1324654398379Mg753_JPEG/movie_image.jpg' },
   { value: '킬빌 1부', screenshot: 'https://movie-phinf.pstatic.net/20111223_74/13245830310193s8BG_JPEG/movie_image.jpg' },
   { value: '피아니스트', screenshot: 'https://movie-phinf.pstatic.net/20111223_151/1324569051618gDbvE_JPEG/movie_image.jpg' },
   { value: '엑스맨 탄생: 울버린', screenshot: 'https://movie-phinf.pstatic.net/20111223_78/1324576397382QIJbl_JPEG/movie_image.jpg' },
-  { value: '물랑루즈', screenshot: 'https://movie-phinf.pstatic.net/20150217_242/14241544239486e6WD_JPEG/movie_image.jpg' },
+  { value: '물랑루즈', screenshot: 'https://movie-phinf.pstatic.net/20150217_242/14241544239486e6WD_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Christina Aguilera(크리스티나 아길레라), Lil\' Kim, 마이아 및 P!nk(핑크)', title: 'Lady Marmalade', youtube_id: 'h1h3YJwsAqc' },
+    ] },
   { value: '메멘토', screenshot: 'https://movie-phinf.pstatic.net/20111221_83/1324475874184WP9ic_JPEG/movie_image.jpg' },
-  { value: '아멜리에', screenshot: 'https://movie-phinf.pstatic.net/20211130_180/1638254681852681Mn_JPEG/movie_image.jpg' },
-  { value: '원스', screenshot: 'https://movie-phinf.pstatic.net/20120112_70/1326346564198hxAP5_JPEG/movie_image.jpg' },
+  { value: '아멜리에', screenshot: 'https://movie-phinf.pstatic.net/20211130_180/1638254681852681Mn_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Yann Tiersen', title: 'La valse d\'Amélie', youtube_id: '07xTvC5a9YQ' },
+    ] },
+  { value: '원스', screenshot: 'https://movie-phinf.pstatic.net/20120112_70/1326346564198hxAP5_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Glen Hansard(글렌 한사드) 및 Markéta Irglová(마르게타 이글로바)', title: 'Falling Slowly', youtube_id: 'agf4tUnxotA' },
+    ] },
   { value: '파이트 클럽', screenshot: 'https://movie-phinf.pstatic.net/20160920_84/1474337305472yMUGj_JPEG/movie_image.jpg' },
   { value: '슬럼독 밀리어네어', screenshot: 'https://movie-phinf.pstatic.net/20111222_229/1324553086754yGHg1_JPEG/movie_image.jpg' },
-  { value: '줄무늬 파자마를 입은 소년', screenshot: '', script: '', sound: '' },
-  { value: '예스맨', screenshot: '', script: '', sound: '' },
-  { value: '레버넌트', screenshot: '', script: '', sound: '' },
-  { value: '벤자민 버튼의 시간은 거꾸로 간다', screenshot: '', script: '', sound: '' },
-  { value: '러브 엑츄얼리', screenshot: '', script: '', sound: '' },
-  { value: '러브레터', screenshot: '', script: '', sound: '' },
-  { value: '오펀 천사의 비밀', screenshot: '', script: '', sound: '' },
-  { value: '아는 여자', screenshot: '', script: '', sound: '' },
-  { value: '만추', screenshot: '', script: '', sound: '' },
-  { value: '아저씨', screenshot: '', script: '', sound: '' },
-  { value: '미녀는 아름다워', screenshot: '', script: '', sound: '' },
-  { value: '태극기 휘날리며', screenshot: '', script: '', sound: '' },
-  { value: '주유소 습격사건', screenshot: '', script: '', sound: '' },
-  { value: '타이타닉', screenshot: '', script: '', sound: '' },
-  { value: '우리형', screenshot: '', script: '', sound: '' },
-  { value: '마더', screenshot: '', script: '', sound: '' },
-  { value: '웜바디스', screenshot: '', script: '', sound: '' },
-  { value: '월드워Z', screenshot: '', script: '', sound: '' },
-  { value: '세 얼간이', screenshot: '', script: '', sound: '' },
-  { value: '인셉션', screenshot: '', script: '', sound: '' },
-  { value: '미이라', screenshot: '', script: '', sound: '' },
-  { value: '슈퍼배드', screenshot: '', script: '', sound: '' },
-  { value: '죽은 시인의 사회', screenshot: '', script: '', sound: '' },
-  { value: '굿 윌 헌팅', screenshot: '', script: '', sound: '' },
-  { value: '스타이즈 본', screenshot: '', script: '', sound: '' },
-  { value: '행오버', screenshot: '', script: '', sound: '' },
-  { value: '헤드윅', screenshot: '', script: '', sound: '' },
-  { value: '파리넬리', screenshot: '', script: '', sound: '' },
-  { value: '클래식', screenshot: '', script: '', sound: '' },
-  { value: '보디가드', screenshot: '', script: '', sound: '' },
-  { value: '로마의 휴일', screenshot: '', script: '', sound: '' },
-  { value: '감기', screenshot: '', script: '', sound: '' },
-  { value: '연가시', screenshot: '', script: '', sound: '' },
-  { value: '시네마 천국', screenshot: '', script: '', sound: '' },
-  { value: '사운드 오브 뮤직', screenshot: '', script: '', sound: '' },
-  { value: '다빈치 코드', screenshot: '', script: '', sound: '' },
-  { value: '포레스트 검프', screenshot: '', script: '', sound: '' },
-  { value: '더 테러 라이브', screenshot: '', script: '', sound: '' },
-  { value: '스쿨오브락', screenshot: '', script: '', sound: '' },
+  { value: '줄무늬 파자마를 입은 소년', screenshot: 'https://movie-phinf.pstatic.net/20111222_74/1324549617849aJnuH_JPEG/movie_image.jpg' },
+  { value: '예스맨', screenshot: 'https://movie-phinf.pstatic.net/20111222_140/1324549400129w5OXL_JPEG/movie_image.jpg' },
+  { value: '레버넌트: 죽음에서 돌아온 자', screenshot: 'https://movie-phinf.pstatic.net/20151230_22/1451452245216Qbc6W_JPEG/movie_image.jpg' },
+  { value: '벤자민 버튼의 시간은 거꾸로 간다', screenshot: 'https://movie-phinf.pstatic.net/20111223_58/13245713751510Pbra_JPEG/movie_image.jpg' },
+  { value: '러브 액츄얼리', screenshot: 'https://movie-phinf.pstatic.net/20171116_43/1510796766486W3Ytt_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Elektra Chiang', title: 'All You Need Is Love', youtube_id: '1t8Y2yv9wP4' },
+    ] },
+  { value: '러브레터', scriptList: [
+      {
+        screenshot: 'images/movie/loveletter.png', script: '오겡끼데스까? 와타시와 겡끼데스',
+      }
+    ] },
+  { value: '냉정과 열정 사이', screenshot: 'https://movie-phinf.pstatic.net/20111216_141/1324026545312LDOez_JPEG/movie_image.jpg', soundList: [
+      { singer: '요시마타 료', title: 'What a coincidence', youtube_id: '2IZO7OdRWxA' },
+      { singer: '요시마타 료', title: '1997春', youtube_id: '8z6P-58J7h0' },
+      { singer: '요시마타 료', title: 'History', youtube_id: 'WaNdGDJOEKw' },
+      { singer: '요시마타 료', title: 'The Whole Nine Yards', youtube_id: 'ds_AzQLn-1w' },
+    ] },
+  { value: '오펀: 천사의 비밀', screenshot: 'https://movie-phinf.pstatic.net/20111223_104/1324590764362Ic953_JPEG/movie_image.jpg' },
+  { value: '아는 여자', screenshot: 'https://movie-phinf.pstatic.net/20111223_36/1324568174965MJr1e_JPEG/movie_image.jpg' },
+  { value: '만추', screenshot: 'https://movie-phinf.pstatic.net/20111223_116/1324632929745ihOzx_JPEG/movie_image.jpg' },
+  { value: '아저씨', screenshot: 'images/movie/mister00.png', scriptList: [
+      { script: '옆집 아저씨', screenshot: 'images/movie/mister01.png' },
+      { script: '야이 개새끼야 이거 방탄유리야 개새끼야!', screenshot: 'images/movie/mister02.png' },
+      { script: '아직 한발 남았다', screenshot: 'images/movie/mister03.png' },
+    ]},
+  { value: '미녀는 괴로워', screenshot: 'https://movie-phinf.pstatic.net/20111222_143/1324561173131UgqXn_JPEG/movie_image.jpg', soundList: [
+      { singer: '김아중', title: 'Maria', youtube_id: 'vSkXfrJtbAw' },
+      { singer: '김아중', title: 'Beautiful girl', youtube_id: 'qdywdVIEBcc' },
+      { singer: '유미', title: 'Maria', youtube_id: 'yG3iqtcrAlA' },
+    ] },
+  { value: '태극기 휘날리며', screenshot: 'https://movie-phinf.pstatic.net/20111223_22/13245676076460jSYG_JPEG/movie_image.jpg' },
+  { value: '주유소 습격사건', screenshot: 'https://movie-phinf.pstatic.net/20111223_243/13245883997338cPAh_JPEG/movie_image.jpg' },
+  { value: '타이타닉', screenshot: 'https://movie-phinf.pstatic.net/20171227_276/15143373470025u9j0_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Celine Dion', title: 'My Heart Will Go On', youtube_id: 'pZk_YV7yqeA' },
+    ] },
+  { value: '우리 형', screenshot: 'https://movie-phinf.pstatic.net/20111223_193/1324580870173DhQuk_JPEG/movie_image.jpg' },
+  { value: '마더', screenshot: 'https://movie-phinf.pstatic.net/20111223_170/13245803909535HqqY_JPEG/movie_image.jpg' },
+  { value: '웜바디스', screenshot: 'https://movie-phinf.pstatic.net/20130320_266/1363746856854S5Xoc_JPEG/movie_image.jpg' },
+  { value: '월드워Z', screenshot: 'images/movie/worldwarz.png' },
+  { value: '세 얼간이', scriptList: [
+      { screenshot: 'images/movie/3idiots.png', script: '알 이즈 웰' }
+    ] },
+  { value: '인셉션', screenshot: 'https://movie-phinf.pstatic.net/20200121_174/1579569809214GfSY2_JPEG/movie_image.jpg' },
+  { value: '미이라', scriptList: [
+      { screenshot: 'images/movie/mira01.png', script: '이모텝 이모텝' },
+      { screenshot: 'images/movie/mira02.png', script: '아낙수나문' }
+    ] },
+  { value: '슈퍼배드', screenshot: 'https://movie-phinf.pstatic.net/20111223_196/13246094547977tJTS_JPEG/movie_image.jpg' },
+  { value: '죽은 시인의 사회', screenshot: 'https://movie-phinf.pstatic.net/20160721_117/1469077572662cGmI6_JPEG/movie_image.jpg' },
+  { value: '굿 윌 헌팅', screenshot: 'https://movie-phinf.pstatic.net/20160719_9/14688962939878hHWT_JPEG/movie_image.jpg' },
+  { value: '스타 이즈 본', screenshot: 'https://movie-phinf.pstatic.net/20180830_212/1535608330714wuBXm_JPEG/movie_image.jpg' },
+  { value: '헤드윅', screenshot: 'https://movie-phinf.pstatic.net/20111222_46/1324484159161BFIQs_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: 'Hedwig And The Angry Inch', title: 'Origin of Love', youtube_id: 'N2-QxyhAsT8' },
+      { singer: 'Hedwig And The Angry Inch', title: 'Angry Inch', youtube_id: 'O8MnYqe5si4' },
+    ]},
+  { value: '위대한 쇼맨', screenshot: 'https://movie-phinf.pstatic.net/20171128_90/1511831349693meD4g_JPEG/movie_image.jpg', soundList: [
+      { singer: '케알라 세틀(Keala Settle) 및 The Greatest Showman Ensemble', title: 'This Is Me', youtube_id: 'kbo0XwwLFks' },
+      { singer: '케알라 세틀(Keala Settle), 휴 잭맨, Zac Efron(잭 에프론) 및 Zendaya(젠다야)', title: 'The Greatest Show', youtube_id: 'w8OyrhaR0kA' },
+      { singer: '노래 • 로렌 올레드', title: 'Never Enough', youtube_id: 'nT0CYXcre0c' },
+    ] },
+  { value: '파리넬리', screenshot: 'https://movie-phinf.pstatic.net/20111223_162/1324641667097eWaML_JPEG/movie_image.jpg' },
+  { value: '클래식', screenshot: 'https://movie-phinf.pstatic.net/20111222_170/1324486889247skSyR_JPEG/movie_image.jpg', soundList: [
+      { singer: '자전거 탄 풍경', title: '너에게 난, 나에게 넌', youtube_id: 'SZkkZLSCv44' },
+    ] },
+  { value: '보디가드', screenshot: 'https://movie-phinf.pstatic.net/20120214_38/1329205968318uU6Lp_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Whitney Houston', title: 'I Will Always Love You', youtube_id: '6BTNH3p4mmM' },
+    ] },
+  { value: '원초적 본능', screenshot: 'https://movie-phinf.pstatic.net/20111223_130/13246420715643PquM_JPEG/movie_image.jpg' },
+  { value: '로마의 휴일', screenshot: 'https://movie-phinf.pstatic.net/20111221_273/13244647149136A7Lg_JPEG/movie_image.jpg', soundList: [
+      { title: '달빛', singer: '', youtube_id: 'xl6qDlPCTUM' },
+    ] },
+  { value: '티파니에서 아침을', screenshot: 'https://movie-phinf.pstatic.net/20111223_214/1324645804111RJ1PE_JPEG/movie_image.jpg', soundList: [
+      { singer: '오드리 헵번', title: 'Moon River', youtube_id: 'Mjkl4rfDy_Y' },
+    ] },
+  { value: '쉬즈 올 댓', soundList: [
+      { singer: 'Sixpence None the Richer', title: 'Kiss Me', youtube_id: 'K2tbQ_g2VbQ' },
+    ] },
+  { value: '라붐', soundList: [
+      { singer: 'Richard Sanderson', title: 'Reality', youtube_id: 'cActM3vQRng' },
+    ] },
+  { value: '감기', screenshot: 'https://movie-phinf.pstatic.net/20130620_213/1371713339443DKoyc_JPEG/movie_image.jpg' },
+  { value: '연가시', screenshot: 'https://movie-phinf.pstatic.net/20120725_179/1343201235803sw351_JPEG/movie_image.jpg' },
+  { value: '시네마 천국', screenshot: 'https://movie-phinf.pstatic.net/20111222_127/1324540072067hGSaW_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Ennio Morricone', title: 'Love Theme', youtube_id: 'HHvm6MMaXfM' },
+    ] },
+  { value: '사운드 오브 뮤직', screenshot: 'https://movie-phinf.pstatic.net/20161021_8/14770231648371Ao6g_JPEG/movie_image.jpg', soundList: [
+      { singer: 'Julie Andrews, 차미언 카, 헤더 멘지스 및 니컬러스 해먼드', title: 'Do-Re-Mi', youtube_id: 'e9L8yTpIupA' },
+      { singer: 'Julie Andrews', title: 'My Favorite Things', youtube_id: 'LZimTeflagM' },
+      { singer: 'Bill Lee, 차미언 카', title: 'Edelweiss', youtube_id: 'HR43hf2hJhg' },
+    ] },
+  { value: '다빈치 코드', screenshot: 'http://t1.daumcdn.net/cfile/13110210A8D3A4F17D' },
+  { value: '포레스트 검프', screenshot: 'http://t1.daumcdn.net/cfile/136F1B10ABE1C32622' },
+  { value: '더 테러 라이브', screenshot: 'https://movie-phinf.pstatic.net/20130620_194/1371695843808Fgxcm_JPEG/movie_image.jpg' },
+  { value: '스쿨 오브 락', screenshot: 'https://movie-phinf.pstatic.net/20171024_127/15088100462704o4Uz_JPEG/movie_image.jpg' },
   { value: '말죽거리 잔혹사', scriptList: [
       { screenshot: 'images/movie/akfwnrrjfl.png', script: '야 이 개새끼야. 너 이리나와. 이 씨발놈아, 니가 그렇게 싸움을 잘해? 옥상으로 올라와' }
     ] },
-  { value: '히트맨', screenshot: '', script: '', sound: '' },
-  { value: '동갑내기 과외하기', screenshot: '', script: '', sound: '' },
-  { value: '협상', screenshot: '', script: '', sound: '' },
-  { value: '마이네임', screenshot: '', script: '', sound: '' },
-  { value: '알고있지만', screenshot: '', script: '', sound: '' },
+  { value: '히트맨', screenshot: 'https://movie-phinf.pstatic.net/20191223_299/1577064164417jcV9X_JPEG/movie_image.jpg?type=m665_443_2' },
+  { value: '동갑내기 과외하기', screenshot: 'https://movie-phinf.pstatic.net/20111222_76/1324522479177F8sP3_JPEG/movie_image.jpg?type=m665_443_2' },
+  { value: '협상', screenshot: 'https://movie-phinf.pstatic.net/20180905_67/1536108767422axMlE_JPEG/movie_image.jpg?type=m665_443_2' },
+  { value: '돈 룩 업', screenshot: 'https://movie-phinf.pstatic.net/20211207_166/1638860863135vsqqG_JPEG/movie_image.jpg' },
 ]
 
 export const dramaList = [
@@ -1690,7 +1857,9 @@ export const dramaList = [
   { value: '로맨스가 필요해2', screenshot: '', sound: '' },
   { value: '나의 아저씨', screenshot: '', sound: '' },
   { value: '눈이 부시게', screenshot: '', sound: '' },
+  { value: '마이네임', screenshot: '', script: '', sound: '' },
   { value: '시그널', screenshot: '', sound: '' },
+  { value: '알고있지만', screenshot: '', script: '', sound: '' },
   { value: '쌈 마이웨이', screenshot: '', sound: '' },
   { value: '이태원클라스', screenshot: '', sound: '' },
   { value: '도깨비', screenshot: '', sound: '' },

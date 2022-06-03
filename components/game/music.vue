@@ -11,8 +11,8 @@
                 @click="handleStop"
                 :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
-    <div class="question-wrap">
-      <div class="shadow" v-if="isShow" @click="setIsShow(false)">
+    <div class="question-wrap" @click="setIsShow(!isShow)">
+      <div class="shadow" v-if="isShow">
         <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
       </div>
       <swiper ref="swiper"
@@ -43,7 +43,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted, ref } from '@nuxtjs/composition-api';
+import { defineComponent, reactive, toRefs, onMounted, ref, watch } from '@nuxtjs/composition-api';
 import gameSetting from '~/composable/gameSetting';
 import GButton from '~/components/_atoms/GButton.vue';
 import GTimer from '~/components/_atoms/GTimer.vue';
@@ -131,6 +131,10 @@ export default defineComponent({
         if (type === 'stop') event.target.stopVideo();
       },
     }
+
+    watch(() => activeIndex.value, (newValue: number) => {
+      data.type = 'pause';
+    })
 
     return {
       swiper,

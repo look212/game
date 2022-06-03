@@ -89,7 +89,7 @@ export default function gameSetting() {
         return false;
       }
       await swiper.value.$swiper.slideNext();
-      data.isShow = true;
+      methods.setIsShow(false);
       data.activeIndex = swiper.value.$swiper.activeIndex;
       console.log(data.activeIndex);
       if (gameType.value === 'photo') await methods.setGoogleImage(gameList.value[data.activeIndex].value);

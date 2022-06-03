@@ -111,7 +111,7 @@ export const mainInfos: IMainInfo[] = [
     subject: [
       { value: 'movie_script', label: '스샷보고 대사 맞추기' },
       { value: 'movie_title', label: '스샷보고 제목 맞추기' },
-      // { value: 'movie_sound', label: 'OST 듣고 제목 맞추기' },
+      { value: 'movie_sound', label: 'OST 듣고 제목 맞추기' },
     ]
   },
 ]
