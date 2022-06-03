@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{404:function(e,n,t){"use strict";t.r(n);var a=t(48),c=Object(a.b)({name:"Privacy"}),r=t(66),i=Object(r.a)(c,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("개인정보 처리방침")])}),[],!1,null,"1f177a0e",null);n.default=i.exports}}]);
