@@ -3,7 +3,7 @@
     <div class="info">
       <p>{{ activeIndex + 1 }}/{{ questionCount }}</p>
     </div>
-    <div class="question-wrap">
+    <div class="question-wrap" @click="setIsShow(!isShow)">
       <g-timer ref="timer" class="timer"></g-timer>
       <swiper ref="swiper"
               class="custom"
@@ -13,8 +13,8 @@
             <img :src="game.url" v-if="index === activeIndex" class="swiper-lazy">
             <div class="swiper-lazy-preloader"></div>
           </div>
-          <div v-else class="txt" @click="setIsShow(false)">
-            <div :class="{'is-active': !isShow}">
+          <div v-else class="txt">
+            <div :class="[{'is-active': !isShow}, {'is-loading': isTimerStart}]">
               {{ game.value }}
             </div>
           </div>
@@ -156,12 +156,31 @@ export default defineComponent({
       left: 50%;
       top: 50%;
       @include transform(translate(-50%, -50%));
-      width: max-content;
       height: max-content;
-      background: $Gray90;
+      color: $Gray00;
+      width: 100%;
+
+      &::before {
+        content: '클릭하여 정답 확인';
+        color: $Gray60;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: fit-content;
+        @include transform(translateX(-50%));
+      }
 
       &.is-active {
-        background: transparent;
+        color: $Gray90;
+        &::before {
+          content: '';
+        }
+      }
+      &.is-loading {
+        color: $Gray00;
+        &::before {
+          content: '';
+        }
       }
     }
   }

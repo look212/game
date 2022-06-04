@@ -6,12 +6,12 @@
         <p>참여인원: {{ participants }}</p>
         <p>주제: {{ subject.label }}</p>
       </div>
-      <div class="question-wrap">
+      <div class="question-wrap" @click="setIsShow(!isShow)">
         <swiper ref="swiper"
                 class="custom"
                 :options="swiperOptions">
           <swiper-slide v-for="(index) in game.liar.participants" :key="`game_${index}`">
-            <div class="shadow" v-if="isShow" @click="setIsShow(false)">
+            <div class="shadow" v-if="isShow">
               <p><span>{{ index + 1 }}</span><br>클릭하여 확인해주세요</p>
             </div>
             <p v-if="liarMode !== 'fool' && index === game.liar.liar">

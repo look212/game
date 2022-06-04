@@ -1387,7 +1387,7 @@ export const movieList = [
     value: '하울의 움직이는 성',
     screenshot: 'https://movie-phinf.pstatic.net/20141119_47/1416357055571DHsVB_JPEG/movie_image.jpg',
     soundList: [
-      { singer: '히사이시 조', title: 'Merry-Go-Round of Life', youtube_id: '1WJxOivfZxI' },
+      { singer: '히사이시 조', title: 'Merry-Go-Round of Life', youtube_id: 'Cj-AL-J98U0' },
     ]
   },
   {
