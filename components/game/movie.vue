@@ -32,7 +32,7 @@
             </template>
             <template v-else>
               <img :src="game.screenshot" alt="">
-              <div class="txt"  @click="setIsShow(!isShow)">
+              <div class="txt">
                 <div :class="{'is-active': !isShow}">
                   {{ game.value }}
                   <i v-if="subject.value === 'movie_script'">{{ game.script }}</i>
@@ -199,8 +199,20 @@ export default defineComponent({
     margin-top: 20px;
 
     > div {
-      background: $Gray90;
       line-height: 1.2em;
+      color: $Gray00;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        content: '클릭하여 정답 확인';
+        color: $Gray60;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: fit-content;
+        @include transform(translateX(-50%));
+      }
       i {
         display: block;
         margin-top: 16px;
@@ -209,7 +221,10 @@ export default defineComponent({
       }
 
       &.is-active {
-        background: transparent;
+        color: $Gray90;
+        &::before {
+          content: '';
+        }
       }
     }
   }

@@ -84,10 +84,6 @@ export default function gameSetting() {
     },
     async nextSlide() {
       if (isTimerStart.value) return false;
-      if (gameType.value === 'liar' && data.isShow) {
-        Vue.swal('확인 후 다음을 눌러주세요.');
-        return false;
-      }
       await swiper.value.$swiper.slideNext();
       methods.setIsShow(false);
       data.activeIndex = swiper.value.$swiper.activeIndex;
