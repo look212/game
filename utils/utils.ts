@@ -34,7 +34,7 @@ export const setTotalList = (subject: any) => {
       totalList = animalList
       break;
     case 'movie':
-      totalList = movieList
+      totalList = movieList.filter((option: any) => option.script || option.sriptList);
       break;
     case 'music':
       totalList = musicList.map((music) => {
