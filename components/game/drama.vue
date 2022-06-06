@@ -3,7 +3,7 @@
     <div class="info">
       <p> {{ subject.label }} ({{ activeIndex + 1 }}/{{ questionCount }})</p>
     </div>
-    <div class="controls" v-if="subject.value === 'movie_sound'">
+    <div class="controls" v-if="subject.value === 'drama_sound'">
       <g-button :is-gray="true"
                 @click="handlePlay"
                 :class="{'is-active': type === 'play'}"><img src="../../static/images/icon/play.png" alt="play" height="14px;">️</g-button>
@@ -12,7 +12,7 @@
                 :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
     <div class="question-wrap" @click="setIsShow(!isShow)">
-      <div class="shadow" v-if="isShow && subject.value === 'movie_sound'">
+      <div class="shadow" v-if="isShow && subject.value === 'drama_sound'">
         <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
       </div>
       <swiper ref="swiper"
@@ -20,7 +20,7 @@
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <div v-if="index === activeIndex">
-            <template v-if="subject.value === 'movie_sound'">
+            <template v-if="subject.value === 'drama_sound'">
               <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.value }}</p>
               <client-only>
                 <youtube :video-id="game.youtube_id"
@@ -35,7 +35,7 @@
               <div class="txt">
                 <div :class="{'is-active': !isShow}">
                   {{ game.value }}
-                  <i v-if="subject.value === 'movie_script'">{{ game.script }}</i>
+                  <i v-if="subject.value === 'drama_script'">{{ game.script }}</i>
                 </div>
               </div>
               <div class="swiper-lazy-preloader"></div>

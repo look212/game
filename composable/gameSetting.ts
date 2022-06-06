@@ -88,7 +88,7 @@ export default function gameSetting() {
       methods.setIsShow(false);
       data.activeIndex = swiper.value.$swiper.activeIndex;
       console.log(data.activeIndex);
-      if (gameType.value === 'photo') await methods.setGoogleImage(gameList.value[data.activeIndex].value);
+      // if (gameType.value === 'photo') await methods.setGoogleImage(gameList.value[data.activeIndex].value);
       if (gameType.value === 'complete' || gameType.value === 'photo') await methods.setCountSpeed(countSpeed.value);
     },
     async setKakaoImage(params: string) {
