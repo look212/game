@@ -62,8 +62,6 @@ export default defineComponent({
       nextSlide,
       setCountSpeed,
       setCountDown,
-      setKakaoImage,
-      setGoogleImage,
       setIsShow,
     } = gameSetting();
     // const isShow = ref(true);
@@ -72,7 +70,7 @@ export default defineComponent({
       setTimeout(async () => {
         await setCountDown(1);
         await setCountSpeed(2000);
-        await setGoogleImage(gameList.value[0].value);
+        // await setGoogleImage(gameList.value[0].value);
       });
     });
 
@@ -91,7 +89,7 @@ export default defineComponent({
             await game.setGameStart({ subject: 'photo', questionCount: questionCount.value });
             isTimerStart.value = true;
             activeIndex.value = 0;
-            await setGoogleImage(gameList.value[activeIndex.value].name);
+            // await setGoogleImage(gameList.value[activeIndex.value].name);
             await swiper.value.$swiper.slideTo(0);
             await setCountDown(1);
             await setCountSpeed(2000);
@@ -130,8 +128,6 @@ export default defineComponent({
       setCountSpeed,
       nextSlide,
       setCountDown,
-      setKakaoImage,
-      setGoogleImage,
       setIsShow,
       ...methods,
     }

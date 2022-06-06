@@ -118,7 +118,7 @@ export const setTotalList = (subject: any) => {
       })
       break;
     case 'drama_title':
-      dramaList.map((option: any) => {
+      dramaList.filter((option: any) => option.scriptList).map((option: any) => {
         option.scriptList.forEach((script: any) => {
           totalList.push({
             value: option.value,

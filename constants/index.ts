@@ -114,6 +114,21 @@ export const mainInfos: IMainInfo[] = [
       { value: 'movie_sound', label: 'OST 듣고 제목 맞추기' },
     ]
   },
+  {
+    type: 'drama',
+    title: '드라마 맞추기',
+    description: `
+    <ul>
+        <li>문제 유형을 고르세요.</li>
+        <li>문제 갯수를 고르세요.</li>
+        <li>답을 맞추세요.</li>
+    </ul>
+    `,
+    subject: [
+      { value: 'drama_title', label: '스샷보고 제목 맞추기' },
+      { value: 'drama_sound', label: 'OST 듣고 제목 맞추기' },
+    ]
+  },
 ]
 
 export const countSpeedList: ISimpleType[] = [
