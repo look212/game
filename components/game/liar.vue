@@ -40,13 +40,15 @@
       </div>
     </template>
     <div class="result-wrap" v-else>
-      <p class="tit">라이어를 골라주세요.</p>
-      <div class="liar-list">
-        <g-button v-for="(index) in game.liar.participants"
-                  :key="`liar_${index}`"
-                  :is-gray="true" @click="checkLiar(index)">{{ index + 1 }}
-        </g-button>
-      </div>
+      <template v-if="!isLiarTrue">
+        <p class="tit">라이어를 골라주세요.</p>
+        <div class="liar-list">
+          <g-button v-for="(index) in game.liar.participants"
+                    :key="`liar_${index}`"
+                    :is-gray="true" @click="checkLiar(index)">{{ index + 1 }}
+          </g-button>
+        </div>
+      </template>
       <template v-if="isLiarTrue">
         <p class="tit">제시어를 골라주세요.</p>
         <ul class="result-ul">
@@ -101,12 +103,18 @@ export default defineComponent({
       },
       checkLiar(value: number) {
         if (value === game.liar.liar) {
-          root.$swal(`${value + 1}번째 사람은 라이어가 맞습니다.`)
-          data.isLiarTrue = true;
+          root.$swal(`${value + 1}번째 사람은 라이어가 맞습니다.`).then((result) => {
+            if (result.isConfirmed) {
+              data.isLiarTrue = true;
+            }
+          })
         }
         else {
-          root.$swal(`${value + 1}번째 사람은 라이어가 아닙니다.`)
-          data.isLiarTrue = false;
+          root.$swal(`${value + 1}번째 사람은 라이어가 아닙니다.`).then((result) => {
+            if (result.isConfirmed) {
+              data.isLiarTrue = false;
+            }
+          })
         }
       },
       checkResult(value: number) {

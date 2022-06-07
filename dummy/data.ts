@@ -2971,6 +2971,27 @@ export const dramaList = [
       { title: '미래', singer: '레드벨벳', youtube_id: '9Rkzr--mH9Q' },
     ]
   },
+  {
+    value: '뿌리깊은 나무', screenshot: 'https://t1.daumcdn.net/cfile/tistory/1573CE354EF9A3B52A', soundList: [
+      { title: '깊은 사랑', singer: '김 용진', youtube_id: 'FUCsvyKlqAw' },
+    ]
+  },
+  {
+    value: '명성황후', screenshot: 'https://dimg.donga.com/wps/NEWS/IMAGE/2002/07/03/6863509.1.jpg', soundList: [
+      { title: '나 가거든', singer: '조수미', youtube_id: 'Kb3TaZoDjNc' },
+    ]
+  },
+  {
+    value: '올인', screenshot: 'https://t1.daumcdn.net/cfile/tistory/211F8234578333830D', soundList: [
+      { title: '처음 그 날처럼', singer: '박용하', youtube_id: 'UgLiNyxs-oI' },
+      { title: 'All In Paino String Version', singer: '김형석', youtube_id: 'd3PaYnVjiFw' },
+    ]
+  },
+  {
+    value: '멜로가 체질', screenshot: 'https://img.insight.co.kr/static/2019/09/03/700/qc580tsze3fyu1qs6h12.jpg', soundList: [
+      { title: '흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야', singer: '장범준', youtube_id: '_pcl_JPqMfw' },
+    ]
+  },
 ]
 
 export const musicList = [
