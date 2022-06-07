@@ -21,7 +21,7 @@
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <div v-if="index === activeIndex">
             <template v-if="subject.value === 'drama_sound'">
-              <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.value }}</p>
+              <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.value }}({{ game.singer }} {{ game.singer ? '-' : ''}} {{ game.title }})</p>
               <client-only>
                 <youtube :video-id="game.youtube_id"
                          player-width="100%"

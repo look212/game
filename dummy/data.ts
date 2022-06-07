@@ -1979,7 +1979,7 @@ export const movieList = [
         title: 'The Greatest Show',
         youtube_id: 'w8OyrhaR0kA'
       },
-      { singer: '노래 • 로렌 올레드', title: 'Never Enough', youtube_id: 'nT0CYXcre0c' },
+      { singer: '로렌 올레드', title: 'Never Enough', youtube_id: 'nT0CYXcre0c' },
     ]
   },
   {
