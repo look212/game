@@ -91,6 +91,7 @@ export default defineComponent({
             activeIndex.value = 0;
             // await setGoogleImage(gameList.value[activeIndex.value].name);
             await swiper.value.$swiper.slideTo(0);
+            isShow.value = true;
             await setCountDown(1);
             await setCountSpeed(2000);
           }

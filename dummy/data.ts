@@ -715,7 +715,7 @@ export const photoList = [
   { value: '손예진', url: 'https://butterpopcorn.kr/wp-content/uploads/2020/02/120-13.jpg' },
   { value: '장동민', url: 'https://pds.joins.com/news/component/htmlphoto_mmdata/201504/14/htm_20150414152842401.jpg' },
   { value: '유세윤', url: 'https://cdn.ppomppu.co.kr/zboard/data3/2017/0814/m_20170814213845_siooonui.jpg' },
-  { value: '문세윤', url: 'http://jjal.today/data/file/gallery/thumb-654776346_6ezI1CWm_a0ff4bb8f0110e035c49d64bf3727690b587da2e_640x406.jpg' },
+  { value: '문세윤', url: 'http://res.heraldm.com/phpwas/restmb_jhidxmake.php?idx=5&simg=202002191934369098934_20200219201650_01.jpg' },
   { value: '유상무', url: 'https://t1.daumcdn.net/cfile/tistory/230BAE3E557AC4953B' },
   { value: '김준호', url: 'https://bunny.jjalbot.com/2018/12/7xVmjV4cos/zzal.png' },
   { value: '김대희', url: 'https://mblogthumb-phinf.pstatic.net/20150110_224/jinna21125_1420880375729m5o0G_JPEG/51283200_2.jpg?type=w2' },
@@ -811,8 +811,8 @@ export const photoList = [
   { value: '윈터', url: 'https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/01/22/j0CUgPfqy6Fn637784817551514147.jpg' },
   { value: '제시', url: 'https://news.imaeil.com/photos/2020/03/16/2020031611155054404_l.jpg' },
   { value: '지코', url: 'http://image.yes24.com/images/chyes24/3/8/5/2/38521b4a4d19c90c240f7fd92e01b0a8.jpeg' },
-  { value: '전현무', url: 'https://cdn.ppomppu.co.kr/zboard/data3/2018/1026/m_1540513311_1336_IMG_1630.JPG' },
-  { value: '기안84', url: 'https://instablank.com/files/jjalbox/2021/06/20210612_60c4d1e002b56.jpg' },
+  { value: '전현무', url: 'https://img7.yna.co.kr/etc/inner/KR/2018/03/07/AKR20180307137700005_01_i_P4.jpg' },
+  { value: '기안84', url: 'https://img.sbs.co.kr/newsnet/etv/upload/2021/11/30/30000727509_700.jpg' },
   { value: '노주현', url: 'https://www.ddengle.com/files/attach/images/11334861/189/465/015/4b9097d5699b7fa4b153b1dd8d97814c.jpeg' },
   { value: '박영규', url: 'https://w.namu.la/s/a526a0607dca879e2a9036ea8fe250177040e592e382320f981de7ece7c5cd044130b0efbec08d06b19f0345063f3858703576257d7871c6f73cbf2d3613c48400685a6f141df642757451c632ad311d6a67bbcfba82256b08837a4e8a9c6701' },
   { value: '올라프', url: 'https://i.ytimg.com/vi/QOZfxE2u-pI/maxresdefault.jpg' },
@@ -1120,7 +1120,7 @@ export const photoList = [
   { value: '던', url: 'https://img0.yna.co.kr/photo/yna/YH/2019/11/05/PYH2019110516880001300_P4.jpg' },
   { value: '최시원', url: 'https://dispatch.cdnser.be/wp-content/uploads/2017/02/d3949708b305255055c4d626d0388bcd.jpg' },
   { value: '호날두', url: 'https://images.chosun.com/resizer/3JLV9orE_fEc0tPgrhwzx5IBW1U=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/FTAMI4GGMWCHB36ELYZUMOYXI4.jpg' },
-  { value: '베컴', url: 'https://img.sbs.co.kr/newimg/news/20160105/200901313_1280.jpg' },
+  { value: '베컴', url: 'https://imgnn.seoul.co.kr/img/upload/2015/03/17/SSI_20150317175358_V.jpg' },
 ]
 
 export const animalList = [
@@ -2846,9 +2846,13 @@ export const dramaList = [
   { value: '이산', screenshot: 'https://i.ytimg.com/vi/-MI7wejb-e4/maxresdefault.jpg' },
   {
     value: '공부의 신',
-    screenshot: 'http://db.kookje.co.kr/news2000/photo/2010/0122/L20100122.22016200041i3.jpg',
+    screenshot: 'http://db.kookje.co.kr/news2000/photo/2010/0122/L20100122.22016200041i3.jpg'
+  },
+  {
+    value: '학교 2013',
+    screenshot: 'https://img.tvreportcdn.de/images/20130116/20130116_1358295297_21248400_1.jpg',
     soundList: [
-      { title: '', singer: '', youtube_id: '' },
+      { title: '혼자라고 생각말기', singer: '김보경', youtube_id: 'W1a_fTUHtXM' },
     ]
   },
   {
