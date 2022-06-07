@@ -129,6 +129,13 @@ export const mainInfos: IMainInfo[] = [
       { value: 'drama_sound', label: 'OST 듣고 제목 맞추기' },
     ]
   },
+  {
+    type: 'bingo',
+    title: 'BINGO',
+    description: `
+    1~ 25 사이의 숫자로 빙고판이 랜덤으로 설정됩니다.
+    `
+  }
 ]
 
 export const countSpeedList: ISimpleType[] = [
