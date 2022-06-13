@@ -40,6 +40,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'idiom', label: '사자성어' },
       { value: 'animal', label: '동물' },
       { value: 'movie', label: '영화' },
+      { value: 'drama', label: '드라마' },
       { value: 'singer', label: '가수' },
       { value: 'music', label: '노래' },
       { value: 'stuff', label: '물건' },
@@ -135,6 +136,24 @@ export const mainInfos: IMainInfo[] = [
     description: `
     1~ 25 사이의 숫자로 빙고판이 랜덤으로 설정됩니다.
     `
+  },
+  {
+    type: 'chosung',
+    title: '초성 게임',
+    description: `
+    <ul>
+        <li>문제 유형을 고르세요.</li>
+        <li>문제 갯수를 고르세요.</li>
+        <li>답을 맞추세요.</li>
+    </ul>
+    `,
+    subject: [
+      { value: 'drama_chosung', label: '드라마' },
+      { value: 'movie_chosung', label: '영화' },
+      { value: 'singer_chosung', label: '가수' },
+      { value: 'music_chosung', label: '노래' },
+      { value: 'proverb_chosung', label: '속담' },
+    ]
   }
 ]
 
