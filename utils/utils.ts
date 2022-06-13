@@ -42,7 +42,7 @@ export const setTotalList = (subject: any) => {
       })
       break;
     case 'singer':
-      const arr = musicList.map((music) => {
+      let arr: any = musicList.map((music) => {
         return { value: music.singer }
       })
       totalList = arr.filter((el: any, index: number) => {
@@ -142,6 +142,71 @@ export const setTotalList = (subject: any) => {
         })
       })
       break;
+    case 'drama_chosung':
+      arr = [];
+      dramaList.forEach((drama: any) => {
+        if (checkHangul(drama.value)) arr.push(checkHangul(drama.value));
+      })
+      arr = removeDuplicate(arr);
+      totalList = arr.map((option: any) => {
+        return {
+          value: getChosung(option),
+          label: option
+        }
+      });
+      break;
+    case 'movie_chosung':
+      arr = [];
+      movieList.forEach((drama: any) => {
+        if (checkHangul(drama.value)) arr.push(checkHangul(drama.value));
+      })
+      arr = removeDuplicate(arr);
+      totalList = arr.map((option: any) => {
+        return {
+          value: getChosung(option),
+          label: option
+        }
+      });
+      break;
+    case 'singer_chosung':
+      arr = [];
+      musicList.map((music) => music.singer).forEach((option: any) => {
+        if (checkHangul(option)) arr.push(checkHangul(option));
+      });
+      arr = removeDuplicate(arr);
+      totalList = arr.map((option: any) => {
+        return {
+          value: getChosung(option),
+          label: option
+        }
+      });
+      break;
+    case 'music_chosung':
+      arr = [];
+      musicList.map((music) => music.music).forEach((option: any) => {
+        if (checkHangul(option)) arr.push(checkHangul(option));
+      });
+      arr = removeDuplicate(arr);
+      totalList = arr.map((option: any) => {
+        return {
+          value: getChosung(option),
+          label: option
+        }
+      });
+      break;
+    case 'proverb_chosung':
+      arr = [];
+      proverbList.forEach((option: any) => {
+        if (checkHangul(option.value)) arr.push(checkHangul(option.value));
+      })
+      arr = removeDuplicate(arr);
+      totalList = arr.map((option: any) => {
+        return {
+          value: getChosung(option),
+          label: option
+        }
+      });
+      break;
   }
 
   return { totalList };
@@ -199,3 +264,28 @@ export const getRandomArray = ((min: number, max: number, count: number) => {
   //   return a - b;
   // });
 })
+
+export const getChosung = (str: string) => {
+  const cho = [ 'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ];
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    let code = str.charCodeAt(i) - 44032;
+    if (code > -1 && code < 11172) result += cho[Math.floor(code / 588)];
+    else result += str.charAt(i);
+  }
+  return result;
+}
+
+export const checkHangul = (str: string) => {
+  const check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+  if(check.test(str)) {
+    let regex = /[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣\s]/gi;
+    return str.replace(regex, '');
+  }
+}
+
+export const removeDuplicate = (arr: any) => {
+  let initialValue: any = [];
+  const newArr = arr.reduce((acc: any, obj: any) => acc.includes(obj) ? acc : [...acc, obj], initialValue)
+  return newArr;
+}
