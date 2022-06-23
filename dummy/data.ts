@@ -3277,7 +3277,7 @@ export const musicList = [
   { singer: '크러쉬', music: '나빠', youtube_id: 'eKuYN8nYIFk' },
   { singer: '크러쉬', music: '자나깨나', youtube_id: 'L4dQ820WhPY' },
   { singer: '크러쉬', music: 'SOFA', youtube_id: 'cb6RNAkQU5g' },
-  { singer: '토이', music: '뜨거운 안녕', youtube_id: 'C10WwJafiCY' },
+  { singer: '토이', music: '뜨거운 안녕', youtube_id: 'YhlZImjEzwY' },
   { singer: '토이', music: '여전히 아름다운지', youtube_id: 'nuAiFzEkFZM' },
   { singer: '토이', music: '좋은 사람', youtube_id: 'jIbUJejAAyQ' },
   { singer: '토이', music: '세사람', youtube_id: 'ySHBMvse8aE' },
