@@ -3607,6 +3607,16 @@ export const musicList = [
   { singer: '한스밴드', music: '오락실', youtube_id: 'gz1PIyRbWe4' },
   { singer: '량현량하', music: '학교를 안갔어', youtube_id: '-xtgeYvY33g' },
   { singer: '량현량하', music: '춤이 뭐길래', youtube_id: 'CXt3J4DUmL8' },
+  { singer: '유엔', music: '파도', youtube_id: 'QOnlj2HnxhY' },
+  { singer: '유엔', music: '선물', youtube_id: '464FKtw1SU8' },
+  { singer: '십센치(10CM)', music: '봄이 좋냐??', youtube_id: 'sN7dsNB7qxs' },
+  { singer: '십센치(10CM)', music: 'Fine Thank You and You', youtube_id: 'JMvq0UPPfdI' },
+  { singer: '십센치(10CM)', music: '쓰담쓰담', youtube_id: 'BH3B95586R0' },
+  { singer: '십센치(10CM)', music: '스토커', youtube_id: '0RZBEHV1vHQ' },
+  { singer: '십센치(10CM)', music: '폰서트', youtube_id: 'txi3VEdStJ4' },
+  { singer: '슈가볼', music: '여름 밤 탓', youtube_id: 'rkyikXhBd-g' },
+  { singer: '도원경', music: '다시 사랑한다면', youtube_id: 'VO4QmC74CO4' },
+  { singer: '정경화', music: '나에게로의 초대', youtube_id: 'XtP8aT3QlfI' },
 ]
 
 export const stuffList = [
