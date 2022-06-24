@@ -3617,6 +3617,7 @@ export const musicList = [
   { singer: '슈가볼', music: '여름 밤 탓', youtube_id: 'rkyikXhBd-g' },
   { singer: '도원경', music: '다시 사랑한다면', youtube_id: 'VO4QmC74CO4' },
   { singer: '정경화', music: '나에게로의 초대', youtube_id: 'XtP8aT3QlfI' },
+  { singer: '정경화', music: '지상에서 영원으로', youtube_id: 'A8-98OMfWLY' },
 ]
 
 export const stuffList = [
