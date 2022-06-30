@@ -14,6 +14,8 @@ import {
   dramaList,
 } from '~/dummy/data';
 
+let arr: any = [];
+let arr2: any = []
 /**
  * 문제 주제 선택 후 전체 목록 가져오기
  * @param subject
@@ -33,16 +35,13 @@ export const setTotalList = (subject: any) => {
     case 'animal':
       totalList = animalList
       break;
-    case 'movie':
-      totalList = movieList.filter((option: any) => option.screenshot || option.sriptList.length > 0);
-      break;
     case 'music':
       totalList = musicList.map((music) => {
         return { value: music.music, singer: music.singer, youtube_id: music.youtube_id }
       })
       break;
     case 'singer':
-      let arr: any = musicList.map((music) => {
+      arr = musicList.map((music) => {
         return { value: music.singer }
       })
       totalList = arr.filter((el: any, index: number) => {
@@ -81,7 +80,7 @@ export const setTotalList = (subject: any) => {
         })
       })
       break;
-    case 'movie_title':
+    case 'movie':
       movieList.filter((option: any) => option.scriptList).map((option: any) => {
         option.scriptList.forEach((script: any) => {
           totalList.push({
@@ -157,8 +156,8 @@ export const setTotalList = (subject: any) => {
       break;
     case 'movie_chosung':
       arr = [];
-      movieList.forEach((drama: any) => {
-        if (checkHangul(drama.value)) arr.push(checkHangul(drama.value));
+      movieList.forEach((movie: any) => {
+        if (checkHangul(movie.value)) arr.push(checkHangul(movie.value));
       })
       arr = removeDuplicate(arr);
       totalList = arr.map((option: any) => {
@@ -279,7 +278,7 @@ export const getChosung = (str: string) => {
 export const checkHangul = (str: string) => {
   const check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
   if(check.test(str)) {
-    let regex = /[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣\s]/gi;
+    let regex = /[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣\s\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
     return str.replace(regex, '');
   }
 }

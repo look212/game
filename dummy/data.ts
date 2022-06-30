@@ -1055,12 +1055,14 @@ export const photoList = [
   { value: '에단 호크', url: 'http://image.cine21.com/resize/IMGDB/still/2001/0702/large/171047_45[W578-].jpg' },
   { value: '쿠사마 야요이', url: 'https://knun.net/data/photos/20131040/art_1380666180.jpg' },
   { value: '엔디워홀', url: 'https://d39q7aik4bbc0b.cloudfront.net/media/artist/image/web/%EC%95%A4%EB%94%94%EC%9B%8C%ED%99%80.jpg' },
+  { value: '도자캣', url: 'http://res.heraldm.com/content/image/2021/04/09/20210409000096_0.jpg' },
+  { value: '핑크스웨츠', url: 'https://img.mbn.co.kr/filewww/news/other/2022/02/10/200020202260.jpg' },
   { value: '살바도르 달리', url: 'https://file.mk.co.kr/mkde/N0/2020/04/20200429_4472242_1588138725.jpeg' },
   { value: '프리다 칼로', url: 'https://file.mk.co.kr/meet/neds/2019/01/image_readtop_2019_4277_15464628633590223.jpeg' },
   { value: '간디', url: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/16C0E/production/_109089139_928b0174-4b3f-48ff-8366-d118afa1ed56.jpg' },
   { value: '마틴 루터 킹', url: 'https://t1.daumcdn.net/cfile/tistory/1478B03F4F329F0429' },
   { value: '체 게바라', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/800px-CheHigh.jpg' },
-  { value: '레오나르도 디카프리오', url: 'https://fimg5.pann.com/new/download.jsp?FileID=56445617' },
+  { value: '레오나르도 디카프리오', url: 'http://file3.instiz.net/data/file3/2021/12/28/5/6/c/56cc2ccee8312a79c986c3af2385b423.jpg' },
   { value: '마돈나', url: 'https://blog.kakaocdn.net/dn/dLf9dZ/btrvWGjVMrV/GVQ8AkDJm8nrArEyrbAf5K/img.jpg' },
   { value: '마이클 잭슨', url: 'https://image.kmib.co.kr/online_image/2019/0311/611315110013133168_1.jpg' },
   { value: '프레디 머큐리', url: 'https://t1.daumcdn.net/cfile/tistory/994C0A365BE5604520' },
@@ -1121,6 +1123,19 @@ export const photoList = [
   { value: '최시원', url: 'https://dispatch.cdnser.be/wp-content/uploads/2017/02/d3949708b305255055c4d626d0388bcd.jpg' },
   { value: '호날두', url: 'https://images.chosun.com/resizer/3JLV9orE_fEc0tPgrhwzx5IBW1U=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/FTAMI4GGMWCHB36ELYZUMOYXI4.jpg' },
   { value: '베컴', url: 'https://imgnn.seoul.co.kr/img/upload/2015/03/17/SSI_20150317175358_V.jpg' },
+  { value: '기무라 타쿠야', url: 'https://t1.daumcdn.net/blogfile/fs12/10_blog_2008_06_22_00_41_485d21240e24f?x-content-disposition=inline&filename=%EA%B8%B0%EB%AC%B4%EB%9D%BC04.jpg' },
+  { value: '오다기리 죠', url: 'https://img.hani.co.kr/imgdb/resize/2016/1201/00500524_20161201.JPG' },
+  { value: '스칼렛 요한슨', url: 'https://image.cine21.com/resize/cine21/person/2018/0706/16_07_53__5b3f1549238b4.jpg' },
+  { value: '올란도 블룸', url: 'http://img.insight.co.kr/static/2018/08/14/700/5t78o8nf8zyj4accks10.jpg' },
+  { value: '크리스토퍼', url: 'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDlfNDMg/MDAxNTk5NjQ3MzczODIy.vsQD0eKgiYExx14nx18QyF_sHJ_ePxancNEw8GM7CEog.u2OcM_bD8vLKfjdRp6TJy0SK_kcPubrTYDIyJwW8dEgg.JPEG.all_d2020/output_1091728725.jpg' },
+  { value: '미란다 커', url: 'https://t1.daumcdn.net/cfile/tistory/246F763D57AD627730' },
+  { value: '잭 스페로우', url: 'https://img.insight.co.kr/static/2018/10/26/700/j6310x1s9n130gw757rv.jpg' },
+  { value: '레이디 가가', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Lady_Gaga_SAG_2019.jpg/534px-Lady_Gaga_SAG_2019.jpg?20190617233925' },
+  { value: '빌리 아일리시', url: 'https://dimg.donga.com/wps/NEWS/IMAGE/2020/01/28/99415644.1.jpg' },
+  { value: '맷 데이먼', url: 'https://mblogthumb-phinf.pstatic.net/20160801_121/xo__x_o_1470053908540yN3Yk_JPEG/15.jpg' },
+  { value: '주드로', url: 'https://t1.daumcdn.net/cfile/tistory/246F5045576E4F3025' },
+  { value: '에단호크', url: 'https://img1.daumcdn.net/thumb/C408x596/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F6300ee95993adef47f737c00f7e7e8367ef7c99c' },
+  { value: '새뮤얼 엘 잭슨', url: 'https://img.huffingtonpost.com/asset/5c3eb6722400009d009f9f11.jpeg?ops=scalefit_630_noupscale' },
 ]
 
 export const animalList = [
@@ -1651,9 +1666,7 @@ export const movieList = [
         youtube_id: 'vCsHo-lrq9k'
       },
       {
-        singer: '비욘세\n' +
-          ', \n' +
-          'Childish Gambino(차일디쉬 감비노)', title: 'Can You Feel the Love Tonight', youtube_id: '95iIdlBtiYY'
+        singer: '비욘세 Childish Gambino(차일디쉬 감비노)', title: 'Can You Feel the Love Tonight', youtube_id: '95iIdlBtiYY'
       },
       {
         singer: 'JD McCrary, Shahadi Wright Joseph 및 존 올리버',
@@ -2434,7 +2447,7 @@ export const dramaList = [
       { title: '보고싶다', singer: '김범수', youtube_id: 'F_w3jpFiiEw' },
     ]
   },
-  { value: '동백꽃 필 무렵', screenshot: 'https://image.kmib.co.kr/online_image/2019/1007/611819110013792783_2.jpg' },
+  { value: '동백꽃 필 무렵', screenshot: 'https://www.sisajournal.com/news/photo/201911/193069_97967_488.jpg' },
   {
     value: '파스타', screenshot: 'http://www.newsinside.kr/news/photo/first/201002/img_77257_1.jpg', soundList: [
       { title: 'Lucky Day', singer: '에브리 싱글 데이', youtube_id: 'qp2h-LWem38' },
@@ -2699,7 +2712,7 @@ export const dramaList = [
       { title: '만약에', singer: '태연', youtube_id: 'RjU5Op_KSBw' },
     ]
   },
-  { value: '경성 스캔들', screenshot: 'https://img.dmitory.com/img/201810/1G3/Yp4/1G3Yp4RW2iqUOkMQWOyUWI.jpg' },
+  { value: '경성 스캔들', screenshot: 'https://dimg.donga.com/wps/NEWS/IMAGE/2007/08/02/7022125.1.jpg' },
   {
     value: '황진이',
     screenshot: 'https://cdnweb01.wikitree.co.kr/webdata/editor/202109/11/img_20210911100431_6a64ef04.webp'
@@ -3280,11 +3293,11 @@ export const musicList = [
   { singer: '토이', music: '뜨거운 안녕', youtube_id: 'YhlZImjEzwY' },
   { singer: '토이', music: '여전히 아름다운지', youtube_id: 'nuAiFzEkFZM' },
   { singer: '토이', music: '좋은 사람', youtube_id: 'jIbUJejAAyQ' },
-  { singer: '토이', music: '세사람', youtube_id: 'ySHBMvse8aE' },
-  { singer: '토이', music: '오늘 서울은 하루종일 맑음', youtube_id: 'JeP2oeeYqFk' },
+  { singer: '토이', music: '세사람', youtube_id: 'AwSeBMaWASw' },
+  { singer: '토이', music: '오늘 서울은 하루종일 맑음', youtube_id: 'wxw2tFXU1zk' },
   { singer: '토이', music: '거짓말 같은 시간', youtube_id: 'v_3HKVEdLPw' },
   { singer: '토이', music: '스케치북', youtube_id: 'E9LnoXOWXkY' },
-  { singer: '토이', music: '내가 너의 곁에 잠시 살았다는 걸', youtube_id: 'j2PTEERB5Vk' },
+  { singer: '토이', music: '내가 너의 곁에 잠시 살았다는 걸', youtube_id: 'hlfZ0nVdM6w' },
   { singer: '롤러코스터', music: '습관', youtube_id: 'qvh74fT4xYY' },
   { singer: '윤종신', music: '좋니', youtube_id: 'oDOVv8qCREk' },
   { singer: '윤종신', music: '내일 할 일', youtube_id: 'R6JYKmuas34' },
@@ -3301,8 +3314,8 @@ export const musicList = [
   { singer: '티아라', music: '너 때문에 미쳐', youtube_id: 'dEifR8ewFAQ' },
   { singer: '티아라', music: 'Roly-Poly', youtube_id: 'PwpFx1-4BI4' },
   { singer: '티아라', music: 'Bo Peep Bo Peep', youtube_id: '9hJKq7nM4Ec' },
-  { singer: '티아라', music: 'Lovey-Dovey', youtube_id: 'Q52lkbNsVd4' },
-  { singer: '티아라', music: 'Sexy Love', youtube_id: 'vQKxrbaSAA4' },
+  { singer: '티아라', music: 'Lovey-Dovey', youtube_id: 'qZmNxCx01T8' },
+  { singer: '티아라', music: 'Sexy Love', youtube_id: 'imJckV0eqAg' },
   { singer: '별', music: 'I Think I', youtube_id: 'FRFJ-tr9enE' },
   { singer: '별', music: '안부', youtube_id: 'nVP-TrxRS9M' },
   { singer: '별', music: '12월 32일', youtube_id: 'l_2pu6P7MB4' },
@@ -3420,7 +3433,7 @@ export const musicList = [
   { singer: '인피니트', music: '내꺼하자', youtube_id: 'WvkX8e2pC0g' },
   { singer: '인피니트', music: 'BTD (Before The Dawn)', youtube_id: 'OIxiIRfzmS8' },
   { singer: '프리스타일', music: 'Y (Please Tell Me Why)', youtube_id: 'MKYv5w0QqFM' },
-  { singer: '프리스타일', music: '수취인불명', youtube_id: 'bCJo43KxLz8' },
+  { singer: '프리스타일', music: '수취인불명', youtube_id: 'aGQyJWj4I1A' },
   { singer: '나얼', music: '바람기억', youtube_id: 'wyejTBPksy0' },
   { singer: '나얼', music: '같은 시간 속의 너', youtube_id: '2jza9S7ZMO0' },
   { singer: '나얼', music: '귀로', youtube_id: 'upA01bvUemQ' },
@@ -3503,7 +3516,7 @@ export const musicList = [
   { singer: '씨야', music: '사랑의 인사', youtube_id: 'wRdNZKsh_a0' },
   { singer: '다비치', music: '두사랑', youtube_id: 'scRtFMzQQDs' },
   { singer: '다비치', music: '안녕이라고 말하지마', youtube_id: '90ie319tqIs' },
-  { singer: '다비치', music: '8282', youtube_id: 'c54FzJcol3I' },
+  { singer: '다비치', music: '8282', youtube_id: 'OJvNhkxtveo' },
   { singer: '다비치', music: '그냥 안아달란 말야', youtube_id: 'xomiVINvVNE' },
   { singer: '손담비', music: '토요일밤에', youtube_id: '_FJu0rqYMR0' },
   { singer: '손담비', music: '미쳤어', youtube_id: '5maMAv48OcM' },
@@ -3618,6 +3631,8 @@ export const musicList = [
   { singer: '도원경', music: '다시 사랑한다면', youtube_id: 'VO4QmC74CO4' },
   { singer: '정경화', music: '나에게로의 초대', youtube_id: 'XtP8aT3QlfI' },
   { singer: '정경화', music: '지상에서 영원으로', youtube_id: 'A8-98OMfWLY' },
+  { singer: '코나', music: '우리의 밤은 당신의 낮보다 아름답다', youtube_id: '5vTHEik_f8Y' },
+  { singer: '제이에스', music: '종로에서', youtube_id: '5cFaJCIPrVQ' },
 ]
 
 export const stuffList = [
