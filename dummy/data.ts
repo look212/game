@@ -1533,6 +1533,9 @@ export const movieList = [
       { screenshot: 'images/movie/slrkrkfk.png', script: '니가 가라 하와이' },
       { screenshot: 'images/movie/tlekqkfl.png', script: '내가 니 시다바리가' },
       { screenshot: 'images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라' }
+    ], soundList: [
+      { singer: '최만식', title: 'Genesis', youtube_id: 'OZ-cHzkSdt8' },
+      { singer: 'Robert Palmer', title: 'Bad case of loving you', youtube_id: 'TEg-csnE9Ws' },
     ]
   },
   {
@@ -1645,6 +1648,14 @@ export const movieList = [
   {
     value: '엑시트', scriptList: [
       { screenshot: 'images/movie/exit.png', script: '따따따 따 따 따 따따따' }
+    ], soundList: [
+      { singer: '', title: '엑시트 OST 탈주 장면', youtube_id: 'KHm1iIJwQKg' },
+      { singer: '이승환', title: '슈퍼히어로', youtube_id: 'opPFWdpCO8c' },
+    ]
+  },
+  {
+    value: '마이 걸', soundList: [
+      { singer: 'The Temptations', title: 'MY GIRL', youtube_id: 'bUvOq7poT9I' },
     ]
   },
   {
@@ -1757,10 +1768,17 @@ export const movieList = [
     ]
   },
   { value: '이터널 선샤인', screenshot: 'http://t1.daumcdn.net/movie/6f004dfd2b0e90f4e5f4973a4e76d7114f772cc1' },
-  { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg' },
+  { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '방준석', title: '아모리-만조상해원경', youtube_id: 'rw1OERVGQxs' },
+    ]
+  },
   {
     value: '웰컴 투 동막골',
-    screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg'
+    screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '', title: 'A Waltz of Sleigh', youtube_id: '6q3tR5nMcWs' },
+    ]
   },
   {
     value: '내 아내의 모든것',
@@ -1779,9 +1797,14 @@ export const movieList = [
     ]
   },
   { value: '군도', screenshot: 'images/movie/gundo.png' },
-  { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441' },
+  { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441', soundList: [
+      { singer: '이병우', title: '한강찬가', youtube_id: 't6GBX-3BsZE' },
+    ] },
   { value: '화이: 괴물을 삼킨 아이', screenshot: 'http://t1.daumcdn.net/cfile/214858495215AB990A' },
-  { value: '독전', screenshot: 'https://movie-phinf.pstatic.net/20180604_284/1528074809424DdA9C_JPEG/movie_image.jpg' },
+  { value: '독전', screenshot: 'https://movie-phinf.pstatic.net/20180604_284/1528074809424DdA9C_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '달파란', title: '소금공장', youtube_id: 'aowespOjqso' },
+    ] },
   {
     value: '접속',
     screenshot: 'https://movie-phinf.pstatic.net/20111222_52/1324534270853gMs61_JPEG/movie_image.jpg',
@@ -1814,7 +1837,11 @@ export const movieList = [
     value: '퍼펙트 게임',
     screenshot: 'https://movie-phinf.pstatic.net/20111224_230/1324654398379Mg753_JPEG/movie_image.jpg'
   },
-  { value: '킬빌 1부', screenshot: 'https://movie-phinf.pstatic.net/20111223_74/13245830310193s8BG_JPEG/movie_image.jpg' },
+  { value: '킬빌 1부', screenshot: 'https://movie-phinf.pstatic.net/20111223_74/13245830310193s8BG_JPEG/movie_image.jpg', soundList: [
+      { singer: '', title: 'Twisted Nerve', youtube_id: '5Q4AUvqfE_g' },
+      { singer: '', title: 'The Green Hornet Theme', youtube_id: 'YAyyTHFNyIQ' },
+      { singer: '', title: 'Battle Without Honor Or Humanity', youtube_id: 'ebMrRxK5S3U' },
+    ] },
   {
     value: '피아니스트',
     screenshot: 'https://movie-phinf.pstatic.net/20111223_151/1324569051618gDbvE_JPEG/movie_image.jpg'
@@ -2417,7 +2444,34 @@ export const movieList = [
     ]
   },
   {
-    value: '탐정 : 더 비기닝', screenshot: 'http://t1.daumcdn.net/movie/9ff0cfa49e2660089652c9d030ac85213e883651' },
+    value: '탐정 : 더 비기닝', screenshot: 'http://t1.daumcdn.net/movie/9ff0cfa49e2660089652c9d030ac85213e883651'
+  },
+  {
+    value: '스타워즈',
+    screenshot: 'https://ichef.bbci.co.uk/news/800/cpsprodpb/BFA1/production/_106775094_5a92457a-cdbb-4ef6-a76e-e0db1fab4386.jpg',
+    soundList: [
+      { title: 'Starwars', singer: '', youtube_id: 'OX4LPg2YLF4' },
+    ]
+  },
+  {
+    value: '인디아나 존스',
+    screenshot: 'https://img.huffingtonpost.com/asset/5ecca00e2500008320eb217c.jpeg?cache=ur8AeFerNP&ops=scalefit_630_noupscale',
+    soundList: [
+      { title: 'Indiana Jones Raiders of the Lost Ark', singer: '', youtube_id: 'qR1o3e3fpoI' },
+    ]
+  },
+  {
+    value: '인생은 아름다워', screenshot: 'http://t1.daumcdn.net/movie/395e534d66ea43488009d52d87a3a6af1567760609800',
+    soundList: [
+      { singer: 'buon giorno principessa', title: 'Life Is Beautiful', youtube_id: '6sC-jHv3mlo' },
+    ]
+  },
+  {
+    value: '슈퍼맨', screenshot: 'https://t1.daumcdn.net/cfile/tistory/2634A74D545C8CBC3D',
+    soundList: [
+      { singer: 'John Williams', title: 'Theme from Superman', youtube_id: 'H73BnAwmG94' },
+    ]
+  },
 ]
 
 export const dramaList = [
@@ -2579,7 +2633,7 @@ export const dramaList = [
       { title: 'You Are My Everything', singer: '거미', youtube_id: 'XvE8T99zpUw' },
     ]
   },
-  { value: '검색어를 입력하세요', screenshot: 'https://news.imaeil.com/photos/2019/07/04/2019070415445589333_l.png' },
+  { value: 'www 검색어를 입력하세요', screenshot: 'https://news.imaeil.com/photos/2019/07/04/2019070415445589333_l.png' },
   {
     value: '미안하다 사랑한다',
     screenshot: 'https://www.justwatch.com/images/backdrop/55632382/s640/im-sorry-i-love-you',
