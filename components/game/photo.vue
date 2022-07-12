@@ -140,7 +140,6 @@ export default defineComponent({
 .swiper-slide {
   img {
     max-width: 90vw;
-    max-height: 50vh;
   }
   .txt {
     position: relative;
