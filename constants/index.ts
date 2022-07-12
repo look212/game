@@ -45,6 +45,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'music', label: '노래' },
       { value: 'stuff', label: '물건' },
       { value: 'emotion', label: '감정' },
+      { value: 'food', label: '음식' },
     ]
   },
   {
@@ -72,6 +73,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'stuff', label: '물건' },
       { value: 'photo', label: '인물' },
       { value: 'appliance', label: '전자제품' },
+      { value: 'food', label: '음식' },
     ]
   },
   {
@@ -154,6 +156,13 @@ export const mainInfos: IMainInfo[] = [
       { value: 'music_chosung', label: '노래' },
       { value: 'proverb_chosung', label: '속담' },
     ]
+  },
+  {
+    type: 'melody',
+    title: '절대음감',
+    description: `제시어를 일정한 규칙에 따라 가장 빨리 발음하는 팀이 이기는 게임<br><br>
+    ex) "모~↗나리자 모나~↗리자 모나리~↗자 모나리자~↗"
+    `,
   }
 ]
 

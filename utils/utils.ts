@@ -12,6 +12,7 @@ import {
   photoList,
   foodList,
   dramaList,
+  melodyList,
 } from '~/dummy/data';
 
 let arr: any = [];
@@ -205,6 +206,9 @@ export const setTotalList = (subject: any) => {
           label: option
         }
       });
+      break;
+    case 'melody':
+      totalList = melodyList;
       break;
   }
 

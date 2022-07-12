@@ -1533,6 +1533,9 @@ export const movieList = [
       { screenshot: 'images/movie/slrkrkfk.png', script: '니가 가라 하와이' },
       { screenshot: 'images/movie/tlekqkfl.png', script: '내가 니 시다바리가' },
       { screenshot: 'images/movie/rhakgofk.png', script: '마 마이 무따 아이가 고마해라' }
+    ], soundList: [
+      { singer: '최만식', title: 'Genesis', youtube_id: 'OZ-cHzkSdt8' },
+      { singer: 'Robert Palmer', title: 'Bad case of loving you', youtube_id: 'TEg-csnE9Ws' },
     ]
   },
   {
@@ -1645,6 +1648,14 @@ export const movieList = [
   {
     value: '엑시트', scriptList: [
       { screenshot: 'images/movie/exit.png', script: '따따따 따 따 따 따따따' }
+    ], soundList: [
+      { singer: '', title: '엑시트 OST 탈주 장면', youtube_id: 'KHm1iIJwQKg' },
+      { singer: '이승환', title: '슈퍼히어로', youtube_id: 'opPFWdpCO8c' },
+    ]
+  },
+  {
+    value: '마이 걸', soundList: [
+      { singer: 'The Temptations', title: 'MY GIRL', youtube_id: 'bUvOq7poT9I' },
     ]
   },
   {
@@ -1757,10 +1768,17 @@ export const movieList = [
     ]
   },
   { value: '이터널 선샤인', screenshot: 'http://t1.daumcdn.net/movie/6f004dfd2b0e90f4e5f4973a4e76d7114f772cc1' },
-  { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg' },
+  { value: '사도', screenshot: 'https://movie-phinf.pstatic.net/20150716_156/1437014129392I8TO4_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '방준석', title: '아모리-만조상해원경', youtube_id: 'rw1OERVGQxs' },
+    ]
+  },
   {
     value: '웰컴 투 동막골',
-    screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg'
+    screenshot: 'https://movie-phinf.pstatic.net/20111222_268/1324548988315saGVc_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '', title: 'A Waltz of Sleigh', youtube_id: '6q3tR5nMcWs' },
+    ]
   },
   {
     value: '내 아내의 모든것',
@@ -1779,9 +1797,14 @@ export const movieList = [
     ]
   },
   { value: '군도', screenshot: 'images/movie/gundo.png' },
-  { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441' },
+  { value: '괴물', screenshot: 'http://t1.daumcdn.net/cfile/12110210A8B2EDB441', soundList: [
+      { singer: '이병우', title: '한강찬가', youtube_id: 't6GBX-3BsZE' },
+    ] },
   { value: '화이: 괴물을 삼킨 아이', screenshot: 'http://t1.daumcdn.net/cfile/214858495215AB990A' },
-  { value: '독전', screenshot: 'https://movie-phinf.pstatic.net/20180604_284/1528074809424DdA9C_JPEG/movie_image.jpg' },
+  { value: '독전', screenshot: 'https://movie-phinf.pstatic.net/20180604_284/1528074809424DdA9C_JPEG/movie_image.jpg',
+    soundList: [
+      { singer: '달파란', title: '소금공장', youtube_id: 'aowespOjqso' },
+    ] },
   {
     value: '접속',
     screenshot: 'https://movie-phinf.pstatic.net/20111222_52/1324534270853gMs61_JPEG/movie_image.jpg',
@@ -1814,7 +1837,11 @@ export const movieList = [
     value: '퍼펙트 게임',
     screenshot: 'https://movie-phinf.pstatic.net/20111224_230/1324654398379Mg753_JPEG/movie_image.jpg'
   },
-  { value: '킬빌 1부', screenshot: 'https://movie-phinf.pstatic.net/20111223_74/13245830310193s8BG_JPEG/movie_image.jpg' },
+  { value: '킬빌 1부', screenshot: 'https://movie-phinf.pstatic.net/20111223_74/13245830310193s8BG_JPEG/movie_image.jpg', soundList: [
+      { singer: '', title: 'Twisted Nerve', youtube_id: '5Q4AUvqfE_g' },
+      { singer: '', title: 'The Green Hornet Theme', youtube_id: 'YAyyTHFNyIQ' },
+      { singer: '', title: 'Battle Without Honor Or Humanity', youtube_id: 'ebMrRxK5S3U' },
+    ] },
   {
     value: '피아니스트',
     screenshot: 'https://movie-phinf.pstatic.net/20111223_151/1324569051618gDbvE_JPEG/movie_image.jpg'
@@ -2417,7 +2444,34 @@ export const movieList = [
     ]
   },
   {
-    value: '탐정 : 더 비기닝', screenshot: 'http://t1.daumcdn.net/movie/9ff0cfa49e2660089652c9d030ac85213e883651' },
+    value: '탐정 : 더 비기닝', screenshot: 'http://t1.daumcdn.net/movie/9ff0cfa49e2660089652c9d030ac85213e883651'
+  },
+  {
+    value: '스타워즈',
+    screenshot: 'https://ichef.bbci.co.uk/news/800/cpsprodpb/BFA1/production/_106775094_5a92457a-cdbb-4ef6-a76e-e0db1fab4386.jpg',
+    soundList: [
+      { title: 'Starwars', singer: '', youtube_id: 'OX4LPg2YLF4' },
+    ]
+  },
+  {
+    value: '인디아나 존스',
+    screenshot: 'https://img.huffingtonpost.com/asset/5ecca00e2500008320eb217c.jpeg?cache=ur8AeFerNP&ops=scalefit_630_noupscale',
+    soundList: [
+      { title: 'Indiana Jones Raiders of the Lost Ark', singer: '', youtube_id: 'qR1o3e3fpoI' },
+    ]
+  },
+  {
+    value: '인생은 아름다워', screenshot: 'http://t1.daumcdn.net/movie/395e534d66ea43488009d52d87a3a6af1567760609800',
+    soundList: [
+      { singer: 'buon giorno principessa', title: 'Life Is Beautiful', youtube_id: '6sC-jHv3mlo' },
+    ]
+  },
+  {
+    value: '슈퍼맨', screenshot: 'https://t1.daumcdn.net/cfile/tistory/2634A74D545C8CBC3D',
+    soundList: [
+      { singer: 'John Williams', title: 'Theme from Superman', youtube_id: 'H73BnAwmG94' },
+    ]
+  },
 ]
 
 export const dramaList = [
@@ -2579,7 +2633,7 @@ export const dramaList = [
       { title: 'You Are My Everything', singer: '거미', youtube_id: 'XvE8T99zpUw' },
     ]
   },
-  { value: '검색어를 입력하세요', screenshot: 'https://news.imaeil.com/photos/2019/07/04/2019070415445589333_l.png' },
+  { value: 'www 검색어를 입력하세요', screenshot: 'https://news.imaeil.com/photos/2019/07/04/2019070415445589333_l.png' },
   {
     value: '미안하다 사랑한다',
     screenshot: 'https://www.justwatch.com/images/backdrop/55632382/s640/im-sorry-i-love-you',
@@ -3310,10 +3364,10 @@ export const musicList = [
   { singer: '에프터스쿨', music: 'DIVA', youtube_id: 'CveilV83S7U' },
   { singer: '에프터스쿨', music: 'Bang', youtube_id: 'OKwcDZtFofk' },
   { singer: '에프터스쿨', music: 'AH', youtube_id: 'fMwxbbmiwAk' },
-  { singer: '티아라', music: 'T.T.L (Time To Love)', youtube_id: 'HKuMchHwUVI' },
-  { singer: '티아라', music: '너 때문에 미쳐', youtube_id: 'dEifR8ewFAQ' },
-  { singer: '티아라', music: 'Roly-Poly', youtube_id: 'PwpFx1-4BI4' },
-  { singer: '티아라', music: 'Bo Peep Bo Peep', youtube_id: '9hJKq7nM4Ec' },
+  { singer: '티아라', music: 'T.T.L (Time To Love)', youtube_id: 'AmdgIK8-raM' },
+  { singer: '티아라', music: '너 때문에 미쳐', youtube_id: 'isYuJ1s8uHI' },
+  { singer: '티아라', music: 'Roly-Poly', youtube_id: 'sF2quESVb9Y' },
+  { singer: '티아라', music: 'Bo Peep Bo Peep', youtube_id: '7PccWSZiCGQ' },
   { singer: '티아라', music: 'Lovey-Dovey', youtube_id: 'qZmNxCx01T8' },
   { singer: '티아라', music: 'Sexy Love', youtube_id: 'imJckV0eqAg' },
   { singer: '별', music: 'I Think I', youtube_id: 'FRFJ-tr9enE' },
@@ -3633,6 +3687,18 @@ export const musicList = [
   { singer: '정경화', music: '지상에서 영원으로', youtube_id: 'A8-98OMfWLY' },
   { singer: '코나', music: '우리의 밤은 당신의 낮보다 아름답다', youtube_id: '5vTHEik_f8Y' },
   { singer: '제이에스', music: '종로에서', youtube_id: '5cFaJCIPrVQ' },
+  { singer: '렉시', music: '애송이', youtube_id: 'ZYdGDN-GYic' },
+  { singer: '아이비', music: '유혹의 소나타', youtube_id: 'Wv5dJlo2f54' },
+  { singer: '시크릿', music: 'Magic', youtube_id: 'hIfnqrmgdSg' },
+  { singer: '시크릿', music: '별빛달빛', youtube_id: 'eqGhFila6qM' },
+  { singer: '시크릿', music: 'Madonna', youtube_id: 'n2fM1yHE_Nc' },
+  { singer: '시크릿', music: 'Shy Boy', youtube_id: '9iMFkd2yf_Y' },
+  { singer: '채연', music: '둘이서', youtube_id: 'BY3hWmQGsFY' },
+  { singer: 'FTISLAND', music: '사랑앓이', youtube_id: 'yb0pYiPLfww' },
+  { singer: '지누션', music: '전화번호', youtube_id: '_hY-KhJUK2o' },
+  { singer: '지누션', music: '말해줘', youtube_id: 'aVHPoC2jdxQ' },
+  { singer: '김종국', music: '한남자', youtube_id: 'zJfF_41gOk8' },
+  { singer: '박경림', music: '착각의 늪', youtube_id: 'fzhcE6BGCD0' },
 ]
 
 export const stuffList = [
@@ -3977,4 +4043,44 @@ export const foodList = [
   { value: '치킨' },
   { value: '핫도그' },
   { value: '스테이크' },
+]
+
+export const melodyList = [
+  { value: '김삿갓삿갓' },
+  { value: '돌산갓김치' },
+  { value: '경찰청창살' },
+  { value: '강력접착제' },
+  { value: '확률분포표' },
+  { value: '척추측만증' },
+  { value: '합성착향료' },
+  { value: '양념닭똥집' },
+  { value: '뽕잎쌈냉채' },
+  { value: '로얄뉴로얄' },
+  { value: '샤랄라랄라' },
+  { value: '한방쑥국수' },
+  { value: '게살샥스핀' },
+  { value: '덩더덕쿵덕' },
+  { value: '간장공장공장장' },
+  { value: '공인중개사사무소장' },
+  { value: '평창동계올림픽' },
+  { value: '상담담당선생님' },
+  { value: '참모총장표창장' },
+  { value: '해충박멸용살충기' },
+  { value: '간접적직접선거' },
+  { value: '책살걸창철수책상' },
+  { value: '찰떡꿀떡콩떡' },
+  { value: '단팥맛통찐빵' },
+  { value: '한국항공화물항공기' },
+  { value: '난방방법변경방법' },
+  { value: '뽕잎쌈생채' },
+  { value: '풋콩찰주먹밥' },
+  { value: '잣찹쌀전병' },
+  { value: '호박홍합찜' },
+  { value: '꿩잎볶음쌈' },
+  { value: '붉은팥팥죽' },
+  { value: '홍합왕밤빵' },
+  { value: '경찰청창살쇠창살' },
+  { value: '법학박사' },
+  { value: '한양양장점' },
+  { value: '한국관광공사관광과장' },
 ]
