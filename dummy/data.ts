@@ -2694,7 +2694,7 @@ export const dramaList = [
   },
   {
     value: '내 이름은 김삼순',
-    screenshot: 'https://mblogthumb-phinf.pstatic.net/MjAyMDAzMDJfMTI5/MDAxNTgzMDkzNzg5NTk4.89tcs66RXYcBilc4yUw1nIjCfPxnjc9sa5ae_i5Hegkg.do9YF5hTe1oLeznAgP02-Og5sKIZtb1coiMndph--YAg.JPEG.geronimo1226/CE695577-0988-4A08-8639-50F489F804C2-505-0000003629174C0E.jpg',
+    screenshot: 'https://post-phinf.pstatic.net/MjAyMDExMTRfMTY5/MDAxNjA1MzM3ODQ4ODAw.z3Iy5SFNPnVq7eMHMKi6VpBXxaC0C3YpfG2SRbIYIkgg.0XpM9U-yW-WRzCFdSeZC4fHWTzOXflCggNaMdqsx73Yg.JPEG/012.jpg',
     soundList: [
       { title: 'She Is', singer: '클래지콰이', youtube_id: 'zjVt73gD1fc' },
       { title: 'Be My Love', singer: '클래지콰이 및 이승열', youtube_id: 'O-ls1MKc688' },
