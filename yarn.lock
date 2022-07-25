@@ -4846,7 +4846,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.2.0, he@^1.1.0, he@^1.2.0:
+he@1.2.0, he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
@@ -9399,10 +9399,10 @@ vue-sweetalert2@^5.0.5:
   dependencies:
     sweetalert2 "11.x"
 
-vue-template-compiler@^2.6.12, vue-template-compiler@^2.6.14, vue-template-compiler@^2.7.4:
-  version "2.7.4"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.4.tgz#5c21ff12dbd8f53ac14b42a6d89e77b55a1c5dd7"
-  integrity sha512-FgaeXI80FzhtDEsixq3WBrHLWpU2gzLb2DFusm62TrmCQyETsnUp0kTLpbExrTUw7g5YOnRf+xkh73nuEX+jGQ==
+vue-template-compiler@^2.6.12, vue-template-compiler@^2.6.14, vue-template-compiler@^2.7.8:
+  version "2.7.8"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.8.tgz#eadd54ed8fbff55b7deb07093a976c07f451a1dc"
+  integrity sha512-eQqdcUpJKJpBRPDdxCNsqUoT0edNvdt1jFjtVnVS/LPPmr0BU2jWzXlrf6BVMeODtdLewB3j8j3WjNiB+V+giw==
   dependencies:
     de-indent "^1.0.2"
     he "^1.2.0"
