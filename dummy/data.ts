@@ -3063,6 +3063,18 @@ export const dramaList = [
       { singer: '이지', title: '응급실', youtube_id: 'E-BvyQb7mWE' },
     ]
   },
+  {
+    value: '우리들의 블루스', screenshot: 'https://newsimg.sedaily.com/2022/04/18/264QP01IDM_1.jpg', soundList: [
+      { singer: '', title: 'Our Blues Title', youtube_id: 'maX-KrJmWq4' },
+      { singer: '멜로망스', title: 'Happy Song', youtube_id: '3SsVs_npjYg' },
+    ]
+  },
+  {
+    value: '왜 오수재인가', screenshot: 'https://cdn.entermedia.co.kr/news/photo/202206/29155_55655_3811.jpg',
+  },
+  {
+    value: '이상한 변호사 우영우', screenshot: 'https://newsimg.sedaily.com/2022/07/06/268F29QVZ1_1.jpg',
+  },
 ]
 
 export const musicList = [
@@ -3699,6 +3711,10 @@ export const musicList = [
   { singer: '지누션', music: '말해줘', youtube_id: 'aVHPoC2jdxQ' },
   { singer: '김종국', music: '한남자', youtube_id: 'zJfF_41gOk8' },
   { singer: '박경림', music: '착각의 늪', youtube_id: 'fzhcE6BGCD0' },
+  { singer: 'LE SSERAFIM (르세라핌)', music: 'FEARLESS', youtube_id: '9NuiUBwVDwQ' },
+  { singer: 'NewJeans (뉴진스)', music: 'Attention', youtube_id: 'kdOS94IjzzE' },
+  { singer: 'aespa 에스파', music: '도깨비불(Illusion)', youtube_id: 'r_RAv0JMB8s' },
+  { singer: 'ITZY', music: 'SNEAKERS', youtube_id: 'Hbb5GPxXF1w' },
 ]
 
 export const stuffList = [
