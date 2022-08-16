@@ -1,5 +1,5 @@
 import { computed, onMounted, useRoute, ref, reactive, toRefs } from '@nuxtjs/composition-api';
-import { countSpeedList, questionNumberList, liarModeList, countDownList } from '~/constants';
+import { countSpeedList, questionNumberList, liarModeList, countDownList, mixedList } from '~/constants';
 import { useGameStore, useAppStore } from '~/store';
 import { saveGuard } from '~/utils/utils';
 import { useContext } from '@nuxtjs/composition-api';
@@ -21,6 +21,7 @@ export default function gameSetting() {
   const isTimerStart = computed(() => game.isTimerStart);
   const giParams = computed(() => game.giParams);
   const participants = computed(() => game.participants);
+  const mixedNum = computed(() => game.mixedNum);
   const route = useRoute();
   const timer = ref();
   const swiper = ref();
@@ -38,12 +39,14 @@ export default function gameSetting() {
     isTimerStart,
     giParams,
     participants,
+    mixedNum,
     isShow: true,
     activeIndex: 0,
     countSpeedList,
     questionNumberList,
     liarModeList,
     countDownList,
+    mixedList,
     swiperOptions: {
       allowTouchMove: false,
       navigation: {
@@ -121,6 +124,9 @@ export default function gameSetting() {
       console.log(value);
       data.isShow = value;
     },
+    setMixedNumber(option: number) {
+      game.setMixedNumber(option);
+    }
   }
 
   return {
