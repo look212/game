@@ -198,4 +198,8 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
 }
+
+.swiper-slide {
+  align-items: inherit;
+}
 </style>
