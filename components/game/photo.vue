@@ -143,7 +143,7 @@ export default defineComponent({
   }
   .txt {
     position: relative;
-    font-size: 2em;
+    font-size: 8vw;
     width: 100%;
     height: 100%;
 
@@ -162,7 +162,7 @@ export default defineComponent({
         position: absolute;
         left: 50%;
         top: 0;
-        width: fit-content;
+        width: 100%;
         @include transform(translateX(-50%));
       }
 

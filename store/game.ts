@@ -5,6 +5,7 @@ import { getRandom, getRandomArray, setTotalList } from '~/utils/utils';
 import Vue from 'vue';
 import { $axios } from '~/utils/api';
 import { AxiosResponse } from 'axios';
+import { hiddenList } from '~/dummy/data';
 
 @Module({
   name: 'game',
@@ -29,10 +30,16 @@ export default class Game extends VuexModule {
   giParams: any = [];
   participants: number = 3;
   liar: any = { participants: [], liar: 0, spy: 0, quiz: '' };
+  hiddenType: string = '';
 
   @Mutation
   setGameType(option: string) {
     this.gameType = option
+  }
+
+  @Mutation
+  setHiddenType(option: string) {
+    this.hiddenType = option
   }
 
   @Mutation
@@ -176,6 +183,15 @@ export default class Game extends VuexModule {
       searchType: 'image',
       num: 1,
       q: param,
+    }
+  }
+
+  @Mutation
+  setHiddenGameList(type: string) {
+    this.gameList = hiddenList.find((opt) => opt.type === type)?.question;
+    this.subject = {
+      label: hiddenList.find((opt) => opt.type === type)?.label || '',
+      value: hiddenList.find((opt) => opt.type === type)?.type,
     }
   }
 }
