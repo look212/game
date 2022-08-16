@@ -210,6 +210,12 @@ export const setTotalList = (subject: any) => {
     case 'melody':
       totalList = melodyList;
       break;
+    case 'mix':
+      //
+      totalList = musicList.filter((option) => option.start).map((music) => {
+        return { value: music.music, singer: music.singer, youtube_id: music.youtube_id, start: music.start }
+      })
+      break;
   }
 
   return { totalList };

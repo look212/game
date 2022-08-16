@@ -163,7 +163,19 @@ export const mainInfos: IMainInfo[] = [
     description: `제시어를 일정한 규칙에 따라 가장 빨리 발음하는 팀이 이기는 게임<br><br>
     ex) "모~↗나리자 모나~↗리자 모나리~↗자 모나리자~↗"
     `,
-  }
+  },
+  {
+    type: 'mix',
+    title: '노래 믹스 퀴즈',
+    description: `
+    <ul>
+        <li>노래 몇 개를 믹스할지 고르세요</li>
+        <li>문제 갯수를 고르세요.</li>
+        <li>믹스된 노래를 맞추세요.</li>
+    </ul>
+    `,
+  },
+
 ]
 
 export const countSpeedList: ISimpleType[] = [
@@ -189,4 +201,11 @@ export const countDownList: ISimpleType[] = [
   { value: 4, label: '4' },
   { value: 5, label: '5' },
   { value: 6, label: '6' },
+]
+
+export const mixedList: ISimpleType[] = [
+  { value: 2, label: '2개' },
+  { value: 3, label: '3개' },
+  { value: 4, label: '4개' },
+  { value: 5, label: '5개' },
 ]

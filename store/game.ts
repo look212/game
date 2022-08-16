@@ -31,6 +31,7 @@ export default class Game extends VuexModule {
   participants: number = 3;
   liar: any = { participants: [], liar: 0, spy: 0, quiz: '' };
   hiddenType: string = '';
+  mixedNum: number = 2;
 
   @Mutation
   setGameType(option: string) {
@@ -144,6 +145,13 @@ export default class Game extends VuexModule {
       this.gameList.push(totalList[num]);
     });
 
+    // 노래 믹스 리스트 만들기
+    if (subject === 'mix') {
+      let newArr = [ ...this.gameList ];
+      this.gameList = [];
+      for(let i = 0; i < newArr.length; i += this.mixedNum) this.gameList.push(newArr.slice(i, i+this.mixedNum));
+    }
+
     console.log('gameList::: ', this.gameList);
 
     // 라이어 게임 세팅
@@ -193,5 +201,10 @@ export default class Game extends VuexModule {
       label: hiddenList.find((opt) => opt.type === type)?.label || '',
       value: hiddenList.find((opt) => opt.type === type)?.type,
     }
+  }
+
+  @Mutation
+  setMixedNumber(option: number) {
+    this.mixedNum = option
   }
 }
