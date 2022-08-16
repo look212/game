@@ -209,7 +209,7 @@ export default defineComponent({
         position: absolute;
         left: 50%;
         top: 0;
-        width: fit-content;
+        width: 100%;
         @include transform(translateX(-50%));
       }
       i {
