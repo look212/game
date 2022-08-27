@@ -1,9 +1,7 @@
 <template>
   <button :class="[{'is-block': isBlock},
       {'is-gray': isGray}]"
-          @click="handleClick"
-          @ontouchstart="handleTouchStart"
-          @ontouchend="handleTouchEnd">
+          @click="handleClick">
     <slot/>
   </button>
 </template>
@@ -23,21 +21,13 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    const isActiveAction = ref<boolean>(false);
     const methods = {
       handleClick(e: Event) {
         emit('click', e);
       },
-      handleTouchStart() {
-        isActiveAction.value = true;
-      },
-      handleTouchEnd() {
-        isActiveAction.value = false;
-      }
     }
 
     return {
-      isActiveAction,
       ...methods
     }
   }
