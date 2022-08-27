@@ -12,26 +12,26 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/composition-api": "0.32.0",
     "@types/lodash-es": "^4.17.6",
-    "core-js": "^3.25.0",
+    "core-js": "^3.19.3",
     "lodash-es": "^4.17.21",
     "nuxt": "^2.15.8",
     "soundcloud-widget": "^0.2.1",
     "soundcloud.ts": "^0.4.7",
-    "swiper": "5.4.5",
-    "vue": "^3.2.37",
+    "swiper": "5.3.7",
+    "vue": "^2.6.14",
     "vue-awesome-swiper": "4.1.1",
-    "vue-server-renderer": "^2.7.8",
-    "vue-sweetalert2": "^5.0.5",
-    "vue-template-compiler": "^2.7.10",
+    "vue-server-renderer": "^2.6.14",
+    "vue-sweetalert2": "^5.0.2",
+    "vue-template-compiler": "^2.6.14",
     "vue-youtube-embed": "^2.2.2",
     "vuex-module-decorators": "^2.0.0",
-    "webpack": "^5.74.0"
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "node-sass": "6.0.1",
-    "sass-loader": "13"
+    "sass-loader": "10"
   }
 }
