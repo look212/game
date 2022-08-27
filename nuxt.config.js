@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   server: {
-    port: 4444,
+    port: 2468,
   },
 
   // Target: https://go.nuxtjs.dev/config-target
