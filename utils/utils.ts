@@ -211,11 +211,8 @@ export const setTotalList = (subject: any) => {
       totalList = melodyList;
       break;
     case 'mix':
-      // totalList = musicList.filter((option) => option.start).map((music) => {
-      //         return { value: music.music, singer: music.singer, youtube_id: music.youtube_id, start: music.start }
-      //       })
-      totalList = musicList.filter((option) => option.soundcloud_id).map((music) => {
-        return { value: music.music, singer: music.singer, soundcloud_id: music.soundcloud_id, soundcloud_t: music.soundcloud_t }
+      totalList = musicList.filter((option) => option.start).map((music) => {
+        return { value: music.music, singer: music.singer, youtube_id: music.youtube_id, start: music.start }
       })
       break;
   }

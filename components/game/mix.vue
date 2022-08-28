@@ -24,8 +24,12 @@
                  :key="`music_${musicIndex}`">
               <p style="font-size: 1.2em;">{{ music.singer }} - {{ music.value }}</p>
               <client-only>
-                <iframe :id="`sc${index}`" width="100%" height="300" scrolling="no" frameborder="no"
-                        :src="`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${music.soundcloud_id}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true&single_active=false`"></iframe>
+                <youtube :video-id="music.youtube_id"
+                         :player-vars="{ start: music.start }"
+                         player-width="100%"
+                         player-height="56.25%"
+                         @ready="ready"
+                         @playing="playing($event, type)"></youtube>
               </client-only>
             </div>
           </div>
@@ -42,6 +46,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent, reactive, toRefs, onMounted, ref, watch } from '@nuxtjs/composition-api';
 import gameSetting from '~/composable/gameSetting';
@@ -53,7 +58,6 @@ export default defineComponent({
   components: {
     GButton,
     GTimer,
-
   },
   setup(props, { root }) {
     const {
@@ -74,7 +78,7 @@ export default defineComponent({
     const data = reactive({
       type: '',
     })
-    // const youtube = ref<any>([]);
+    const youtube = ref<any>([]);
 
     const methods = {
       setGameStart() {
@@ -111,25 +115,22 @@ export default defineComponent({
       handlePlay() {
         if (data.type === 'play') {
           data.type = 'pause';
-          for (let i = 0; i < mixedNum.value; i++) {
-            // playerArr[i].play()
-          }
         } else {
           data.type = 'play';
-          for (let i = 0; i < mixedNum.value; i++) {
-            // playerArr[i].pause()
-          }
+        }
+        for (let i = 0; i < mixedNum.value; i++) {
+          methods.playing(youtube.value[i], data.type);
         }
       },
       handleStop() {
         data.type = 'stop';
         for (let i = 0; i < mixedNum.value; i++) {
-          // methods.playing(youtube.value[i], data.type);
+          methods.playing(youtube.value[i], data.type);
         }
       },
 
       ready(event: any) {
-        // youtube.value.push(event);
+        youtube.value.push(event);
       },
       playing(event: any, type: string) {
         if (type === 'play') event.target.playVideo();
@@ -140,25 +141,18 @@ export default defineComponent({
         await swiper.value.$swiper.slideNext();
         activeIndex.value = swiper.value.$swiper.activeIndex;
         console.log(activeIndex.value);
-        // youtube.value = [];
+        youtube.value = [];
       },
       async prevSlide() {
         await swiper.value.$swiper.slidePrev();
         activeIndex.value = swiper.value.$swiper.activeIndex;
         console.log(activeIndex.value);
-        // youtube.value = [];
+        youtube.value = [];
       },
     }
 
     watch(() => activeIndex.value, (newValue: number) => {
       data.type = 'pause';
-    })
-
-    onMounted(() => {
-      let playerArr: any = [];
-      // for (let i = 0; i < mixedNum.value; i++) {
-      //   playerArr.push(new SoundCloud(`sc${i}`));
-      // }
     })
 
     return {
