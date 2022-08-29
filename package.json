@@ -20,7 +20,7 @@
     "vue": "^2.6.14",
     "vue-awesome-swiper": "4.1.1",
     "vue-server-renderer": "^2.6.14",
-    "vue-sweetalert2": "^5.0.2",
+    "vue-sweetalert2": "^5.0.5",
     "vue-template-compiler": "^2.6.14",
     "vue-youtube-embed": "^2.2.2",
     "vuex-module-decorators": "^2.0.0",
