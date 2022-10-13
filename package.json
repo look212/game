@@ -17,11 +17,11 @@
     "nuxt": "^2.15.8",
     "soundcloud-embed": "^0.1.0",
     "swiper": "5.3.7",
-    "vue": "^2.6.14",
+    "vue": "^2.7.12",
     "vue-awesome-swiper": "4.1.1",
     "vue-server-renderer": "^2.6.14",
     "vue-sweetalert2": "^5.0.2",
-    "vue-template-compiler": "^2.6.14",
+    "vue-template-compiler": "^2.7.12",
     "vue-youtube-embed": "^2.2.2",
     "vuex-module-decorators": "^2.0.0",
     "webpack": "^4.46.0"
