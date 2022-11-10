@@ -12,14 +12,14 @@
                 :class="{'is-active': type === 'stop'}"><img src="../../static/images/icon/stop.png" alt="stop" height="14px"></g-button>
     </div>
     <div class="question-wrap" @click="setIsShow(!isShow)">
-      <div class="shadow" v-if="isShow && subject.value === 'movie_sound'">
-        <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
-      </div>
       <swiper ref="swiper"
               class="custom"
               :options="swiperOptions">
         <swiper-slide v-for="(game, index) in gameList" :key="`game_${index}`">
           <div v-if="index === activeIndex">
+            <div class="shadow" v-if="isShow && subject.value === 'movie_sound'">
+              <p><span>{{ activeIndex + 1 }}</span><br>클릭하여 확인해주세요</p>
+            </div>
             <template v-if="subject.value === 'movie_sound'">
               <p style="font-size: 1.2em; margin-bottom: 20px;">{{ game.value }}({{ game.singer }} {{ game.singer ? '-' : ''}} {{ game.title }})</p>
               <client-only>

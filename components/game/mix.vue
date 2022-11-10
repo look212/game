@@ -194,7 +194,6 @@ export default defineComponent({
 }
 
 .next-wrap {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
