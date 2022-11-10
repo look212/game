@@ -98,7 +98,7 @@ pre {
 }
 
 .swiper-container.custom {
-  overflow: hidden;
+  overflow: visible;
   .swiper-slide {
     height: calc(100vh - 284px);
     background: #fff;
