@@ -722,7 +722,6 @@ export const photoList = [
   { value: '김대희', url: 'https://mblogthumb-phinf.pstatic.net/20150110_224/jinna21125_1420880375729m5o0G_JPEG/51283200_2.jpg?type=w2' },
   { value: '이용진', url: 'https://mblogthumb-phinf.pstatic.net/MjAxOTA4MjdfMTE2/MDAxNTY2OTE3MDI0MjEz.djD3iPy7gx7JcOTWwq0VV5FKQHZ-5WiHY41Ox67pxgYg.xhKpRtfmx6IYcWIzj-AHUC-LrWhAQHxvhF0_Op83EPog.JPEG.cosl922/output_1621615859.jpg?type=w800' },
   { value: '이진호', url: 'https://blog.kakaocdn.net/dn/bYk87Q/btq3mgGZFsI/pdiKCa2oGK1KzkBbdlAgjk/img.jpg' },
-  { value: '뱃사공', url: 'https://image.fmkorea.com/files/attach/new2/20220516/2120028041/3100694838/4623272834/99b983892094b5c6d2fc3736e15da7d1.jpg' },
   { value: '정호연', url: 'https://img7.yna.co.kr/etc/inner/KR/2022/02/28/AKR20220228085900005_01_i_P4.jpg' },
   { value: '김사랑', url: 'http://www.sisaweek.com/news/photo/201903/119578_104502_457.jpg' },
   { value: '백예린', url: 'https://i.ytimg.com/vi/sQFSh9K5Y-s/maxresdefault.jpg' },
@@ -1136,6 +1135,8 @@ export const photoList = [
   { value: '주드로', url: 'https://t1.daumcdn.net/cfile/tistory/246F5045576E4F3025' },
   { value: '에단호크', url: 'https://img1.daumcdn.net/thumb/C408x596/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F6300ee95993adef47f737c00f7e7e8367ef7c99c' },
   { value: '새뮤얼 엘 잭슨', url: 'https://img.huffingtonpost.com/asset/5c3eb6722400009d009f9f11.jpeg?ops=scalefit_630_noupscale' },
+  { value: '노윤서', url: 'https://img.allurekorea.com/allure/2020/10/style_5f90f49e42104.jpg' },
+  { value: '티모시 샬라메', url: 'https://image.news1.kr/system/photos/2022/3/28/5288832/high.jpg/dims/optimize' },
 ]
 
 export const animalList = [
@@ -3257,14 +3258,14 @@ export const musicList = [
   { singer: '헤이즈', music: '널 너무 모르고', youtube_id: 'T1wssdlybp4' },
   { singer: '헤이즈', music: '돌아오지마', youtube_id: 'I7EwLNhPgpg' },
   { singer: '헤이즈', music: 'HAPPEN (헤픈 우연)', youtube_id: '_2Q9yS3TDcw' },
-  { singer: 'god', music: '길', youtube_id: '_EgZ9sfrCf8' },
-  { singer: 'god', music: '촛불하나', youtube_id: 'Llg91lVmctg', start: '56', soundcloud_id: '300345638', soundcloud_t: '1m6s' },
-  { singer: 'god', music: '거짓말', youtube_id: 'Cq1z_7eWEv4' },
-  { singer: 'god', music: '사랑해 그리고 기억해', youtube_id: 'BC5vQCuqWw8' },
-  { singer: 'god', music: '다시', youtube_id: 'B5P3NGFrmJg' },
-  { singer: 'god', music: '하늘색 풍선', youtube_id: 'ysWlLG8AbUw', start: '60', soundcloud_id: '1285827775', soundcloud_t: '1m' },
-  { singer: 'god', music: '어머님께', youtube_id: '1Vleb1kqpZg' },
-  { singer: 'god', music: '니가 있어야 할 곳', youtube_id: '1XC_SItrOBY', start: '0', soundcloud_id: '56278949', soundcloud_t: '0s' },
+  { singer: 'god', music: '길', youtube_id: 'KgXtSx8ublA' },
+  { singer: 'god', music: '촛불하나', youtube_id: 'IJRo4GJqTfE', start: '56', soundcloud_id: '300345638', soundcloud_t: '1m6s' },
+  { singer: 'god', music: '거짓말', youtube_id: '3Bej2DWdWRk' },
+  { singer: 'god', music: '사랑해 그리고 기억해', youtube_id: 'GQ4pfQ7IZmQ' },
+  { singer: 'god', music: '다시', youtube_id: 'i_RILNaNib4' },
+  { singer: 'god', music: '하늘색 풍선', youtube_id: 'MRMXeEObevg', start: '60', soundcloud_id: '1285827775', soundcloud_t: '1m' },
+  { singer: 'god', music: '어머님께', youtube_id: 'evb-3W3Wnls' },
+  { singer: 'god', music: '니가 있어야 할 곳', youtube_id: 'NaUjm_fhtX4', start: '0', soundcloud_id: '56278949', soundcloud_t: '0s' },
   { singer: 'god', music: 'Friday night', youtube_id: '4Qna6tdoE5Q' },
   { singer: 'H.O.T', music: '캔디', youtube_id: 'BaQDN_Ex9L4', start: '85', soundcloud_id: '1015174678', soundcloud_t: '1m25s' },
   { singer: 'H.O.T', music: '빛', youtube_id: 'Ls2rKrCjbqU', start: '60', soundcloud_id: '19741821', soundcloud_t: '1m' },
@@ -3722,6 +3723,7 @@ export const musicList = [
   { singer: '지누션', music: '말해줘', youtube_id: 'aVHPoC2jdxQ' },
   { singer: '김종국', music: '한남자', youtube_id: 'zJfF_41gOk8' },
   { singer: '박경림', music: '착각의 늪', youtube_id: 'fzhcE6BGCD0' },
+  { singer: '모세', music: '사랑인걸', youtube_id: 'L1q2-mGHg9A' },
   { singer: 'LE SSERAFIM (르세라핌)', music: 'FEARLESS', youtube_id: '9NuiUBwVDwQ' },
   { singer: 'NewJeans (뉴진스)', music: 'Attention', youtube_id: 'kdOS94IjzzE', start: '55', soundcloud_id: '1311630391', soundcloud_t: '2m5s' },
   { singer: 'aespa (에스파)', music: '도깨비불(Illusion)', youtube_id: 'r_RAv0JMB8s' },
@@ -3729,6 +3731,9 @@ export const musicList = [
   { singer: 'ZICO (지코)', music: '괴짜(FREAK)', youtube_id: 'xfiUyThjctg' },
   { singer: 'STAYC (스테이씨)', music: 'ASAP', youtube_id: 'NsY-9MCOIAQ', start: '45', soundcloud_id: '1028534395', soundcloud_t: '45s' },
   { singer: 'STAYC (스테이씨)', music: 'RUN2U', youtube_id: 'AFI7RVxJtWo', start: '55', soundcloud_id: '1219737598', soundcloud_t: '55s' },
+  { singer: 'NewJeans (뉴진스)', music: 'Hype Boy', youtube_id: '11cta61wi0g' },
+  { singer: 'NewJeans (뉴진스)', music: 'Ditto', youtube_id: 'Km71Rr9K-Bw' },
+  { singer: 'NewJeans (뉴진스)', music: 'OMG', youtube_id: 'sVTy_wmn5SU' },
 ]
 
 export const stuffList = [
