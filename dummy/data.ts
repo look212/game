@@ -3076,6 +3076,9 @@ export const dramaList = [
   {
     value: '이상한 변호사 우영우', screenshot: 'https://newsimg.sedaily.com/2022/07/06/268F29QVZ1_1.jpg',
   },
+  {
+    value: '재벌집 막내아들', screenshot: 'https://cdn.salgoonews.com/news/photo/202212/25915_75586_126.png',
+  },
 ]
 
 export const musicList = [
@@ -4202,7 +4205,7 @@ export const hiddenList = [
       '어쿠비치',
       'Kill this love',
       '아이유',
-      '이재홍',
+      '구혜림',
       '살짝 설렜어',
     ],
   },
@@ -4215,11 +4218,11 @@ export const hiddenList = [
       '김경백',
       '명동 파스쿠찌',
       '테마인테리어',
-      '대천',
       '코타키나발루',
       '더화이트베일',
-      '싸이월드 다이어리',
       '선풍기',
+      '몰디브',
+      '5월 12일',
     ],
   },
 ]
