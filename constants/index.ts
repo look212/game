@@ -170,6 +170,7 @@ export const mainInfos: IMainInfo[] = [
     title: '노래 믹스 퀴즈',
     description: `
     <ul>
+        <li>(안드로이드, 웹에서만 동작합니다)</li>
         <li>노래 몇 개를 믹스할지 고르세요</li>
         <li>문제 갯수를 고르세요.</li>
         <li>믹스된 노래를 맞추세요.</li>
