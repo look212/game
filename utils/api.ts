@@ -1,5 +1,5 @@
-import {NuxtAxiosInstance} from '@nuxtjs/axios'
-import {AxiosError, AxiosResponse} from 'axios'
+import { NuxtAxiosInstance } from '@nuxtjs/axios'
+import { AxiosError, AxiosResponse } from 'axios'
 
 let $axios: NuxtAxiosInstance
 
@@ -9,17 +9,17 @@ export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
   // })
 
   axiosInstance.onResponse((response: AxiosResponse) => {
-    console.info('onResponse :: ', response);
-    return response;
+    console.info('onResponse :: ', response)
+    return response
   })
 
   axiosInstance.onError(async (error: AxiosError) => {
-    console.error('onError');
-    console.dir(error);
-    return Promise.reject(error);
+    console.error('onError')
+    console.dir(error)
+    return Promise.reject(error)
   })
 
   $axios = axiosInstance
 }
 
-export {$axios}
+export { $axios }

@@ -32,5 +32,13 @@
     "@nuxtjs/style-resources": "^1.2.1",
     "node-sass": "6.0.1",
     "sass-loader": "10"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "vueIndentScriptAndStyle": true,
+    "printWidth": 100
   }
 }

@@ -13,30 +13,27 @@ export default {
   head: {
     title: 'game',
     htmlAttrs: {
-      lang: 'ko'
+      lang: 'ko',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'google-site-verification', content: 'TzeBX7E_eVuV7BLV_xFhnxkzkXnHi2lhhUGpRlJ-3uw' }
+      { name: 'google-site-verification', content: 'TzeBX7E_eVuV7BLV_xFhnxkzkXnHi2lhhUGpRlJ-3uw' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href:
-          '//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css'
-      }
-    ]
+        href: '//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/scss/index.scss',
-  ],
+  css: ['@/assets/scss/index.scss'],
 
   styleResources: {
     scss: ['~/assets/scss/abstract/*.scss'],
@@ -78,32 +75,28 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    'vue-sweetalert2/nuxt', '@nuxtjs/axios',
-  ],
+  modules: ['vue-sweetalert2/nuxt', '@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [
-      'vue-awesome-swiper'
-    ],
+    transpile: ['vue-awesome-swiper'],
     terser: {
       // https://github.com/terser/terser#compress-options
       terserOptions: {
         compress: {
-          drop_console: true
-        }
-      }
-    }
+          drop_console: true,
+        },
+      },
+    },
   },
 
   // Build path change
   generate: {
-    dir: 'docs'
+    dir: 'docs',
   },
 
   router: {
-    base: '/game'
+    base: '/game',
   },
 
   compilerOptions: {

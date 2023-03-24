@@ -3,12 +3,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api';
-export default defineComponent({
-  name: 'Privacy'
-})
+  import { defineComponent } from '@nuxtjs/composition-api'
+  export default defineComponent({
+    name: 'Privacy',
+  })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

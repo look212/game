@@ -1,4 +1,4 @@
-import { IMainInfo, ISimpleType } from '~/types';
+import { IMainInfo, ISimpleType } from '~/types'
 
 export const mainInfos: IMainInfo[] = [
   {
@@ -6,7 +6,7 @@ export const mainInfos: IMainInfo[] = [
     title: '게임을 선택해주세요😉',
     description: `
     <q>Copyright 2022. <a href="https://github.com/look212/" target="_blank">look212</a> all rights reserved.</q>
-    `
+    `,
   },
   {
     type: 'complete',
@@ -22,7 +22,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'proverb', label: '속담' },
       { value: 'idiom', label: '사자성어' },
       { value: 'fourLetterVocab', label: '4글자단어' },
-    ]
+    ],
   },
   {
     type: 'speed',
@@ -47,7 +47,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'stuff', label: '물건' },
       { value: 'emotion', label: '감정' },
       { value: 'food', label: '음식' },
-    ]
+    ],
   },
   {
     type: 'liar',
@@ -75,7 +75,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'photo', label: '인물' },
       { value: 'appliance', label: '전자제품' },
       { value: 'food', label: '음식' },
-    ]
+    ],
   },
   {
     type: 'photo',
@@ -100,7 +100,7 @@ export const mainInfos: IMainInfo[] = [
     subject: [
       { value: 'music', label: '가요' },
       { value: 'classic', label: '클래식' },
-    ]
+    ],
   },
   {
     type: 'movie',
@@ -116,7 +116,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'movie_script', label: '스샷보고 대사 맞추기' },
       { value: 'movie', label: '스샷보고 제목 맞추기' },
       { value: 'movie_sound', label: 'OST 듣고 제목 맞추기' },
-    ]
+    ],
   },
   {
     type: 'drama',
@@ -131,14 +131,14 @@ export const mainInfos: IMainInfo[] = [
     subject: [
       { value: 'drama_title', label: '스샷보고 제목 맞추기' },
       { value: 'drama_sound', label: 'OST 듣고 제목 맞추기' },
-    ]
+    ],
   },
   {
     type: 'bingo',
     title: 'BINGO',
     description: `
     1~ 25 사이의 숫자로 빙고판이 랜덤으로 설정됩니다.
-    `
+    `,
   },
   {
     type: 'chosung',
@@ -156,7 +156,7 @@ export const mainInfos: IMainInfo[] = [
       { value: 'singer_chosung', label: '가수' },
       { value: 'music_chosung', label: '노래' },
       { value: 'proverb_chosung', label: '속담' },
-    ]
+    ],
   },
   {
     type: 'melody',
@@ -176,7 +176,6 @@ export const mainInfos: IMainInfo[] = [
     </ul>
     `,
   },
-
 ]
 
 export const countSpeedList: ISimpleType[] = [
