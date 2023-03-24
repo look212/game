@@ -29,6 +29,7 @@ export const mainInfos: IMainInfo[] = [
     title: '스피드게임',
     description: `
     <ul>
+        <li>몸으로 말해요, 고요속의 외침</li>
         <li>주제, 문제 갯수를 고르세요.</li>
         <li>팀을 나눠 문제 내는 사람과 맞추는 사람을 정하세요.</li>
         <li>제한시간을 정하고 타이머를 맞추세요.</li>
